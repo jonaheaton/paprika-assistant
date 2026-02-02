@@ -20,7 +20,35 @@ Call `action="help"` first on any MCP tool to discover available actions and par
 
 ```
 paprika-assistant/
+  .claude/agents/  # Claude Code agent definitions
   skills/          # Claude Code skills
-  tools/           # Helper functions
   scripts/         # Automation scripts
+  logs/            # Automation logs (git-ignored)
 ```
+
+## Scheduled Automation
+
+### Pantry Cleanup (Every Tuesday 3 AM)
+
+Automatic cleanup of expired and duplicate pantry items using Claude Code in headless mode.
+
+**Management:**
+```bash
+./scripts/install-scheduled-cleanup.sh install    # Enable scheduled job
+./scripts/install-scheduled-cleanup.sh status     # Check job status
+./scripts/install-scheduled-cleanup.sh run-now    # Run immediately
+./scripts/install-scheduled-cleanup.sh uninstall  # Disable scheduled job
+```
+
+**Configuration:**
+- Model: Haiku (cost-efficient)
+- Permissions: `mcp__paprika__pantry` only
+- Max turns: 20
+- Logs: `logs/pantry-cleanup-*.log` and `logs/cleanup-history.log`
+
+**Spoilage thresholds:**
+- Meat/Seafood: 7 days
+- Produce: 14 days
+- Dairy: 30 days
+- Bakery: 10 days
+- Frozen: 180 days

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.jonaheaton.pantry-cleanup</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/jonaheaton/Documents/paprika-assistant/scripts/pantry-cleanup-scheduled.sh</string>
+    </array>
+
+    <!-- Run every Tuesday at 3:00 AM -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Weekday</key>
+        <integer>2</integer>
+        <key>Hour</key>
+        <integer>3</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <!-- Environment variables -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/Users/jonaheaton/.local/bin:/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        <key>HOME</key>
+        <string>/Users/jonaheaton</string>
+    </dict>
+
+    <!-- Working directory -->
+    <key>WorkingDirectory</key>
+    <string>/Users/jonaheaton/Documents/paprika-assistant</string>
+
+    <!-- Log output -->
+    <key>StandardOutPath</key>
+    <string>/Users/jonaheaton/Documents/paprika-assistant/logs/launchd-stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/jonaheaton/Documents/paprika-assistant/logs/launchd-stderr.log</string>
+
+    <!-- Don't keep alive - just run on schedule -->
+    <key>KeepAlive</key>
+    <false/>
+
+    <!-- Nice priority (lower CPU priority) -->
+    <key>Nice</key>
+    <integer>10</integer>
+
+    <!-- Timeout after 30 minutes -->
+    <key>TimeOut</key>
+    <integer>1800</integer>
+</dict>
+</plist>
