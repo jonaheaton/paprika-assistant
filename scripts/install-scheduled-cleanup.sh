@@ -25,7 +25,7 @@ case "${1:-install}" in
 
         echo ""
         echo "Scheduled cleanup installed."
-        echo "  Schedule: Every Tuesday at 3:00 AM"
+        echo "  Schedule: Every Wednesday at 3:00 AM"
         echo "  Logs: $(dirname "$0")/../logs/"
         echo ""
         echo "Commands:"

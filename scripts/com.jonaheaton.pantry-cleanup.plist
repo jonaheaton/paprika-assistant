@@ -11,11 +11,11 @@
         <string>/Users/jonaheaton/Documents/paprika-assistant/scripts/pantry-cleanup-scheduled.sh</string>
     </array>
 
-    <!-- Run every Tuesday at 3:00 AM -->
+    <!-- Run every Wednesday at 3:00 AM -->
     <key>StartCalendarInterval</key>
     <dict>
         <key>Weekday</key>
-        <integer>2</integer>
+        <integer>3</integer>
         <key>Hour</key>
         <integer>3</integer>
         <key>Minute</key>

@@ -28,7 +28,7 @@ paprika-assistant/
 
 ## Scheduled Automation
 
-### Pantry Cleanup (Every Tuesday 3 AM)
+### Pantry Cleanup (Every Wednesday 3 AM)
 
 Automatic cleanup of expired and duplicate pantry items using Claude Code in headless mode.
 
