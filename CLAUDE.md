@@ -20,11 +20,24 @@ Call `action="help"` first on any MCP tool to discover available actions and par
 
 ```
 paprika-assistant/
-  .claude/agents/  # Claude Code agent definitions
-  skills/          # Claude Code skills
+  .claude/
+    agents/        # Claude Code agent definitions
+    skills/        # Claude Code skills (project-level)
   scripts/         # Automation scripts
   logs/            # Automation logs (git-ignored)
 ```
+
+## Skills
+
+Project-level skills are stored in `.claude/skills/`. These skills are specific to this project and version-controlled with the repository.
+
+**Available Skills:**
+- **walmart-to-pantry**: Extract grocery items from Walmart orders and add to Paprika pantry with proper categorization and expiration dates
+- **meal-planner**: (Additional skill for meal planning workflows)
+
+**Skill Directory Locations:**
+- Global skills (all projects): `~/.claude/skills/`
+- Project skills (this repo): `.claude/skills/`
 
 ## Scheduled Automation
 
