@@ -29,3 +29,13 @@ Thumbs.db
 # Logs
 *.log
 logs/
+
+# Build/Package
+dist/
+build/
+*.egg-info/
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
