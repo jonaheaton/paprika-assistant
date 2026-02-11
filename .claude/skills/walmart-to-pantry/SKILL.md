@@ -9,9 +9,11 @@ Automate transferring grocery items from Walmart orders into Paprika pantry inve
 
 ## Workflow
 
-### 1. Set Up Browser Session
+Two approaches are available:
+- **Option A (Fast)**: Use Chrome shortcut if available
+- **Option B (Fallback)**: Full browser automation
 
-Get Chrome context and create a plan for the user to approve:
+### 1. Set Up Browser Session
 
 ```javascript
 // Get Chrome context (creates tab group if needed)
@@ -24,8 +26,8 @@ mcp__claude-in-chrome__tabs_create_mcp()
 mcp__claude-in-chrome__update_plan(
   domains: ["walmart.com"],
   approach: [
-    "Navigate to Walmart.com",
-    "Access your account orders page",
+    "Check for Walmart order shortcut",
+    "Navigate to Walmart.com orders page",
     "Locate most recent grocery order",
     "Extract all grocery items with quantities",
     "Add items to Paprika pantry with proper categorization"
@@ -33,7 +35,43 @@ mcp__claude-in-chrome__update_plan(
 )
 ```
 
-### 2. Navigate to Walmart Order History
+### 2. Check for Chrome Shortcut (Option A)
+
+```javascript
+// List available shortcuts
+mcp__claude-in-chrome__shortcuts_list(tabId: <tab_id>)
+
+// Look for shortcuts matching: "walmart", "order", "view-order-details", or similar
+// If found, execute it and skip to step 4
+// If not found or similar shortcuts exist, warn the user
+```
+
+**Warning Messages:**
+
+If shortcut not found:
+```
+⚠️  No Walmart order shortcut found. Available shortcuts: [list them]
+
+I'll use the full automation workflow instead. If you have a shortcut for
+accessing Walmart orders, you can use it directly and I'll skip navigation steps.
+```
+
+If similar shortcuts found:
+```
+⚠️  Found similar shortcuts: [list them]
+
+Did you mean one of these? If so, let me know and I'll use it.
+Otherwise, I'll proceed with full automation.
+```
+
+**If shortcut found and executed:**
+- Execute the shortcut
+- Wait 5 seconds for navigation
+- Skip to step 4 (Extract Order Items)
+
+### 3. Navigate to Walmart Order History (Option B - Full Automation)
+
+**Use this if no shortcut available or shortcut failed.**
 
 ```javascript
 // Navigate to Walmart
@@ -58,7 +96,7 @@ mcp__claude-in-chrome__computer(
 
 **Authentication Check:** If not logged in, pause and ask user to log in manually, then continue.
 
-### 3. Find Most Recent Grocery Order
+### 4. Find Most Recent Grocery Order (Option B continued)
 
 ```javascript
 // Read page to find order elements
@@ -88,7 +126,9 @@ mcp__claude-in-chrome__computer(
 )
 ```
 
-### 4. Extract Order Items
+### 5. Extract Order Items (Both Options Converge Here)
+
+**At this point, you should be on the Walmart order details page (via shortcut OR full automation).**
 
 ```javascript
 // Read the full order page
@@ -103,7 +143,7 @@ mcp__claude-in-chrome__get_page_text(
 )
 ```
 
-### 5. Parse Grocery Items
+### 6. Parse Grocery Items
 
 Parse the order page for food items. Extract:
 - Item name
@@ -112,7 +152,7 @@ Parse the order page for food items. Extract:
 
 Filter out non-food items (tissues, paper products, personal care, cleaning supplies).
 
-### 6. Categorize and Add to Pantry
+### 7. Categorize and Add to Pantry
 
 For each food item:
 
@@ -132,7 +172,7 @@ mcp__claude_ai_Paprika_Recipes__pantry(
 )
 ```
 
-### 7. Batch Processing
+### 8. Batch Processing
 
 Add multiple items in parallel for efficiency. Use parallel tool calls for independent pantry additions.
 
@@ -155,11 +195,22 @@ Add multiple items in parallel for efficiency. Use parallel tool calls for indep
 
 | Issue | Solution |
 |-------|----------|
+| Shortcut not found | Warn user and fall back to full automation |
+| Shortcut exists but fails | Try full automation as fallback |
 | Not logged into Walmart | Ask user to log in manually, then continue |
 | Order page layout changed | Use find() with natural language queries instead of fixed selectors |
 | Items missing quantities | Default to "1 ea" if quantity not found |
 | Duplicate items in pantry | Check if item already exists before adding |
 | Rate limiting | Add 1-2 second delays between pantry additions |
+
+## Creating a Chrome Shortcut (Optional)
+
+To speed up future runs, you can create a Chrome shortcut/workflow:
+
+1. In Claude Chrome extension, navigate to your Walmart order details page
+2. Create a new shortcut with a name like "view-order-details" or "walmart-order"
+3. The skill will automatically detect and use it on future runs
+4. Benefits: Faster execution, fewer clicks, more reliable
 
 ## References
 
