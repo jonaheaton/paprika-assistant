@@ -72,16 +72,18 @@ Walmart's Akamai bot detection can appear at two points:
 - **Orders list page** (rare): modal appears before you've clicked anything
 - **After clicking "View details"** (more common): modal appears as an overlay
 
-The modal is a **modal overlay**, not a full-page replacement. Waiting does not resolve it — you must click "Close dialog". **After dismissing, wait 3-5 seconds before taking any further action.** Rapid interactions after dismissal escalate the detection and can trigger a hard block at `/blocked?url=...`.
+The modal is a **modal overlay**, not a full-page replacement. Waiting does not resolve it — you must click "Close dialog". After dismissing, use `browser_wait_for` to insert an actual browser-level delay — **do not use bash `sleep`**, which only delays you, not the browser. Rapid browser interactions after dismissal escalate detection and trigger a hard block at `/blocked?url=...`.
 
 ```javascript
 mcp__plugin_playwright_playwright__browser_snapshot()
 // If snapshot shows dialog "Robot or human?" with a "Close dialog" button:
 mcp__plugin_playwright_playwright__browser_click(ref: <close-dialog-button-ref>)
-// Wait 3-5 seconds before proceeding — do NOT immediately navigate or click
+mcp__plugin_playwright_playwright__browser_wait_for(time: 4000)  // 4s actual browser delay
 mcp__plugin_playwright_playwright__browser_snapshot()
 // Confirm dialog is gone before continuing
 ```
+
+**After a bot modal dismissal, slow down for the rest of the order** — use `browser_wait_for(time: 2000)` between every subsequent action on that page (snapshot, Show items click, etc.).
 
 **Escalation pattern to avoid:** dismissing a bot modal → immediately clicking a stale ref (error) → snapshot shows another modal → dismissing again → navigation = hard block. Always take a fresh snapshot before clicking anything after a dismissal.
 
@@ -112,7 +114,13 @@ import re
 with open('.playwright-mcp/items-expanded.md') as f:
     content = f.read()
 
+# Items start at "Weight-adjusted" section (produce) or "Shopped" section (all others)
+# Fall back to just before the first "Add to cart" button if neither header exists
 start = content.find('Weight-adjusted')
+if start == -1:
+    start = content.find('Shopped')
+if start == -1:
+    start = content.find('Add to cart')
 end = content.find('How can we help?')
 items_section = content[start:end] if end != -1 else content[start:]
 
@@ -160,6 +168,18 @@ mcp__claude_ai_Paprika__pantry(
 **Important:** `params` must be passed as a native JSON object, not a JSON string.
 
 **Multiple quantities:** If Qty > 1 with a unit size (e.g., Qty 2 of 15 oz cans), combine into one entry (e.g., `"30 oz (2 cans)"`).
+
+### 7. Return to Orders List
+
+After finishing an order, **do not navigate directly to `https://www.walmart.com/orders`** — a bare URL load right after a bot-detected session is a strong automation signal. Instead, click the "Purchase history" breadcrumb link that's already on the order details page:
+
+```javascript
+// The breadcrumb is always present: My account / Purchase history / Order details
+mcp__plugin_playwright_playwright__browser_click(ref: <purchase-history-breadcrumb-ref>)
+// Example: link "Purchase history" [ref=eXXX] with /url: /orders
+```
+
+This looks identical to a human clicking back to their order list.
 
 ## Common Issues
 
