@@ -68,15 +68,22 @@ mcp__plugin_playwright_playwright__browser_click(ref: <view-details-button-ref>)
 
 ### 4. Handle Bot Detection (if it appears)
 
-After clicking View details, Walmart sometimes shows a "Robot or human?" dialog. This appears as a **modal overlay**, not a full-page replacement. Waiting does not resolve it — you must dismiss it:
+Walmart's Akamai bot detection can appear at two points:
+- **Orders list page** (rare): modal appears before you've clicked anything
+- **After clicking "View details"** (more common): modal appears as an overlay
+
+The modal is a **modal overlay**, not a full-page replacement. Waiting does not resolve it — you must click "Close dialog". **After dismissing, wait 3-5 seconds before taking any further action.** Rapid interactions after dismissal escalate the detection and can trigger a hard block at `/blocked?url=...`.
 
 ```javascript
 mcp__plugin_playwright_playwright__browser_snapshot()
 // If snapshot shows dialog "Robot or human?" with a "Close dialog" button:
 mcp__plugin_playwright_playwright__browser_click(ref: <close-dialog-button-ref>)
+// Wait 3-5 seconds before proceeding — do NOT immediately navigate or click
 mcp__plugin_playwright_playwright__browser_snapshot()
-// Confirm dialog is gone before proceeding
+// Confirm dialog is gone before continuing
 ```
+
+**Escalation pattern to avoid:** dismissing a bot modal → immediately clicking a stale ref (error) → snapshot shows another modal → dismissing again → navigation = hard block. Always take a fresh snapshot before clicking anything after a dismissal.
 
 ### 5. Extract All Order Items
 
@@ -160,7 +167,8 @@ mcp__claude_ai_Paprika__pantry(
 |-------|----------|
 | Paprika tools not in deferred list | Run `/mcp` in Claude Code to reconnect claude.ai integration |
 | Not logged in | Follow login flow; ensure persistent session is configured (see CLAUDE.md) |
-| Bot detection dialog | Click the "Close dialog" button — don't just wait |
+| Bot detection dialog | Click the "Close dialog" button — don't just wait; then wait 3-5s before next action |
+| Hard block (`/blocked?url=...`) | Stop. Wait 10+ min before retrying — caused by rapid modal dismissals |
 | "Show items" click blocked | Check for and dismiss any open dialogs first |
 | Session expired after 60 days | Re-run login flow with `--headed` flag (see CLAUDE.md → Playwright Setup) |
 | Item count on page doesn't match product lines | Expected — Walmart counts individual units; don't chase the discrepancy |
