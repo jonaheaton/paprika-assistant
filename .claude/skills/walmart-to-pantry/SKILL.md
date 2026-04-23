@@ -18,11 +18,24 @@ Automate transferring grocery items from Walmart orders into Paprika pantry inve
 - Ask the user to reconnect from the Claude Code MCP menu if `/mcp` doesn't work
 - Once reconnected, use ToolSearch to load the schema before calling it
 
+## How Item Data Is Extracted
+
+Walmart server-renders all order item data into a `<script id="__NEXT_DATA__">` tag on page load. **No "Show items" click, no snapshot, no file parsing needed.** A single `browser_evaluate()` call extracts structured JSON immediately after the page loads.
+
+Data path: `__NEXT_DATA__.props.pageProps.initialData.data.order.groups_2101[]`
+
+Each group contains:
+- `deliveryDate` — ISO timestamp of delivery
+- `items[]` — received items with `quantity`, `productInfo.name`, `requestedWeight`, `salesUnitType`, `priceInfo`
+
 ## Workflow
 
 ### 1. Navigate to Walmart Orders
 
 ```javascript
+mcp__plugin_playwright_playwright__browser_navigate(url: "https://www.walmart.com")
+// 3-5s warm-up pause — cold-start directly to /orders is a bot signal
+mcp__plugin_playwright_playwright__browser_wait_for(time: 4000)
 mcp__plugin_playwright_playwright__browser_navigate(url: "https://www.walmart.com/orders")
 mcp__plugin_playwright_playwright__browser_snapshot()
 ```
@@ -60,94 +73,65 @@ The purchase history page lists all orders by date. Grocery orders are labeled *
 
 **If multiple "Delivery from store" orders are visible on the same day:** prefer the one with the largest order total — the small one is typically a correction or partial redelivery. If it's unclear, ask the user which order to process.
 
-Click the "View details" button for the chosen order.
+Get the order ID from the return link URL (e.g., `/orders/200014426966175/returns` → order ID `200014426966175`).
 
-```javascript
-mcp__plugin_playwright_playwright__browser_click(ref: <view-details-button-ref>)
-```
+### 4. Handle Bot Detection on the Orders List (if it appears)
 
-### 4. Handle Bot Detection (if it appears)
-
-Walmart's Akamai bot detection can appear at two points:
-- **Orders list page** (rare): modal appears before you've clicked anything
-- **After clicking "View details"** (more common): modal appears as an overlay
-
-The modal is a **modal overlay**, not a full-page replacement. Waiting does not resolve it — you must click "Close dialog". After dismissing, use `browser_wait_for` to insert an actual browser-level delay — **do not use bash `sleep`**, which only delays you, not the browser. Rapid browser interactions after dismissal escalate detection and trigger a hard block at `/blocked?url=...`.
+Walmart's Akamai bot detection occasionally appears on the orders list as a **modal overlay**. Waiting does not resolve it — click "Close dialog", then wait before continuing.
 
 ```javascript
 mcp__plugin_playwright_playwright__browser_snapshot()
 // If snapshot shows dialog "Robot or human?" with a "Close dialog" button:
 mcp__plugin_playwright_playwright__browser_click(ref: <close-dialog-button-ref>)
-mcp__plugin_playwright_playwright__browser_wait_for(time: 4000)  // 4s actual browser delay
+mcp__plugin_playwright_playwright__browser_wait_for(time: 4000)
 mcp__plugin_playwright_playwright__browser_snapshot()
-// Confirm dialog is gone before continuing
 ```
 
-**After a bot modal dismissal, slow down for the rest of the order** — use `browser_wait_for(time: 2000)` between every subsequent action on that page (snapshot, Show items click, etc.).
+### 5. Extract Order Items via __NEXT_DATA__
 
-**Escalation pattern to avoid:** dismissing a bot modal → immediately clicking a stale ref (error) → snapshot shows another modal → dismissing again → navigation = hard block. Always take a fresh snapshot before clicking anything after a dismissal.
-
-### 5. Extract All Order Items
-
-On the order details page, items are collapsed by default. The page shows a thumbnail strip with a "Show items" button. **Dismiss any open dialogs first** — an open dialog overlay will block the click.
+Navigate to the order detail page. After it loads, extract all data in a single JavaScript call — no clicking required.
 
 ```javascript
-mcp__plugin_playwright_playwright__browser_click(ref: <show-items-button-ref>)
-// Save to file — snapshot will be large
-mcp__plugin_playwright_playwright__browser_snapshot(filename: ".playwright-mcp/items-expanded.md")
+mcp__plugin_playwright_playwright__browser_navigate(url: "https://www.walmart.com/orders/<ORDER_ID>")
+// If bot detection appears (/blocked?url=... or "Robot or human?" modal), see Common Issues below
+mcp__plugin_playwright_playwright__browser_wait_for(time: 2000)
 ```
 
-**Note on item counts:** The "N items received" count shown on the page includes individual units from multipacks and substitution rows. The number of visible product lines will always be fewer — this is expected. Don't scroll looking for missing items once the full list is visible.
+Then extract the data:
 
-The item list has two sections:
-- **Weight-adjusted**: produce sold by weight (e.g., apples, bananas). Each entry shows `Qty N` and `Final weight X lbs`.
-- **Shopped**: all other items. Each entry shows `Qty N`.
+```javascript
+mcp__plugin_playwright_playwright__browser_evaluate(function: `() => {
+  const order = JSON.parse(document.getElementById('__NEXT_DATA__').textContent)
+    .props.pageProps.initialData.data.order;
 
-**Substitution items:** Walmart sometimes inserts a "substitution offer" row alongside a received item. These rows have an "Add to cart" button but **no `Qty N` text**. Skip them — only items with an explicit Qty were actually received.
-
-Parse the snapshot with Python:
-
-```bash
-python3 << 'EOF'
-import re
-
-with open('.playwright-mcp/items-expanded.md') as f:
-    content = f.read()
-
-# Items start at "Weight-adjusted" section (produce) or "Shopped" section (all others)
-# Fall back to just before the first "Add to cart" button if neither header exists
-start = content.find('Weight-adjusted')
-if start == -1:
-    start = content.find('Shopped')
-if start == -1:
-    start = content.find('Add to cart')
-end = content.find('How can we help?')
-items_section = content[start:end] if end != -1 else content[start:]
-
-# Each item block ends at its "Add to cart" button
-blocks = re.split(r'- button "Add to cart - ', items_section)
-
-for block in blocks[1:]:
-    name_match = re.match(r'(.+?)"', block)
-    if not name_match:
-        continue
-    name = name_match.group(1)
-    qty_match = re.search(r'Qty (\d+)', block)
-    qty = int(qty_match.group(1)) if qty_match else None
-    weight_match = re.search(r'Final weight ([\d.]+) (\w+)', block)
-    weight = f"{weight_match.group(1)} {weight_match.group(2)}" if weight_match else None
-    # Skip substitution items (no Qty text)
-    if qty is None:
-        continue
-    print(f"{name} — Qty {qty}" + (f" ({weight})" if weight else ""))
-EOF
+  return JSON.stringify({
+    orderId: order.id,
+    groups: order.groups_2101.map(group => ({
+      deliveryDate: group.deliveryDate,
+      items: group.items.map(item => ({
+        name: item.productInfo.name,
+        quantity: item.quantity,
+        salesUnitType: item.productInfo.salesUnitType,
+        requestedWeight: item.requestedWeight,
+        unitPrice: item.priceInfo?.unitPrice?.displayValue,
+        linePrice: item.priceInfo?.linePrice?.value
+      }))
+    }))
+  }, null, 2);
+}`)
 ```
+
+**Produce items (weight-based):** Items ordered by weight have `salesUnitType: "WEIGHT"` and a non-null `requestedWeight`. Use the weight value as the quantity (e.g., `"1.2 lbs"`). If a `finalWeight` field is present (to be confirmed on first produce order), prefer that over `requestedWeight` — it reflects what was actually delivered.
+
+**Multiple groups:** Some orders have multiple delivery groups (e.g., same-day + next-day). Process each group's `deliveryDate` and `items` independently.
+
+**Substitution items:** In the JSON response, `items[]` contains only received items. Substitution offer rows (visible in the UI but not actually delivered) do not appear here — no filtering needed.
 
 ### 6. Categorize and Add to Pantry
 
 For each food item:
 1. **Determine aisle**: Map to Paprika aisle name (see references/mappings.md)
-2. **Calculate expiration**: From the delivery date shown in the order header (see references/mappings.md)
+2. **Calculate expiration**: From `deliveryDate` in the group (see references/mappings.md)
 3. **Skip non-food items**: paper products, cleaning supplies, personal care (see references/mappings.md)
 4. **Add to pantry** — make all calls in parallel for efficiency:
 
@@ -167,19 +151,22 @@ mcp__claude_ai_Paprika__pantry(
 
 **Important:** `params` must be passed as a native JSON object, not a JSON string.
 
-**Multiple quantities:** If Qty > 1 with a unit size (e.g., Qty 2 of 15 oz cans), combine into one entry (e.g., `"30 oz (2 cans)"`).
+**Multiple quantities:** If `quantity > 1` with a unit size in the name (e.g., qty 2 of 15 oz cans), combine into one entry (e.g., `"30 oz (2 cans)"`).
+
+**Weight items:** Use the weight as the quantity string (e.g., `"1.2 lbs"`).
 
 ### 7. Return to Orders List
 
-After finishing an order, **do not navigate directly to `https://www.walmart.com/orders`** — a bare URL load right after a bot-detected session is a strong automation signal. Instead, click the "Purchase history" breadcrumb link that's already on the order details page:
+After finishing an order, click the "Purchase history" breadcrumb rather than navigating directly to `/orders` — a bare URL load right after processing is a bot signal.
 
 ```javascript
 // The breadcrumb is always present: My account / Purchase history / Order details
 mcp__plugin_playwright_playwright__browser_click(ref: <purchase-history-breadcrumb-ref>)
-// Example: link "Purchase history" [ref=eXXX] with /url: /orders
+// Wait before processing next order — rapid sequential order loads trigger hard blocks
+mcp__plugin_playwright_playwright__browser_wait_for(time: 5000)
 ```
 
-This looks identical to a human clicking back to their order list.
+**Between orders:** Wait 5+ seconds before navigating to the next order detail page. Never process two orders back-to-back without a pause.
 
 ## Common Issues
 
@@ -187,14 +174,15 @@ This looks identical to a human clicking back to their order list.
 |-------|----------|
 | Paprika tools not in deferred list | Run `/mcp` in Claude Code to reconnect claude.ai integration |
 | Not logged in | Follow login flow; ensure persistent session is configured (see CLAUDE.md) |
-| Bot detection dialog | Click the "Close dialog" button — don't just wait; then wait 3-5s before next action |
-| Hard block (`/blocked?url=...`) | Stop. Wait 10+ min before retrying — caused by rapid modal dismissals |
-| "Show items" click blocked | Check for and dismiss any open dialogs first |
+| Hard block (`/blocked?url=...`) on order detail load | Stop. Navigate back to homepage. Wait 5+ minutes before retrying. Caused by rapid sequential order loads. |
+| Bot detection modal on orders list | Click "Close dialog", wait 4s, take fresh snapshot before continuing |
+| `__NEXT_DATA__` missing or empty | Page may not have fully loaded — wait 2s and re-evaluate; if still missing, fall back to snapshot approach |
+| `groups_2101` key missing | Walmart may rename this key in a future deploy — check `Object.keys(order)` for a key matching `groups_*` |
+| Produce weight field unclear | Use `requestedWeight` if present; `finalWeight` may also exist (verify on first produce order) |
 | Session expired after 60 days | Re-run login flow with `--headed` flag (see CLAUDE.md → Playwright Setup) |
-| Item count on page doesn't match product lines | Expected — Walmart counts individual units; don't chase the discrepancy |
-| Extra item with no Qty text | It's a substitution offer, not a received item — skip it |
 | `params` validation error | Ensure params is JSON object, not string |
 
 ## References
 
 - **references/mappings.md**: Complete aisle mappings and expiration heuristics
+- **references/bot-detection-mitigations.md**: Options for reducing bot detection if blocks become frequent
