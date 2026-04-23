@@ -20,13 +20,15 @@ Automate transferring grocery items from Walmart orders into Paprika pantry inve
 
 ## How Item Data Is Extracted
 
-Walmart server-renders all order item data into a `<script id="__NEXT_DATA__">` tag on page load. **No "Show items" click, no snapshot, no file parsing needed.** A single `browser_evaluate()` call extracts structured JSON immediately after the page loads.
+**Primary method (orders list page):** Walmart server-renders all order data — including full item lists — into `<script id="__NEXT_DATA__">` on the `/orders` list page itself. A single `browser_evaluate()` call extracts every grocery order's items without navigating to individual order detail pages.
 
-Data path: `__NEXT_DATA__.props.pageProps.initialData.data.order.groups_2101[]`
+Data path: `__NEXT_DATA__.props.pageProps.phRedesignInitialData.data.purchaseHistory.orders[]`
 
-Each group contains:
-- `deliveryDate` — ISO timestamp of delivery
-- `items[]` — received items with `quantity`, `productInfo.name`, `requestedWeight`, `salesUnitType`, `priceInfo`
+Each order has `groups[]`. Grocery orders have `group.fulfillmentType === "DFS"` (Delivery From Store). Each group contains:
+- `deliveredDate` — ISO timestamp of actual delivery
+- `items[]` — delivered items with `name` and `quantity` (already filtered to delivered items only)
+
+**Fallback method (order detail page):** Only use when an order is not on the current list page (older orders). See the Fallback section below.
 
 ## Workflow
 
@@ -51,7 +53,6 @@ Walmart's login is two-step: email → password.
 mcp__plugin_playwright_playwright__browser_click(ref: <sign-in-button-ref>)
 mcp__plugin_playwright_playwright__browser_snapshot()
 // If "Robot or human?" appears as a full page during login, wait — it auto-resolves to the login form
-// (This is different from the modal dialog that appears on the order details page — see Step 4)
 
 // Fill email (ask user for their email)
 mcp__plugin_playwright_playwright__browser_type(ref: <email-field-ref>, text: <email>)
@@ -65,75 +66,65 @@ mcp__plugin_playwright_playwright__browser_snapshot()
 
 After successful login, Walmart redirects to `/orders?action=SignIn` with "Purchase history" visible.
 
-### 3. Find the Grocery Order to Process
+### 3. Extract All Grocery Orders from the List Page
 
-The purchase history page lists all orders by date. Grocery orders are labeled **"Delivery from store"**. Non-grocery orders (marketplace sellers, electronics, etc.) say "Delivery" with a seller name.
+Extract all recent grocery orders in a single call — no clicking, no detail page navigation:
 
-**If only one "Delivery from store" order is visible:** use it.
+```javascript
+mcp__plugin_playwright_playwright__browser_evaluate(function: `() => {
+  const data = JSON.parse(document.getElementById('__NEXT_DATA__').textContent);
+  const orders = data?.props?.pageProps?.phRedesignInitialData?.data?.purchaseHistory?.orders || [];
 
-**If multiple "Delivery from store" orders are visible on the same day:** prefer the one with the largest order total — the small one is typically a correction or partial redelivery. If it's unclear, ask the user which order to process.
+  const groceryOrders = orders
+    .filter(o => o.groups.some(g => g.fulfillmentType === 'DFS'))
+    .map(o => ({
+      orderId: o.id,
+      orderDate: o.orderDate,
+      groups: o.groups
+        .filter(g => g.fulfillmentType === 'DFS')
+        .map(g => ({
+          deliveredDate: g.deliveredDate,
+          items: g.items.map(item => ({
+            name: item.name,
+            quantity: item.quantity
+          }))
+        }))
+    }));
 
-Get the order ID from the return link URL (e.g., `/orders/200014426966175/returns` → order ID `200014426966175`).
+  return JSON.stringify(groceryOrders, null, 2);
+}`)
+```
+
+**Identifying grocery orders:** `fulfillmentType: "DFS"` = Delivery From Store (grocery). Non-grocery orders (marketplace parcels, FC_DELIVERY) have `fulfillmentType: "INTERNALIZED_PARCEL"` or similar and should be ignored.
+
+**Which order to process:** If only one DFS order is recent, use it. If multiple DFS orders exist from the same day, prefer the largest (by `itemCount`) — small ones are typically corrections or partial deliveries. If unclear, ask the user.
+
+**Items already filtered:** The `items[]` array contains only delivered items. Substitution offers (visible in the Walmart UI but not delivered) are excluded automatically.
 
 ### 4. Handle Bot Detection on the Orders List (if it appears)
 
-Walmart's Akamai bot detection occasionally appears on the orders list as a **modal overlay**. Waiting does not resolve it — click "Close dialog", then wait before continuing.
+Walmart's Akamai bot detection occasionally shows a **modal overlay** on the orders list. Waiting does not resolve it — click "Close dialog", then wait before re-evaluating.
 
 ```javascript
 mcp__plugin_playwright_playwright__browser_snapshot()
 // If snapshot shows dialog "Robot or human?" with a "Close dialog" button:
 mcp__plugin_playwright_playwright__browser_click(ref: <close-dialog-button-ref>)
 mcp__plugin_playwright_playwright__browser_wait_for(time: 4000)
-mcp__plugin_playwright_playwright__browser_snapshot()
+// Re-run the browser_evaluate extraction after dismissing
 ```
 
-### 5. Extract Order Items via __NEXT_DATA__
+### 5. Categorize and Add to Pantry
 
-Navigate to the order detail page. After it loads, extract all data in a single JavaScript call — no clicking required.
-
-```javascript
-mcp__plugin_playwright_playwright__browser_navigate(url: "https://www.walmart.com/orders/<ORDER_ID>")
-// If bot detection appears (/blocked?url=... or "Robot or human?" modal), see Common Issues below
-mcp__plugin_playwright_playwright__browser_wait_for(time: 2000)
-```
-
-Then extract the data:
-
-```javascript
-mcp__plugin_playwright_playwright__browser_evaluate(function: `() => {
-  const order = JSON.parse(document.getElementById('__NEXT_DATA__').textContent)
-    .props.pageProps.initialData.data.order;
-
-  return JSON.stringify({
-    orderId: order.id,
-    groups: order.groups_2101.map(group => ({
-      deliveryDate: group.deliveryDate,
-      items: group.items.map(item => ({
-        name: item.productInfo.name,
-        quantity: item.quantity,
-        salesUnitType: item.productInfo.salesUnitType,
-        requestedWeight: item.requestedWeight,
-        unitPrice: item.priceInfo?.unitPrice?.displayValue,
-        linePrice: item.priceInfo?.linePrice?.value
-      }))
-    }))
-  }, null, 2);
-}`)
-```
-
-**Produce items (weight-based):** Items ordered by weight have `salesUnitType: "WEIGHT"` and a non-null `requestedWeight`. Use the weight value as the quantity (e.g., `"1.2 lbs"`). If a `finalWeight` field is present (to be confirmed on first produce order), prefer that over `requestedWeight` — it reflects what was actually delivered.
-
-**Multiple groups:** Some orders have multiple delivery groups (e.g., same-day + next-day). Process each group's `deliveryDate` and `items` independently.
-
-**Substitution items:** In the JSON response, `items[]` contains only received items. Substitution offer rows (visible in the UI but not actually delivered) do not appear here — no filtering needed.
-
-### 6. Categorize and Add to Pantry
-
-For each food item:
+For each food item in the selected DFS order:
 1. **Determine aisle**: Map to Paprika aisle name (see references/mappings.md)
-2. **Calculate expiration**: From `deliveryDate` in the group (see references/mappings.md)
+2. **Calculate expiration**: From `deliveredDate` in the group (see references/mappings.md)
 3. **Skip non-food items**: paper products, cleaning supplies, personal care (see references/mappings.md)
-4. **Add to pantry** — make all calls in parallel for efficiency:
+4. **Parse quantity from item name**: The `quantity` field is a count; the item name encodes the size. Examples:
+   - `"Great Value Black Beans, 15 oz"` qty 2 → `"30 oz (2 cans)"`
+   - `"Fresh Strawberries, 2 lb, Container"` qty 1 → `"2 lb"`
+   - `"Fresh Fuji Apple, Each"` qty 3 → `"3"`
+   - `"Dave's Killer Bread 21 Whole Grains, 27 ounce"` qty 1 → `"27 oz"`
+5. **Add to pantry** — make all calls in parallel for efficiency:
 
 First load the tool schema: `ToolSearch(query="select:mcp__claude_ai_Paprika__pantry")`
 
@@ -151,22 +142,45 @@ mcp__claude_ai_Paprika__pantry(
 
 **Important:** `params` must be passed as a native JSON object, not a JSON string.
 
-**Multiple quantities:** If `quantity > 1` with a unit size in the name (e.g., qty 2 of 15 oz cans), combine into one entry (e.g., `"30 oz (2 cans)"`).
+## Fallback: Older Orders via Detail Page
 
-**Weight items:** Use the weight as the quantity string (e.g., `"1.2 lbs"`).
-
-### 7. Return to Orders List
-
-After finishing an order, click the "Purchase history" breadcrumb rather than navigating directly to `/orders` — a bare URL load right after processing is a bot signal.
+If an order is not on the current list page (e.g., an order from weeks ago), navigate to its detail page to extract item data. This method carries bot detection risk — use only when the order is unavailable from the list page.
 
 ```javascript
-// The breadcrumb is always present: My account / Purchase history / Order details
-mcp__plugin_playwright_playwright__browser_click(ref: <purchase-history-breadcrumb-ref>)
-// Wait before processing next order — rapid sequential order loads trigger hard blocks
-mcp__plugin_playwright_playwright__browser_wait_for(time: 5000)
+mcp__plugin_playwright_playwright__browser_navigate(url: "https://www.walmart.com/orders/<ORDER_ID>")
+// If bot detection appears (/blocked?url=... or "Robot or human?" modal), see Common Issues below
+mcp__plugin_playwright_playwright__browser_wait_for(time: 2000)
 ```
 
-**Between orders:** Wait 5+ seconds before navigating to the next order detail page. Never process two orders back-to-back without a pause.
+Extract from the detail page (different schema than the list page):
+
+```javascript
+mcp__plugin_playwright_playwright__browser_evaluate(function: `() => {
+  const order = JSON.parse(document.getElementById('__NEXT_DATA__').textContent)
+    .props.pageProps.initialData.data.order;
+
+  // Key name may change — check Object.keys(order) if groups_2101 is missing
+  const groupsKey = Object.keys(order).find(k => k.startsWith('groups_'));
+
+  return JSON.stringify({
+    orderId: order.id,
+    groups: order[groupsKey].map(group => ({
+      deliveryDate: group.deliveryDate,
+      items: group.items.map(item => ({
+        name: item.productInfo.name,
+        quantity: item.quantity,
+        salesUnitType: item.productInfo.salesUnitType,
+        requestedWeight: item.requestedWeight,
+        unitPrice: item.priceInfo?.unitPrice?.displayValue
+      }))
+    }))
+  }, null, 2);
+}`)
+```
+
+**Produce items (weight-based):** Items with `salesUnitType: "WEIGHT"` have a `requestedWeight` field. Use that as the quantity string (e.g., `"1.2 lbs"`).
+
+**After processing a detail page order:** Return to the orders list via the "Purchase history" breadcrumb (not direct URL navigation). Wait 5+ seconds before processing another.
 
 ## Common Issues
 
@@ -174,13 +188,14 @@ mcp__plugin_playwright_playwright__browser_wait_for(time: 5000)
 |-------|----------|
 | Paprika tools not in deferred list | Run `/mcp` in Claude Code to reconnect claude.ai integration |
 | Not logged in | Follow login flow; ensure persistent session is configured (see CLAUDE.md) |
-| Hard block (`/blocked?url=...`) on order detail load | Stop. Navigate back to homepage. Wait 5+ minutes before retrying. Caused by rapid sequential order loads. |
-| Bot detection modal on orders list | Click "Close dialog", wait 4s, take fresh snapshot before continuing |
-| `__NEXT_DATA__` missing or empty | Page may not have fully loaded — wait 2s and re-evaluate; if still missing, fall back to snapshot approach |
-| `groups_2101` key missing | Walmart may rename this key in a future deploy — check `Object.keys(order)` for a key matching `groups_*` |
-| Produce weight field unclear | Use `requestedWeight` if present; `finalWeight` may also exist (verify on first produce order) |
+| `phRedesignInitialData` missing or empty | Walmart may have restructured the page — check `Object.keys(data.props.pageProps)` for the new key containing orders |
+| Bot detection modal on orders list | Click "Close dialog", wait 4s, re-run the browser_evaluate extraction |
+| Hard block (`/blocked?url=...`) on detail page | Stop. Navigate to homepage. Wait 5+ minutes. This is why the list-page approach is preferred. |
+| `__NEXT_DATA__` missing | Page not fully loaded — wait 2s and retry |
+| `groups_2101` key missing on detail page | Check `Object.keys(order)` for a key starting with `groups_` |
 | Session expired after 60 days | Re-run login flow with `--headed` flag (see CLAUDE.md → Playwright Setup) |
 | `params` validation error | Ensure params is JSON object, not string |
+| Order not on current list page | Use date filter buttons ("Last 3 months", etc.) or fall back to detail page approach |
 
 ## References
 
