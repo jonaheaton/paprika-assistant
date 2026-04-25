@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.jonaheaton.walmart-grocery-sync</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/jonaheaton/Documents/paprika-assistant/scripts/walmart-grocery-sync.sh</string>
+    </array>
+
+    <!-- Run every day at 5:00 AM -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>5</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <!-- Environment variables -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/Users/jonaheaton/.local/bin:/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        <key>HOME</key>
+        <string>/Users/jonaheaton</string>
+    </dict>
+
+    <!-- Working directory -->
+    <key>WorkingDirectory</key>
+    <string>/Users/jonaheaton/Documents/paprika-assistant</string>
+
+    <!-- Launchd-level stdout/stderr (separate from the script's own run log) -->
+    <key>StandardOutPath</key>
+    <string>/Users/jonaheaton/Documents/paprika-assistant/logs/launchd-walmart-stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/jonaheaton/Documents/paprika-assistant/logs/launchd-walmart-stderr.log</string>
+
+    <!-- Don't keep alive — run on schedule only -->
+    <key>KeepAlive</key>
+    <false/>
+
+    <!-- Lower CPU priority -->
+    <key>Nice</key>
+    <integer>10</integer>
+
+    <!-- Kill after 30 minutes if still running -->
+    <key>TimeOut</key>
+    <integer>1800</integer>
+</dict>
+</plist>

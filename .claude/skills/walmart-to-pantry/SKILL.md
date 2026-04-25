@@ -18,6 +18,33 @@ Automate transferring grocery items from Walmart orders into Paprika pantry inve
 - Ask the user to reconnect from the Claude Code MCP menu if `/mcp` doesn't work
 - Once reconnected, use ToolSearch to load the schema before calling it
 
+## Headless Mode (Automated Runs)
+
+When `logs/walmart-sync-pending.json` exists, this is an **automated headless run** from the walmart-grocery-sync orchestrator. The following rules apply — they override the interactive defaults below:
+
+**Never ask for user input.** If any step would normally prompt the user, instead output a clear error message to stdout and exit non-zero. The orchestrator's `notify_failure` will create a Things 3 task.
+
+**Specific fail-fast conditions:**
+
+| Condition | Error message to output |
+|-----------|------------------------|
+| Walmart session expired (login page shown) | `HEADLESS_ERROR: Walmart session expired — re-login required (see CLAUDE.md → Playwright Setup)` |
+| Paprika MCP not accessible | `HEADLESS_ERROR: Paprika MCP unavailable — reconnect via /mcp in Claude Code` |
+| Bot hard-block on orders page (`/blocked?`) | `HEADLESS_ERROR: Walmart bot detection hard-block — manual retry needed` |
+| No DFS order found for delivery date | Not an error — see "Order Selection in Headless Mode" below |
+
+**Order selection in headless mode:**
+
+Read `logs/walmart-sync-pending.json` to get the `delivered_date` for each pending entry. Then find the DFS order on the Walmart orders page whose `deliveredDate` date portion matches `delivered_date` (allow ±1 day for UTC/local timezone edge cases).
+
+If multiple DFS orders match the date, prefer the largest by item count.
+
+If no DFS order matches the date, this is likely a false-positive detection email (non-grocery item with the DFS snippet). Log: `"No DFS order found for delivered_date YYYY-MM-DD — likely false positive, skipping"`, write a history log entry to prevent re-queuing, and exit successfully (not an error).
+
+**After successful import:** Write to history log. See "History Log" section below.
+
+---
+
 ## How Item Data Is Extracted
 
 **Primary method (orders list page):** Walmart server-renders all order data — including full item lists — into `<script id="__NEXT_DATA__">` on the `/orders` list page itself. A single `browser_evaluate()` call extracts every grocery order's items without navigating to individual order detail pages.
@@ -97,7 +124,7 @@ mcp__plugin_playwright_playwright__browser_evaluate(function: `() => {
 
 **Identifying grocery orders:** `fulfillmentType: "DFS"` = Delivery From Store (grocery). Non-grocery orders (marketplace parcels, FC_DELIVERY) have `fulfillmentType: "INTERNALIZED_PARCEL"` or similar and should be ignored.
 
-**Which order to process:** If only one DFS order is recent, use it. If multiple DFS orders exist from the same day, prefer the largest (by `itemCount`) — small ones are typically corrections or partial deliveries. If unclear, ask the user.
+**Which order to process:** In headless mode, use `delivered_date` from `pending-detection.json` to match by date (see "Headless Mode" above). In interactive mode: if only one DFS order is recent, use it; if multiple exist from the same day, prefer the largest by item count; if unclear, ask the user.
 
 **Items already filtered:** The `items[]` array contains only delivered items. Substitution offers (visible in the Walmart UI but not delivered) are excluded automatically.
 
@@ -196,6 +223,31 @@ mcp__plugin_playwright_playwright__browser_evaluate(function: `() => {
 | Session expired after 60 days | Re-run login flow with `--headed` flag (see CLAUDE.md → Playwright Setup) |
 | `params` validation error | Ensure params is JSON object, not string |
 | Order not on current list page | Use date filter buttons ("Last 3 months", etc.) or fall back to detail page approach |
+
+## History Log (Headless Mode Only)
+
+After successfully importing all items from a pending entry, append to `logs/walmart-sync-history.json`. This prevents re-queuing on the next run.
+
+**Read the pending entry** from `logs/walmart-sync-pending.json` to get `email_id` and `delivered_date`. If the file doesn't exist (interactive/manual run), skip this step entirely.
+
+**Append logic:**
+```python
+import json, datetime
+
+history_path = "logs/walmart-sync-history.json"
+existing = json.load(open(history_path)) if os.path.exists(history_path) else []
+
+existing.append({
+    "email_id": pending_entry["email_id"],
+    "delivered_date": pending_entry["delivered_date"],
+    "completed_at": datetime.utcnow().isoformat() + "Z"
+})
+
+with open(history_path, "w") as f:
+    json.dump(existing, f, indent=2)
+```
+
+Write a history entry for **every** pending entry, including false positives (no DFS order found). The `completed_at` timestamp distinguishes from entries that were never written (failure cases).
 
 ## References
 
