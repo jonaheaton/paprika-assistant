@@ -22,7 +22,7 @@ HISTORY_LOG="$LOG_DIR/walmart-sync-history.json"
 STEP1_JSON="$LOG_DIR/walmart-sync-$TODAY-step1.json"
 STEP2_JSON="$LOG_DIR/walmart-sync-$TODAY-step2.json"
 RUN_LOG="$LOG_DIR/walmart-sync-$TODAY.log"
-LOCK_FILE="$LOG_DIR/.walmart-sync.lock"
+PID_FILE="$LOG_DIR/.walmart-sync.pid"
 CLAUDE_BIN="/Users/jonaheaton/.local/bin/claude"
 
 # Change to project directory — required for Claude to find .claude/skills/
@@ -50,9 +50,16 @@ Full log: $RUN_LOG'" \
     >> "$RUN_LOG" 2>&1 || true
 }
 
-# Flock guard — exit silently if another instance is already running
-exec 200>"$LOCK_FILE"
-flock -n 200 || { log "Another sync is already running. Exiting."; exit 0; }
+# PID file guard — exit silently if another instance is already running
+if [ -f "$PID_FILE" ]; then
+  OLD_PID=$(cat "$PID_FILE" 2>/dev/null || echo "")
+  if [ -n "$OLD_PID" ] && kill -0 "$OLD_PID" 2>/dev/null; then
+    log "Another sync is already running (PID $OLD_PID). Exiting."
+    exit 0
+  fi
+fi
+echo $$ > "$PID_FILE"
+trap 'rm -f "$PID_FILE"' EXIT
 
 log "=== Walmart Grocery Sync starting ==="
 
