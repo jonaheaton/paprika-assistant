@@ -29,10 +29,6 @@
         <string>/Users/jonaheaton</string>
     </dict>
 
-    <!-- Working directory -->
-    <key>WorkingDirectory</key>
-    <string>/Users/jonaheaton/Documents/paprika-assistant</string>
-
     <!-- Launchd-level stdout/stderr (separate from the script's own run log) -->
     <key>StandardOutPath</key>
     <string>/Users/jonaheaton/Documents/paprika-assistant/logs/launchd-walmart-stdout.log</string>
