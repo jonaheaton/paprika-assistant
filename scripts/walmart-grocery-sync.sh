@@ -50,10 +50,12 @@ Full log: $RUN_LOG'" \
     >> "$RUN_LOG" 2>&1 || true
 }
 
-# PID file guard — exit silently if another instance is already running
+# PID file guard — exit silently if another instance is already running.
+# Verify the PID actually belongs to this script (guards against recycled PIDs).
 if [ -f "$PID_FILE" ]; then
   OLD_PID=$(cat "$PID_FILE" 2>/dev/null || echo "")
-  if [ -n "$OLD_PID" ] && kill -0 "$OLD_PID" 2>/dev/null; then
+  if [ -n "$OLD_PID" ] && kill -0 "$OLD_PID" 2>/dev/null \
+      && ps -p "$OLD_PID" -o args= 2>/dev/null | grep -q "walmart-grocery-sync"; then
     log "Another sync is already running (PID $OLD_PID). Exiting."
     exit 0
   fi
