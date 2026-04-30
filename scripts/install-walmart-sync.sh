@@ -87,8 +87,59 @@ for entry in history[-5:]:
         bash "$SCRIPT"
         ;;
 
+    test)
+        PASS=0; FAIL=0
+
+        check() {
+            local name="$1" ok="$2"
+            if [ "$ok" = "0" ]; then
+                echo "  PASS  $name"; ((PASS++)) || true
+            else
+                echo "  FAIL  $name (exit $ok)"; ((FAIL++)) || true
+            fi
+        }
+
+        echo "Walmart sync environment checks..."
+        echo ""
+
+        # 1. env -i simulation: verify bash can read the script without terminal FDA
+        echo "1. launchd environment simulation (env -i + WALMART_SYNC_TEST)"
+        env -i \
+            HOME="$HOME" \
+            PATH="/Users/jonaheaton/.local/bin:/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin" \
+            WALMART_SYNC_TEST=1 \
+            bash "$SCRIPT" > /dev/null 2>&1
+        check "script readable in stripped env" $?
+        echo ""
+
+        # 2. claude -p reachability: verify the subprocess works outside a terminal
+        echo "2. claude -p reachability"
+        result=$("/Users/jonaheaton/.local/bin/claude" -p "Reply with the word OK." \
+            --output-format json --max-turns 1 2>/dev/null \
+            | python3 -c "import json,sys; d=json.load(sys.stdin); exit(0 if d.get('result') else 1)" \
+            2>/dev/null); rc=$?
+        check "claude -p produces valid JSON output" $rc
+        echo ""
+
+        # 3. Stale PID guard: non-existent PID should not block
+        echo "3. Stale PID guard (non-existent PID)"
+        TMP_LOG=$(mktemp -d)
+        echo "99999" > "$TMP_LOG/.walmart-sync.pid"
+        WALMART_SYNC_TEST=1 LOG_DIR="$TMP_LOG" bash "$SCRIPT" > /dev/null 2>&1; rc=$?
+        if [ $rc -eq 0 ] && ! grep -q "Another sync" "$TMP_LOG"/*.log 2>/dev/null; then
+            check "guard bypassed for non-existent PID" 0
+        else
+            check "guard bypassed for non-existent PID" 1
+        fi
+        rm -rf "$TMP_LOG"
+        echo ""
+
+        echo "Results: $PASS passed, $FAIL failed"
+        [ "$FAIL" -eq 0 ] || exit 1
+        ;;
+
     *)
-        echo "Usage: $0 [install|uninstall|status|run-now]"
+        echo "Usage: $0 [install|uninstall|status|run-now|test]"
         exit 1
         ;;
 esac

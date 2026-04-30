@@ -14,16 +14,16 @@ set -euo pipefail
 # Ensure claude is in PATH (launchd doesn't inherit shell profile)
 export PATH="/Users/jonaheaton/.local/bin:$PATH"
 
-REPO_DIR="$HOME/Documents/paprika-assistant"
-LOG_DIR="$REPO_DIR/logs"
-TODAY=$(date +%Y-%m-%d)
+REPO_DIR="${REPO_DIR:-$HOME/Documents/paprika-assistant}"
+LOG_DIR="${LOG_DIR:-$REPO_DIR/logs}"
+TODAY="${TODAY:-$(date +%Y-%m-%d)}"
 PENDING_FILE="$LOG_DIR/walmart-sync-pending.json"
 HISTORY_LOG="$LOG_DIR/walmart-sync-history.json"
 STEP1_JSON="$LOG_DIR/walmart-sync-$TODAY-step1.json"
 STEP2_JSON="$LOG_DIR/walmart-sync-$TODAY-step2.json"
 RUN_LOG="$LOG_DIR/walmart-sync-$TODAY.log"
 PID_FILE="$LOG_DIR/.walmart-sync.pid"
-CLAUDE_BIN="/Users/jonaheaton/.local/bin/claude"
+CLAUDE_BIN="${CLAUDE_BIN:-/Users/jonaheaton/.local/bin/claude}"
 
 # Change to project directory — required for Claude to find .claude/skills/
 cd "$REPO_DIR"
@@ -63,6 +63,12 @@ fi
 echo $$ > "$PID_FILE"
 trap 'rm -f "$PID_FILE"' EXIT
 
+# Test mode: verify environment and exit early (used by install-walmart-sync.sh test)
+if [ "${WALMART_SYNC_TEST:-}" = "1" ]; then
+  log "TEST MODE: environment OK"
+  exit 0
+fi
+
 log "=== Walmart Grocery Sync starting ==="
 
 # ---------------------------------------------------------------------------
@@ -85,6 +91,12 @@ log "Step 1: Gmail grocery detection..."
   fi
   exit 1
 }
+
+# Catch silent failures: claude exits 0 but writes empty or non-JSON output
+if ! python3 -m json.tool "$STEP1_JSON" > /dev/null 2>&1; then
+  notify_failure "Step 1 produced empty/invalid JSON — silent crash or MCP init failure at boot. Run: ./install-walmart-sync.sh test"
+  exit 1
+fi
 
 # Append step output to run log
 python3 -c "
@@ -135,6 +147,12 @@ log "Found $DELIVERY_COUNT new delivery/deliveries. Starting pantry import..."
   fi
   exit 1
 }
+
+# Catch silent failures: claude exits 0 but writes empty or non-JSON output
+if ! python3 -m json.tool "$STEP2_JSON" > /dev/null 2>&1; then
+  notify_failure "Step 3 produced empty/invalid JSON — silent crash or Playwright/Paprika init failure"
+  exit 1
+fi
 
 # Append step output to run log
 python3 -c "

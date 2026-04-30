@@ -154,3 +154,43 @@ Automatic cleanup of expired and duplicate pantry items using Claude Code in hea
 - Dairy: 30 days
 - Bakery: 10 days
 - Frozen: 180 days
+
+## Testing & Troubleshooting
+
+### Running Tests
+
+```bash
+# Quick environment sanity checks (run after any plist/script change)
+./scripts/install-walmart-sync.sh test
+
+# Full orchestrator test suite (stub-based, no real APIs hit)
+bash tests/test-orchestrator.sh
+```
+
+### Known Failure Modes
+
+**`Operation not permitted` when running via launchd**
+- Cause: macOS Full Disk Access (FDA) not granted to `/bin/bash`
+- Symptom: `launchd-walmart-stderr.log` shows `getcwd: cannot access parent directories` and `Operation not permitted`; launchctl exit code 126
+- Fix: System Settings → Privacy & Security → Full Disk Access → add `/bin/bash`
+- Test: `./install-walmart-sync.sh test` (check 1 catches this)
+
+**Empty `step1.json` or `step2.json` with no error logged**
+- Cause: `claude -p` exits 0 but writes nothing — transient MCP init failure at boot
+- Symptom: run log has only 2 lines; step JSON is 0 bytes; no Things task created
+- Fix: now caught by JSON validation added after each claude call; creates a Things task
+- Test: `bash tests/test-orchestrator.sh` (tests 1 and 7 cover this)
+
+**`Another sync is already running` blocks all future runs**
+- Cause: launchd killed the job with SIGKILL (after TimeOut), bypassing the EXIT trap that deletes the PID file; the PID was later recycled to an unrelated process
+- Symptom: every run exits immediately with the "already running" message
+- Fix: `rm logs/.walmart-sync.pid` — then the improved PID guard (checks process name) prevents recurrence
+- Test: `bash tests/test-orchestrator.sh` (tests 5 and 6 cover this)
+
+**Gmail MCP token expired**
+- Symptom: Things task created: "Gmail MCP token expired — re-authorize"
+- Fix: Claude Code → `/mcp` to reconnect Gmail integration, or Settings → Integrations → Gmail
+
+**Walmart session expired (Playwright)**
+- Symptom: Things task created: "Walmart session expired — re-login required"
+- Fix: See Playwright Browser Setup → Re-login When Session Expires above
