@@ -1,0 +1,586 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - banner [ref=e5]:
+        - link [ref=e781] [cursor=pointer]:
+          - /url: "#maincontent"
+          - text: Skip to Main Content
+        - text: 
+        - link [ref=e782] [cursor=pointer]:
+          - /url: /
+          - img [ref=e783]
+        - search [ref=e784]:
+          - generic [ref=e10]:
+            - searchbox [ref=e785]
+            - button [ref=e12] [cursor=pointer]:
+              - generic [ref=e13]: 
+            - button [ref=e786] [cursor=pointer]:
+              - generic [ref=e15]: 
+        - navigation [ref=e787]:
+          - list [ref=e17]:
+            - listitem [ref=e18]:
+              - button [ref=e788] [cursor=pointer]:
+                - generic [ref=e20]: 
+                - generic [ref=e21]:
+                  - generic [ref=e22]: Reorder
+                  - generic [ref=e23]: My Items
+              - text:   
+            - listitem [ref=e24]:
+              - generic [ref=e26]:
+                - button [ref=e789] [cursor=pointer]:
+                  - generic [ref=e28]: 
+                  - generic [ref=e29]:
+                    - generic [ref=e30]: Hi, Jonah E
+                    - generic [ref=e31]: Account
+                - text:     
+            - listitem [ref=e32]:
+              - button [ref=e790]:
+                - generic [ref=e36]: 
+                - generic [ref=e37]: "0"
+                - generic [ref=e38]: $0.00
+      - navigation [ref=e791]:
+        - list [ref=e42]:
+          - listitem [ref=e43]:
+            - button [ref=e792]:
+              - text: Departments
+              - generic [ref=e48]: 
+          - listitem [ref=e49]:
+            - button [ref=e793]:
+              - text: Services
+              - generic [ref=e54]: 
+    - generic [ref=e55]:
+      - main [ref=e58]:
+        - generic [ref=e794]:
+          - generic [ref=e795]:
+            - navigation [ref=e797]:
+              - list [ref=e798]:
+                - listitem [ref=e799]:
+                  - link [ref=e801] [cursor=pointer]:
+                    - /url: /account
+                    - text: My account
+                  - text: /
+                - listitem [ref=e802]:
+                  - link [ref=e804] [cursor=pointer]:
+                    - /url: /orders
+                    - text: Purchase history
+            - generic [ref=e806]:
+              - link [ref=e809] [cursor=pointer]:
+                - /url: /account/message-center
+                - generic [ref=e810]: 
+                - generic [ref=e811]: "4"
+              - generic [ref=e812]:
+                - link [ref=e813] [cursor=pointer]:
+                  - /url: /account/settings
+                  - generic [ref=e814]: 
+                - generic [ref=e817]:
+                  - generic [ref=e818]:
+                    - generic [ref=e819]: callout
+                    - text: Your Wallet, Addresses, Personal Info and more are now in Account Settings.
+                  - button [ref=e821] [cursor=pointer]: Close
+          - generic [ref=e822]:
+            - navigation [ref=e825]:
+              - generic [ref=e828]:
+                - separator [ref=e829]
+                - generic [ref=e830]:
+                  - img [ref=e831]
+                  - heading [level=3] [ref=e832]: Hi, Jonah
+                - generic [ref=e833]: Member since 2023
+                - generic [ref=e834]:
+                  - button [expanded] [ref=e835]:
+                    - heading [level=2] [ref=e836]:
+                      - generic [ref=e837]:
+                        - generic [ref=e840]: 
+                        - text: Account
+                    - generic [ref=e843]: 
+                  - generic [ref=e845]:
+                    - list [ref=e847]:
+                      - listitem [ref=e848]:
+                        - link [ref=e850] [cursor=pointer]:
+                          - /url: /account
+                          - generic [ref=e851]: Home
+                      - listitem [ref=e852]:
+                        - link [ref=e854] [cursor=pointer]:
+                          - /url: /orders
+                          - generic [ref=e855]: Purchase history
+                      - listitem [ref=e856]:
+                        - link [ref=e858] [cursor=pointer]:
+                          - /url: /account/plus/overview
+                          - generic [ref=e859]: Walmart+
+                      - listitem [ref=e860]:
+                        - link [ref=e862] [cursor=pointer]:
+                          - /url: /savings
+                          - generic [ref=e863]: My savings
+                      - listitem [ref=e864]:
+                        - link [ref=e866] [cursor=pointer]:
+                          - /url: https://www.walmart.com/walmartcash
+                          - generic [ref=e867]: Walmart Cash
+                      - listitem [ref=e868]:
+                        - link [ref=e870] [cursor=pointer]:
+                          - /url: /account/message-center
+                          - generic [ref=e871]:
+                            - text: Messages
+                            - generic [ref=e872]: (4 New)
+                    - generic [ref=e874]:
+                      - heading [level=3] [ref=e875]: My items
+                      - list [ref=e876]:
+                        - listitem [ref=e877]:
+                          - link [ref=e879] [cursor=pointer]:
+                            - /url: https://www.walmart.com/my-items
+                            - generic [ref=e880]: Reorder
+                        - listitem [ref=e881]:
+                          - link [ref=e883] [cursor=pointer]:
+                            - /url: /lists
+                            - generic [ref=e884]: Lists
+                        - listitem [ref=e885]:
+                          - link [ref=e887] [cursor=pointer]:
+                            - /url: /subscriptions/manage
+                            - generic [ref=e888]: Subscriptions
+                        - listitem [ref=e889]:
+                          - link [ref=e891] [cursor=pointer]:
+                            - /url: /my-registries
+                            - generic [ref=e892]: Registry
+                        - listitem [ref=e893]:
+                          - link [ref=e895] [cursor=pointer]:
+                            - /url: /protection-plans
+                            - generic [ref=e896]: Protection plans
+                    - generic [ref=e897]:
+                      - heading [level=3] [ref=e898]: My profile
+                      - list [ref=e899]:
+                        - listitem [ref=e900]:
+                          - link [ref=e902] [cursor=pointer]:
+                            - /url: /reviews/dashboard
+                            - generic [ref=e903]:
+                              - text: Reviews
+                              - generic [ref=e905]: 10+ items to review
+                        - listitem [ref=e906]:
+                          - link [ref=e908] [cursor=pointer]:
+                            - /url: /account/pet-hub
+                            - generic [ref=e909]: Pets
+                        - listitem [ref=e910]:
+                          - link [ref=e912] [cursor=pointer]:
+                            - /url: /acc/garage
+                            - generic [ref=e913]: Vehicles
+                        - listitem [ref=e914]:
+                          - link [ref=e916] [cursor=pointer]:
+                            - /url: /i/recipe-results?facet=myrecipes-all
+                            - generic [ref=e917]: Recipes
+                        - listitem [ref=e918]:
+                          - link [ref=e920] [cursor=pointer]:
+                            - /url: /account/spark-good
+                            - generic [ref=e921]: Giving & impact
+                    - generic [ref=e922]:
+                      - heading [level=2] [ref=e923]: Other Accounts
+                      - list [ref=e924]:
+                        - listitem [ref=e925]:
+                          - link [ref=e927] [cursor=pointer]:
+                            - /url: https://www.walmart.com/pharmacy/dashboard
+                            - generic [ref=e928]: Pharmacy
+                        - listitem [ref=e929]:
+                          - link [ref=e931] [cursor=pointer]:
+                            - /url: https://photos3.walmart.com/account/orders
+                            - generic [ref=e932]: Photo
+                - generic [ref=e933]:
+                  - separator [ref=e934]
+                  - button [ref=e935]:
+                    - heading [level=2] [ref=e936]:
+                      - generic [ref=e937]:
+                        - generic [ref=e940]: 
+                        - text: Settings
+                    - generic [ref=e943]: 
+                - separator [ref=e944]
+                - link [ref=e945] [cursor=pointer]:
+                  - /url: https://www.walmart.com/account/logout?returnUrl=%2Forders%3Fpage%3D1
+                  - generic [ref=e948]: 
+                  - generic [ref=e949]: Sign Out
+            - generic [ref=e953]:
+              - heading [level=1] [ref=e955]: Purchase history
+              - search [ref=e956]:
+                - generic [ref=e958]:
+                  - button [ref=e959]:
+                    - generic [ref=e960]: 
+                  - searchbox [ref=e961]
+              - region [ref=e962]:
+                - list [ref=e963]:
+                  - listitem [ref=e964]:
+                    - button [ref=e966] [cursor=pointer]: All
+                  - listitem [ref=e967]:
+                    - generic [ref=e968]:
+                      - text: 
+                      - button [ref=e972] [cursor=pointer]:
+                        - text: By date
+                        - generic [ref=e974]: 
+                  - listitem [ref=e975]:
+                    - button [ref=e977] [cursor=pointer]: Returns
+                  - listitem [ref=e978]:
+                    - button [ref=e980] [cursor=pointer]: In store
+                  - listitem [ref=e981]:
+                    - generic [ref=e982]:
+                      - text: 
+                      - button [ref=e986] [cursor=pointer]:
+                        - text: Status
+                        - generic [ref=e988]: 
+              - separator [ref=e989]
+              - generic [ref=e995]:
+                - generic [ref=e996]:
+                  - heading [level=2] [ref=e997]: Help other customers by writing a review.
+                  - button [ref=e998] [cursor=pointer]:
+                    - generic [ref=e999]: 
+                - list [ref=e1001]:
+                  - listitem [ref=e1002]:
+                    - generic [ref=e1005]:
+                      - generic [ref=e1008]: What'd you think?
+                      - button [ref=e1010] [cursor=pointer]: Review more items
+                  - listitem [ref=e1011]:
+                    - generic [ref=e1013]:
+                      - link [ref=e1014] [cursor=pointer]:
+                        - /url: /reviews/write-review?productId=18566118912&conditionGroupCode=1&returnUrl=/orders&campaign_id=PURCHASE-HISTORY-SINGLE-ITEM-REVIEW
+                      - generic [ref=e1016]:
+                        - generic [ref=e1017]: "Dossier Originals, The icons collection, Amber Rose, Eau de Parfum. Size: 50ml / 1.7oz"
+                        - generic [ref=e1019]:
+                          - generic [ref=e1021]:
+                            - generic [ref=e1022]:
+                              - radio [ref=e1024]
+                              - img [ref=e1025]
+                            - generic [ref=e1027]:
+                              - radio [ref=e1029]
+                              - img [ref=e1030]
+                            - generic [ref=e1032]:
+                              - radio [ref=e1034]
+                              - img [ref=e1035]
+                            - generic [ref=e1037]:
+                              - radio [ref=e1039]
+                              - img [ref=e1040]
+                            - generic [ref=e1042]:
+                              - radio [ref=e1044]
+                              - img [ref=e1045]
+                          - generic [ref=e1049]:
+                            - generic [ref=e1051]:
+                              - generic [ref=e1052]: Click to rate
+                              - text: Click to rate
+                            - button [ref=e1054]:
+                              - generic [ref=e1055]: 
+                  - listitem [ref=e1056]:
+                    - generic [ref=e1058]:
+                      - link [ref=e1059] [cursor=pointer]:
+                        - /url: /reviews/write-review?productId=10294098&conditionGroupCode=1&returnUrl=/orders&campaign_id=PURCHASE-HISTORY-SINGLE-ITEM-REVIEW
+                      - generic [ref=e1061]:
+                        - generic [ref=e1062]: Refresh Tears Lubricant Eye Drops Artificial Tears, 30 ml, 2 Bottles
+                        - generic [ref=e1066]:
+                          - generic [ref=e1067]:
+                            - radio [ref=e1069]
+                            - img [ref=e1070]
+                          - generic [ref=e1072]:
+                            - radio [ref=e1074]
+                            - img [ref=e1075]
+                          - generic [ref=e1077]:
+                            - radio [ref=e1079]
+                            - img [ref=e1080]
+                          - generic [ref=e1082]:
+                            - radio [ref=e1084]
+                            - img [ref=e1085]
+                          - generic [ref=e1087]:
+                            - radio [ref=e1089]
+                            - img [ref=e1090]
+              - generic [ref=e1092]:
+                - generic [ref=e1096]:
+                  - generic [ref=e1097]:
+                    - generic [ref=e1098]:
+                      - generic [ref=e1103]:
+                        - generic [ref=e1105]: Delivery
+                        - heading [level=2] [ref=e1107]: Delivered on Apr 18
+                      - generic [ref=e1110]:
+                        - generic [ref=e1111]:
+                          - generic [ref=e1112]:
+                            - text: Sold by
+                            - link [ref=e1113] [cursor=pointer]:
+                              - /url: /global/seller/2961?itemId=200014562400817
+                              - text: WOWParts
+                          - generic [ref=e1115]:
+                            - generic [ref=e1116]: 
+                            - strong [ref=e1117]: Pro Seller
+                          - generic [ref=e1118]: "|"
+                        - generic [ref=e1119]: Fulfilled by Walmart
+                      - list [ref=e1124]:
+                        - listitem [ref=e1125]:
+                          - generic [ref=e1126]: Complete,
+                          - img [ref=e1127]
+                          - text: Placed
+                        - listitem [ref=e1129]:
+                          - generic [ref=e1130]: Complete,
+                          - img [ref=e1131]
+                          - text: Preparing
+                        - listitem [ref=e1133]:
+                          - generic [ref=e1134]: Complete,
+                          - img [ref=e1135]
+                          - text: On the way
+                        - listitem [ref=e1137]:
+                          - generic [ref=e1138]: Current,
+                          - img [ref=e1139]
+                          - text: Delivered
+                      - button [ref=e1144] [cursor=pointer]: Can't find your package?
+                    - generic [ref=e1148]:
+                      - link [ref=e1150] [cursor=pointer]: Track shipment
+                      - button [ref=e1152] [cursor=pointer]: View details
+                  - list [ref=e1156]:
+                    - listitem [ref=e1157]:
+                      - img [ref=e1159]
+                  - generic [ref=e1160]:
+                    - separator [ref=e1161]
+                    - generic [ref=e1164]:
+                      - heading [level=3] [ref=e1165]: How was your shipping experience?
+                      - generic [ref=e1166]: Select a rating to begin quick survey.
+                      - group [ref=e1167]:
+                        - generic [ref=e1168]:
+                          - generic [ref=e1169]:
+                            - radio [ref=e1171]
+                            - img [ref=e1172]
+                          - generic [ref=e1174]:
+                            - radio [ref=e1176]
+                            - img [ref=e1177]
+                          - generic [ref=e1179]:
+                            - radio [ref=e1181]
+                            - img [ref=e1182]
+                          - generic [ref=e1184]:
+                            - radio [ref=e1186]
+                            - img [ref=e1187]
+                          - generic [ref=e1189]:
+                            - radio [ref=e1191]
+                            - img [ref=e1192]
+                - generic [ref=e1195]:
+                  - link [ref=e1197] [cursor=pointer]:
+                    - /url: /orders/200014562400817/returns
+                    - text: Start a return
+                  - generic [ref=e1199]: Order total $7.98
+              - generic [ref=e1200]:
+                - generic [ref=e1202]:
+                  - generic [ref=e1204]:
+                    - generic [ref=e1205]:
+                      - generic [ref=e1206]: "info:"
+                      - img [ref=e1207]
+                    - generic [ref=e1212]: Refund issued on Sun, Apr 19.
+                  - generic [ref=e1214]:
+                    - generic [ref=e1215]:
+                      - generic [ref=e1216]:
+                        - generic [ref=e1221]:
+                          - generic [ref=e1223]: Delivery
+                          - heading [level=2] [ref=e1225]: Refund issued on Apr 19
+                        - generic [ref=e1228]:
+                          - generic [ref=e1229]:
+                            - generic [ref=e1230]:
+                              - text: Sold by
+                              - link [ref=e1231] [cursor=pointer]:
+                                - /url: /global/seller/101183483?itemId=200014360484370
+                                - text: HaloFox
+                            - generic [ref=e1232]: "|"
+                          - generic [ref=e1233]: Fulfilled by Walmart
+                      - generic [ref=e1237]:
+                        - link [ref=e1239] [cursor=pointer]: Track shipment
+                        - button [ref=e1241] [cursor=pointer]: View details
+                    - list [ref=e1245]:
+                      - listitem [ref=e1246]:
+                        - img [ref=e1248]
+                - generic [ref=e1252]: Order total $13.85
+              - generic [ref=e1253]:
+                - generic [ref=e1257]:
+                  - generic [ref=e1258]:
+                    - generic [ref=e1264]:
+                      - generic [ref=e1266]: Delivery from store
+                      - heading [level=2] [ref=e1268]: Delivered on Apr 15
+                    - button [ref=e1274] [cursor=pointer]: View details
+                  - list [ref=e1278]:
+                    - listitem [ref=e1279]:
+                      - img [ref=e1281]
+                    - listitem [ref=e1282]:
+                      - img [ref=e1284]
+                    - listitem [ref=e1285]:
+                      - img [ref=e1287]
+                    - listitem [ref=e1288]:
+                      - img [ref=e1290]
+                    - listitem [ref=e1291]:
+                      - img [ref=e1293]
+                    - listitem [ref=e1294]:
+                      - generic [ref=e1295]:
+                        - img [ref=e1296]
+                        - generic [ref=e1297]: "3"
+                    - listitem [ref=e1298]:
+                      - img [ref=e1300]
+                    - listitem [ref=e1301]:
+                      - img [ref=e1303]
+                    - listitem [ref=e1304]:
+                      - img [ref=e1306]
+                    - listitem [ref=e1307]: "+10"
+                - generic [ref=e1309]:
+                  - link [ref=e1311] [cursor=pointer]:
+                    - /url: /orders/200014632809026/returns
+                    - text: Start a return
+                  - generic [ref=e1313]: Order total $110.27
+              - generic [ref=e1314]:
+                - generic [ref=e1318]:
+                  - generic [ref=e1319]:
+                    - generic [ref=e1325]:
+                      - generic [ref=e1327]: Delivery from store
+                      - heading [level=2] [ref=e1329]: Delivered on Apr 15
+                    - button [ref=e1335] [cursor=pointer]: View details
+                  - list [ref=e1339]:
+                    - listitem [ref=e1340]:
+                      - img [ref=e1342]
+                - generic [ref=e1344]:
+                  - link [ref=e1346] [cursor=pointer]:
+                    - /url: /orders/200014861140152/returns
+                    - text: Start a return
+                  - generic [ref=e1348]: Order total $4.97
+              - generic [ref=e1349]:
+                - generic [ref=e1353]:
+                  - generic [ref=e1354]:
+                    - generic [ref=e1360]:
+                      - generic [ref=e1362]: Delivery from store
+                      - heading [level=2] [ref=e1364]: Delivered on Apr 13
+                    - button [ref=e1370] [cursor=pointer]: View details
+                  - list [ref=e1374]:
+                    - listitem [ref=e1375]:
+                      - img [ref=e1377]
+                    - listitem [ref=e1378]:
+                      - img [ref=e1380]
+                    - listitem [ref=e1381]:
+                      - img [ref=e1383]
+                    - listitem [ref=e1384]:
+                      - img [ref=e1386]
+                    - listitem [ref=e1387]:
+                      - img [ref=e1389]
+                    - listitem [ref=e1390]:
+                      - img [ref=e1392]
+                    - listitem [ref=e1393]:
+                      - img [ref=e1395]
+                    - listitem [ref=e1396]:
+                      - img [ref=e1398]
+                    - listitem [ref=e1399]:
+                      - img [ref=e1401]
+                    - listitem [ref=e1402]: "+14"
+                - generic [ref=e1404]:
+                  - link [ref=e1406] [cursor=pointer]:
+                    - /url: /orders/200014577999454/returns
+                    - text: Start a return
+                  - generic [ref=e1408]: Order total $120.37
+              - navigation [ref=e1409]:
+                - list [ref=e1410]:
+                  - listitem [ref=e1411]:
+                    - button [ref=e1412]:
+                      - generic [ref=e1413]: 
+                  - listitem [ref=e1414]:
+                    - button [ref=e1415]:
+                      - generic [ref=e1416]: 
+      - contentinfo [ref=e712]:
+        - region [ref=e1417]:
+          - paragraph [ref=e717]: We’d love to hear what you think!
+          - button [ref=e1418] [cursor=pointer]: Give feedback
+        - generic [ref=e719]:
+          - list [ref=e720]:
+            - listitem [ref=e721]:
+              - link [ref=e1419] [cursor=pointer]:
+                - /url: /all-departments
+                - text: All Departments
+            - listitem [ref=e723]:
+              - link [ref=e1420] [cursor=pointer]:
+                - /url: /store/directory
+                - text: Store Directory
+            - listitem [ref=e725]:
+              - link [ref=e1421] [cursor=pointer]:
+                - /url: https://careers.walmart.com/
+                - text: Careers
+            - listitem [ref=e727]:
+              - link [ref=e1422] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/
+                - text: Our Company
+            - listitem [ref=e729]:
+              - link [ref=e1423] [cursor=pointer]:
+                - /url: https://marketplace.walmart.com/?utm_source=Walmart.com&utm_medium=link&utm_campaign=footer
+                - text: Sell on Walmart.com
+            - listitem [ref=e731]:
+              - link [ref=e1424] [cursor=pointer]:
+                - /url: /help
+                - text: Help
+            - listitem [ref=e733]:
+              - link [ref=e1425] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/recalls
+                - text: Product Recalls
+            - listitem [ref=e735]:
+              - link [ref=e1426] [cursor=pointer]:
+                - /url: https://www.walmart.com/help/article/responsible-disclosure-and-accessibility-policies/0f173dab8bd942da84b1cd7ab5ffc3cb
+                - text: Accessibility
+            - listitem [ref=e737]:
+              - link [ref=e1427] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/tax-exemption-program/8480422
+                - text: Tax Exempt Program
+            - listitem [ref=e739]:
+              - link [ref=e1428] [cursor=pointer]:
+                - /url: https://walmart.onelink.me/UIev?pid=walmart.com&af_web_dp=https%3A%2F%2Fwww.walmart.com%2Fcp%2Fwalmart-mobile-app%2F1087865&c=Walmart.com%20Site%20Footer&af_dp=walmart%3A%2F%2F
+                - text: Get the Walmart App
+            - listitem [ref=e741]:
+              - link [ref=e1429] [cursor=pointer]:
+                - /url: http://msds.walmartstores.com/
+                - text: Safety Data Sheet
+            - listitem [ref=e743]:
+              - link [ref=e1430] [cursor=pointer]:
+                - /url: /help/article/walmart-com-terms-of-use/3b75080af40340d6bbd596f116fae5a0
+                - text: Terms of Use
+            - listitem [ref=e745]:
+              - link [ref=e1431] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/walmart-privacy-notice
+                - text: Privacy Notice
+            - listitem [ref=e747]:
+              - link [ref=e1432] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/california-transparency
+                - text: California Supply Chain Act
+            - listitem [ref=e749]:
+              - link [ref=e1433] [cursor=pointer]:
+                - /url: https://cpa-ui.walmart.com/dc/privacy/en-US/affirmation?brandCode=WMT&languageCode=en-US&market=US
+                - img [ref=e751]
+                - text: Your Privacy Choices
+            - listitem [ref=e752]:
+              - link [ref=e1434] [cursor=pointer]:
+                - /url: https://www.walmart.com/privacy-center
+                - text: Customer Privacy Center
+            - listitem [ref=e754]:
+              - link [ref=e1435] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/california-privacy-rights#what-are-the-categories-of-personal-information-collected
+                - text: Notice at Collection
+            - listitem [ref=e756]:
+              - link [ref=e1436] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/walmart-privacy-notice#interest-based-advertising
+                - text: AdChoices
+            - listitem [ref=e758]:
+              - link [ref=e1437] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/walmart-consumer-health-data-privacy-notices
+                - text: Consumer Health Data Privacy Notices
+            - listitem [ref=e760]:
+              - link [ref=e1438] [cursor=pointer]:
+                - /url: https://www.sparkdriverapp.com/
+                - text: Learn about Spark Driver
+            - listitem [ref=e762]:
+              - link [ref=e1439] [cursor=pointer]:
+                - /url: https://www.walmart.com/brand/branddirectory
+                - text: Brand Shop Directory
+            - listitem [ref=e764]:
+              - link [ref=e1440] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/pharmacy/5431?povid=HWS_GlobalFooter_Pharmacy
+                - text: Pharmacy
+            - listitem [ref=e766]:
+              - link [ref=e1441] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/walmart-business/7810722?povid=7810722_POV_WMTfooter
+                - text: Walmart Business
+            - listitem [ref=e768]:
+              - link [ref=e1442] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/walmart-in-the-know/7781927
+                - text: "#IYWYK"
+            - listitem [ref=e770]:
+              - link [ref=e1443] [cursor=pointer]:
+                - /url: https://www.walmart.com/account/login?vid=oaoh&tid=0&returnUrl=%2Faccount%2Fdelete-account
+                - text: Delete Account
+          - generic [ref=e772]: © 2026 Walmart. The trademarks Walmart and the Walmart Spark design are registered with the US Patent and Trademark Office. All Rights Reserved.
+  - alert [ref=e777]: /orders?page=1
+  - dialog "Robot or human?" [ref=e1447]:
+    - generic [ref=e1448]:
+      - button "Close dialog" [active] [ref=e1449] [cursor=pointer]:
+        - img [ref=e1450]
+      - heading "Robot or human?" [level=2] [ref=e1452]
+    - paragraph [ref=e1456]: Activate and hold the button to confirm that you're human. Thank You!

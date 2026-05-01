@@ -1,7 +1,7 @@
 ---
 name: pantry-cleanup-autonomous
 description: "Autonomous pantry cleanup agent for scheduled execution. Deletes duplicates and expired items WITHOUT user confirmation. Only use for headless/automated runs."
-tools: mcp__paprika__pantry
+tools: mcp__claude_ai_Paprika__pantry
 model: haiku
 color: red
 ---

@@ -1,0 +1,509 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - banner [ref=e5]:
+        - link [ref=e791] [cursor=pointer]:
+          - /url: "#maincontent"
+          - text: Skip to Main Content
+        - text: 
+        - link [ref=e792] [cursor=pointer]:
+          - /url: /
+          - img [ref=e793]
+        - search [ref=e794]:
+          - generic [ref=e10]:
+            - searchbox [ref=e795]
+            - button [ref=e12] [cursor=pointer]:
+              - generic [ref=e13]: 
+            - button [ref=e796] [cursor=pointer]:
+              - generic [ref=e15]: 
+        - navigation [ref=e797]:
+          - list [ref=e17]:
+            - listitem [ref=e18]:
+              - button [ref=e798] [cursor=pointer]:
+                - generic [ref=e20]: 
+                - generic [ref=e21]:
+                  - generic [ref=e22]: Reorder
+                  - generic [ref=e23]: My Items
+              - text:   
+            - listitem [ref=e24]:
+              - generic [ref=e799]:
+                - button [ref=e800] [cursor=pointer]:
+                  - generic [ref=e28]: 
+                  - generic [ref=e29]:
+                    - generic [ref=e30]: Hi, Jonah E
+                    - generic [ref=e31]: Account
+                - text:     
+            - listitem [ref=e45]:
+              - button [ref=e801]:
+                - generic [ref=e49]: 
+                - generic [ref=e790]: "0"
+                - generic [ref=e50]: $0.00
+      - navigation [ref=e802]:
+        - list [ref=e54]:
+          - listitem [ref=e55]:
+            - button [ref=e803]:
+              - text: Departments
+              - generic [ref=e60]: 
+          - listitem [ref=e61]:
+            - button [ref=e804]:
+              - text: Services
+              - generic [ref=e66]: 
+    - generic [ref=e67]:
+      - main [ref=e805]:
+        - generic [ref=e806]:
+          - generic [ref=e807]:
+            - navigation [ref=e809]:
+              - list [ref=e810]:
+                - listitem [ref=e811]:
+                  - link [ref=e813] [cursor=pointer]:
+                    - /url: /account
+                    - text: My account
+                  - text: /
+                - listitem [ref=e814]:
+                  - link [ref=e816] [cursor=pointer]:
+                    - /url: /orders
+                    - text: Purchase history
+                  - text: /
+                - listitem [ref=e817]:
+                  - link [ref=e819] [cursor=pointer]:
+                    - /url: /orders/200014704057843
+                    - text: Order details
+            - generic [ref=e821]:
+              - link [ref=e824] [cursor=pointer]:
+                - /url: /account/message-center
+                - generic [ref=e825]: 
+                - generic [ref=e826]: "5"
+              - generic [ref=e827]:
+                - link [ref=e828] [cursor=pointer]:
+                  - /url: /account/settings
+                  - generic [ref=e829]: 
+                - generic [ref=e832]:
+                  - generic [ref=e833]:
+                    - generic [ref=e834]: callout
+                    - text: Your Wallet, Addresses, Personal Info and more are now in Account Settings.
+                  - button [ref=e836] [cursor=pointer]: Close
+          - generic [ref=e837]:
+            - navigation [ref=e840]:
+              - generic [ref=e843]:
+                - separator [ref=e844]
+                - generic [ref=e845]:
+                  - img [ref=e846]
+                  - heading [level=3] [ref=e847]: Hi, Jonah
+                - generic [ref=e848]: Member since 2023
+                - generic [ref=e849]:
+                  - button [expanded] [ref=e850]:
+                    - heading [level=2] [ref=e851]:
+                      - generic [ref=e852]:
+                        - generic [ref=e855]: 
+                        - text: Account
+                    - generic [ref=e858]: 
+                  - generic [ref=e860]:
+                    - list [ref=e862]:
+                      - listitem [ref=e863]:
+                        - link [ref=e865] [cursor=pointer]:
+                          - /url: /account
+                          - generic [ref=e866]: Home
+                      - listitem [ref=e867]:
+                        - link [ref=e869] [cursor=pointer]:
+                          - /url: /orders
+                          - generic [ref=e870]: Purchase history
+                      - listitem [ref=e871]:
+                        - link [ref=e873] [cursor=pointer]:
+                          - /url: /account/plus/overview
+                          - generic [ref=e874]: Walmart+
+                      - listitem [ref=e875]:
+                        - link [ref=e877] [cursor=pointer]:
+                          - /url: /savings
+                          - generic [ref=e878]: My savings
+                      - listitem [ref=e879]:
+                        - link [ref=e881] [cursor=pointer]:
+                          - /url: https://www.walmart.com/walmartcash
+                          - generic [ref=e882]: Walmart Cash
+                      - listitem [ref=e883]:
+                        - link [ref=e885] [cursor=pointer]:
+                          - /url: /account/message-center
+                          - generic [ref=e886]:
+                            - text: Messages
+                            - generic [ref=e887]: (5 New)
+                    - generic [ref=e889]:
+                      - heading [level=3] [ref=e890]: My items
+                      - list [ref=e891]:
+                        - listitem [ref=e892]:
+                          - link [ref=e894] [cursor=pointer]:
+                            - /url: https://www.walmart.com/my-items
+                            - generic [ref=e895]: Reorder
+                        - listitem [ref=e896]:
+                          - link [ref=e898] [cursor=pointer]:
+                            - /url: /lists
+                            - generic [ref=e899]: Lists
+                        - listitem [ref=e900]:
+                          - link [ref=e902] [cursor=pointer]:
+                            - /url: /subscriptions/manage
+                            - generic [ref=e903]: Subscriptions
+                        - listitem [ref=e904]:
+                          - link [ref=e906] [cursor=pointer]:
+                            - /url: /my-registries
+                            - generic [ref=e907]: Registry
+                        - listitem [ref=e908]:
+                          - link [ref=e910] [cursor=pointer]:
+                            - /url: /protection-plans
+                            - generic [ref=e911]: Protection plans
+                    - generic [ref=e912]:
+                      - heading [level=3] [ref=e913]: My profile
+                      - list [ref=e914]:
+                        - listitem [ref=e915]:
+                          - link [ref=e917] [cursor=pointer]:
+                            - /url: /reviews/dashboard
+                            - generic [ref=e918]:
+                              - text: Reviews
+                              - generic [ref=e920]: 10+ items to review
+                        - listitem [ref=e921]:
+                          - link [ref=e923] [cursor=pointer]:
+                            - /url: /account/pet-hub
+                            - generic [ref=e924]: Pets
+                        - listitem [ref=e925]:
+                          - link [ref=e927] [cursor=pointer]:
+                            - /url: /acc/garage
+                            - generic [ref=e928]: Vehicles
+                        - listitem [ref=e929]:
+                          - link [ref=e931] [cursor=pointer]:
+                            - /url: /i/recipe-results?facet=myrecipes-all
+                            - generic [ref=e932]: Recipes
+                        - listitem [ref=e933]:
+                          - link [ref=e935] [cursor=pointer]:
+                            - /url: /account/spark-good
+                            - generic [ref=e936]: Giving & impact
+                    - generic [ref=e937]:
+                      - heading [level=2] [ref=e938]: Other Accounts
+                      - list [ref=e939]:
+                        - listitem [ref=e940]:
+                          - link [ref=e942] [cursor=pointer]:
+                            - /url: https://www.walmart.com/pharmacy/dashboard
+                            - generic [ref=e943]: Pharmacy
+                        - listitem [ref=e944]:
+                          - link [ref=e946] [cursor=pointer]:
+                            - /url: https://photos3.walmart.com/account/orders
+                            - generic [ref=e947]: Photo
+                - generic [ref=e948]:
+                  - separator [ref=e949]
+                  - button [ref=e950]:
+                    - heading [level=2] [ref=e951]:
+                      - generic [ref=e952]:
+                        - generic [ref=e955]: 
+                        - text: Settings
+                    - generic [ref=e958]: 
+                - separator [ref=e959]
+                - link [ref=e960] [cursor=pointer]:
+                  - /url: https://www.walmart.com/account/logout?returnUrl=%2Forders%2F200014704057843%3FgroupId%3D70d90472686fb4906b797e8e0e5ca98b
+                  - generic [ref=e963]: 
+                  - generic [ref=e964]: Sign Out
+            - generic [ref=e966]:
+              - generic [ref=e967]:
+                - generic [ref=e968]:
+                  - heading [level=1] [ref=e969]: Apr 21, 2026 order
+                  - generic [ref=e970]: "|"
+                  - generic [ref=e971]: Order# 2000147-04057843
+                - generic [ref=e974]:
+                  - generic [ref=e975]: 
+                  - button [ref=e976]: Print
+              - generic [ref=e977]:
+                - generic [ref=e978]:
+                  - generic [ref=e984]:
+                    - img [ref=e985]
+                    - generic [ref=e987]:
+                      - generic [ref=e990]: $0.25 Walmart Cash added!
+                      - link [ref=e993] [cursor=pointer]:
+                        - /url: https://www.walmart.com/cp/8301756
+                        - text: View your balance
+                  - generic [ref=e996]:
+                    - generic [ref=e998]:
+                      - generic [ref=e999]:
+                        - generic [ref=e1005]:
+                          - generic [ref=e1007]: Delivery from store
+                          - heading [level=2] [ref=e1009]: Delivered today at 7:14am
+                          - generic [ref=e1010]: Return eligible until Mon, Jul 20
+                        - link [ref=e1015] [cursor=pointer]: View delivery details
+                      - list [ref=e1020]:
+                        - listitem [ref=e1021]:
+                          - generic [ref=e1022]: Complete,
+                          - img [ref=e1023]
+                          - text: Placed
+                        - listitem [ref=e1025]:
+                          - generic [ref=e1026]: Complete,
+                          - img [ref=e1027]
+                          - text: Preparing
+                        - listitem [ref=e1029]:
+                          - generic [ref=e1030]: Complete,
+                          - img [ref=e1031]
+                          - text: On the way
+                        - listitem [ref=e1033]:
+                          - generic [ref=e1034]: Current,
+                          - img [ref=e1035]
+                          - text: Delivered
+                    - separator [ref=e1038]
+                    - generic [ref=e1040]:
+                      - generic [ref=e1041]:
+                        - generic [ref=e1042]: Delivery dropped off today
+                        - generic [ref=e1043]: Here's a photo of where your package was left.
+                        - button [ref=e1044]: View delivery photo
+                      - img [ref=e1045]
+                    - separator [ref=e1046]
+                    - generic [ref=e1047]:
+                      - generic [ref=e1048]:
+                        - generic [ref=e1049]: 32 items received
+                        - button [ref=e1050]:
+                          - generic [ref=e1051]: 
+                      - generic [ref=e1052]:
+                        - generic [ref=e1055]:
+                          - generic [ref=e1056]: Want to see what was substituted?
+                          - button [ref=e1057] [cursor=pointer]: View
+                        - text: 
+                      - text:                         
+                      - button [ref=e1058] [cursor=pointer]:
+                        - list [ref=e1061]:
+                          - listitem [ref=e1062]:
+                            - img [ref=e1064]
+                          - listitem [ref=e1065]:
+                            - img [ref=e1067]
+                          - listitem [ref=e1068]:
+                            - img [ref=e1070]
+                          - listitem [ref=e1071]:
+                            - generic [ref=e1072]:
+                              - img [ref=e1073]
+                              - generic [ref=e1074]: "3"
+                          - listitem [ref=e1075]:
+                            - generic [ref=e1076]:
+                              - img [ref=e1077]
+                              - generic [ref=e1078]: "4"
+                          - listitem [ref=e1079]: "+21"
+                    - separator [ref=e1080]
+                    - generic [ref=e1082]:
+                      - heading [level=2] [ref=e1083]:
+                        - generic [ref=e1084]: How can we help?
+                      - button [ref=e1085]:
+                        - generic [ref=e1086]:
+                          - generic [ref=e1087]: Start a return for refund or replacement
+                          - generic [ref=e1089]: 
+                      - button [ref=e1090]:
+                        - generic [ref=e1091]:
+                          - generic [ref=e1092]: Issues with delivery
+                          - generic [ref=e1094]: 
+                      - button [ref=e1095]:
+                        - generic [ref=e1096]:
+                          - generic [ref=e1097]: Need more help? Visit our help center.
+                          - generic [ref=e1099]: 
+                    - separator [ref=e1100]
+                    - text: 
+                    - generic [ref=e1104]:
+                      - generic [ref=e1105]:
+                        - heading [level=5] [ref=e1106]: Driver tip
+                        - button [expanded] [ref=e1107] [cursor=pointer]:
+                          - generic [ref=e1109]: 
+                      - generic [ref=e1110]:
+                        - generic [ref=e1112]: 100% of tips go to the driver
+                        - generic [ref=e1113]:
+                          - generic [ref=e1115]: "Your tip:"
+                          - generic [ref=e1117]: $9.00
+                          - button [ref=e1118]: Add extra tip
+                        - generic [ref=e1119]: You can add extra tip for great service up to 24 hours after delivery. You won't be charged until then.
+                    - separator [ref=e1120]
+                - generic [ref=e1122]:
+                  - generic [ref=e1124]:
+                    - generic [ref=e1125]: Delivery from store
+                    - generic [ref=e1126]:
+                      - heading [level=2] [ref=e1128]: Address
+                      - generic [ref=e1129]:
+                        - generic [ref=e1130]: Jonah Eaton
+                        - generic [ref=e1131]: 20 W Palisade Ave, Apt 2208, Englewood, NJ 07631
+                    - separator [ref=e1132]
+                    - generic [ref=e1134]:
+                      - heading [level=2] [ref=e1135]: Delivery instructions
+                      - button [ref=e1136]:
+                        - generic [ref=e1137]: 
+                    - separator [ref=e1138]
+                  - generic [ref=e1139]:
+                    - heading [level=2] [ref=e1141]: Payment method
+                    - generic [ref=e1142]:
+                      - text: 
+                      - generic [ref=e1143]:
+                        - generic [ref=e1144]:
+                          - generic [ref=e1145]:
+                            - img [ref=e1146]
+                            - generic [ref=e1147]:
+                              - generic [ref=e1148]: OnePay CashRewards
+                              - generic [ref=e1149]: Ending in 5554
+                          - generic [ref=e1151]: Your payment method has a temporary hold for $110.56. An updated charge will appear on your statement within 10 business days.
+                        - generic [ref=e1153]:
+                          - img [ref=e1154]
+                          - generic [ref=e1156]: Walmart Cash
+                    - separator [ref=e1158]
+                  - generic [ref=e1159]:
+                    - generic [ref=e1160]:
+                      - generic [ref=e1161]: Subtotal
+                      - generic [ref=e1162]: $101.75
+                    - generic [ref=e1163]:
+                      - generic [ref=e1165]: Savings
+                      - button [ref=e1166] [cursor=pointer]:
+                        - generic [ref=e1167]: 
+                      - generic [ref=e1169]: "-$1.27"
+                    - generic [ref=e1170]: $100.48
+                    - separator [ref=e1171]
+                    - generic [ref=e1172]:
+                      - generic [ref=e1173]:
+                        - generic [ref=e1174]: Walmart+ Free delivery from store , was $9.95, now $0
+                        - generic [ref=e1175]:
+                          - img [ref=e1176]
+                          - generic [ref=e1178]: Free delivery from store
+                        - generic [ref=e1179]:
+                          - generic [ref=e1180]: $9.95
+                          - generic [ref=e1181]: $0
+                      - generic [ref=e1182]:
+                        - generic [ref=e1183]: Tax $0.99
+                        - generic [ref=e1186]: Tax
+                        - generic [ref=e1188]: $0.99
+                    - separator [ref=e1189]
+                    - generic [ref=e1190]:
+                      - generic [ref=e1191]: Driver tip
+                      - generic [ref=e1192]: $9.00
+                    - generic [ref=e1193]: (charged separately after delivery)
+                    - generic [ref=e1194]:
+                      - generic [ref=e1195]: Total
+                      - generic [ref=e1196]: $110.47
+                    - generic [ref=e1197]:
+                      - generic [ref=e1198]:
+                        - generic [ref=e1199]: Temporary adjusted total $117.79
+                        - generic [ref=e1200]:
+                          - text: Temporary adjusted total
+                          - button [ref=e1201]:
+                            - generic [ref=e1202]: 
+                        - generic [ref=e1203]: $117.79
+                      - generic [ref=e1204]:
+                        - generic [ref=e1205]: This covers adjustments to your final order total for items that are priced by weight or potentially substituted, and state bag fees where applicable. After your final order total is confirmed,
+                        - generic [ref=e1206]: we’ll refund any amount that’s left over.
+                        - generic [ref=e1209]: If needed, your credit or debit card will be used to cover any cost differences that may exceed the adjustment charge amount.
+                    - generic [ref=e1210]:
+                      - img [ref=e1211]
+                      - button [ref=e1212]:
+                        - generic [ref=e1213]:
+                          - generic [ref=e1214]: Charge history
+                          - generic [ref=e1215]: Your transaction activity for this order
+                        - generic [ref=e1216]: 
+                  - generic [ref=e1217]:
+                    - generic [ref=e1218]: Order# 2000147-04057843
+                    - img [ref=e1220]
+                  - button [ref=e1224] [cursor=pointer]: Reorder all
+      - contentinfo [ref=e723]:
+        - region [ref=e1225]:
+          - paragraph [ref=e728]: We’d love to hear what you think!
+          - button [ref=e1226] [cursor=pointer]: Give feedback
+        - generic [ref=e730]:
+          - list [ref=e731]:
+            - listitem [ref=e732]:
+              - link [ref=e1227] [cursor=pointer]:
+                - /url: /all-departments
+                - text: All Departments
+            - listitem [ref=e734]:
+              - link [ref=e1228] [cursor=pointer]:
+                - /url: /store/directory
+                - text: Store Directory
+            - listitem [ref=e736]:
+              - link [ref=e1229] [cursor=pointer]:
+                - /url: https://careers.walmart.com/
+                - text: Careers
+            - listitem [ref=e738]:
+              - link [ref=e1230] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/
+                - text: Our Company
+            - listitem [ref=e740]:
+              - link [ref=e1231] [cursor=pointer]:
+                - /url: https://marketplace.walmart.com/?utm_source=Walmart.com&utm_medium=link&utm_campaign=footer
+                - text: Sell on Walmart.com
+            - listitem [ref=e742]:
+              - link [ref=e1232] [cursor=pointer]:
+                - /url: /help
+                - text: Help
+            - listitem [ref=e744]:
+              - link [ref=e1233] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/recalls
+                - text: Product Recalls
+            - listitem [ref=e746]:
+              - link [ref=e1234] [cursor=pointer]:
+                - /url: https://www.walmart.com/help/article/responsible-disclosure-and-accessibility-policies/0f173dab8bd942da84b1cd7ab5ffc3cb
+                - text: Accessibility
+            - listitem [ref=e748]:
+              - link [ref=e1235] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/tax-exemption-program/8480422
+                - text: Tax Exempt Program
+            - listitem [ref=e750]:
+              - link [ref=e1236] [cursor=pointer]:
+                - /url: https://walmart.onelink.me/UIev?pid=walmart.com&af_web_dp=https%3A%2F%2Fwww.walmart.com%2Fcp%2Fwalmart-mobile-app%2F1087865&c=Walmart.com%20Site%20Footer&af_dp=walmart%3A%2F%2F
+                - text: Get the Walmart App
+            - listitem [ref=e752]:
+              - link [ref=e1237] [cursor=pointer]:
+                - /url: http://msds.walmartstores.com/
+                - text: Safety Data Sheet
+            - listitem [ref=e754]:
+              - link [ref=e1238] [cursor=pointer]:
+                - /url: /help/article/walmart-com-terms-of-use/3b75080af40340d6bbd596f116fae5a0
+                - text: Terms of Use
+            - listitem [ref=e756]:
+              - link [ref=e1239] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/walmart-privacy-notice
+                - text: Privacy Notice
+            - listitem [ref=e758]:
+              - link [ref=e1240] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/california-transparency
+                - text: California Supply Chain Act
+            - listitem [ref=e760]:
+              - link [ref=e1241] [cursor=pointer]:
+                - /url: https://cpa-ui.walmart.com/dc/privacy/en-US/affirmation?brandCode=WMT&languageCode=en-US&market=US
+                - img [ref=e762]
+                - text: Your Privacy Choices
+            - listitem [ref=e763]:
+              - link [ref=e1242] [cursor=pointer]:
+                - /url: https://www.walmart.com/privacy-center
+                - text: Customer Privacy Center
+            - listitem [ref=e765]:
+              - link [ref=e1243] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/california-privacy-rights#what-are-the-categories-of-personal-information-collected
+                - text: Notice at Collection
+            - listitem [ref=e767]:
+              - link [ref=e1244] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/walmart-privacy-notice#interest-based-advertising
+                - text: AdChoices
+            - listitem [ref=e769]:
+              - link [ref=e1245] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/walmart-consumer-health-data-privacy-notices
+                - text: Consumer Health Data Privacy Notices
+            - listitem [ref=e771]:
+              - link [ref=e1246] [cursor=pointer]:
+                - /url: https://www.sparkdriverapp.com/
+                - text: Learn about Spark Driver
+            - listitem [ref=e773]:
+              - link [ref=e1247] [cursor=pointer]:
+                - /url: https://www.walmart.com/brand/branddirectory
+                - text: Brand Shop Directory
+            - listitem [ref=e775]:
+              - link [ref=e1248] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/pharmacy/5431?povid=HWS_GlobalFooter_Pharmacy
+                - text: Pharmacy
+            - listitem [ref=e777]:
+              - link [ref=e1249] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/walmart-business/7810722?povid=7810722_POV_WMTfooter
+                - text: Walmart Business
+            - listitem [ref=e779]:
+              - link [ref=e1250] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/walmart-in-the-know/7781927
+                - text: "#IYWYK"
+            - listitem [ref=e781]:
+              - link [ref=e1251] [cursor=pointer]:
+                - /url: https://www.walmart.com/account/login?vid=oaoh&tid=0&returnUrl=%2Faccount%2Fdelete-account
+                - text: Delete Account
+          - generic [ref=e783]: © 2026 Walmart. The trademarks Walmart and the Walmart Spark design are registered with the US Patent and Trademark Office. All Rights Reserved.
+  - alert [ref=e788]: /orders/200014704057843?groupId=70d90472686fb4906b797e8e0e5ca98b
+  - dialog "Robot or human?" [ref=e1255]:
+    - generic [ref=e1256]:
+      - button "Close dialog" [active] [ref=e1257] [cursor=pointer]:
+        - img [ref=e1258]
+      - heading "Robot or human?" [level=2] [ref=e1260]
+    - paragraph [ref=e1264]: Activate and hold the button to confirm that you're human. Thank You!

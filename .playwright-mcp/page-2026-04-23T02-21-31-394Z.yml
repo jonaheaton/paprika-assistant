@@ -1,0 +1,156 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - banner [ref=e5]:
+        - link "Skip to Main Content" [ref=e6] [cursor=pointer]:
+          - /url: "#maincontent"
+        - text: 
+        - link "Walmart Homepage" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "Walmart+" [ref=e8]
+        - search "Walmart Site-Wide" [ref=e9]:
+          - generic [ref=e10]:
+            - searchbox "Search" [ref=e11]
+            - button [ref=e12] [cursor=pointer]:
+              - generic [ref=e13]: 
+            - button "Search" [ref=e14] [cursor=pointer]:
+              - generic [ref=e15]: 
+        - navigation "Account and Cart" [ref=e16]:
+          - list [ref=e17]:
+            - listitem [ref=e18]:
+              - button "Reorder My Items" [ref=e19] [cursor=pointer]:
+                - generic [ref=e20]: 
+                - generic [ref=e21]:
+                  - generic [ref=e22]: Reorder
+                  - generic [ref=e23]: My Items
+              - text:   
+            - listitem [ref=e24]:
+              - generic [ref=e26]:
+                - button "Hi, Jonah E Account" [ref=e27] [cursor=pointer]:
+                  - generic [ref=e28]: 
+                  - generic [ref=e29]:
+                    - generic [ref=e30]: Hi, Jonah E
+                    - generic [ref=e31]: Account
+                - text:     
+            - listitem [ref=e32]:
+              - button "Cart contains 2 items Total Amount $59.73" [ref=e444]:
+                - generic [ref=e36]: 
+                - generic [ref=e445]: "2"
+                - generic [ref=e37]: $59.73
+      - navigation "Primary" [ref=e40]:
+        - list [ref=e41]:
+          - listitem [ref=e42]:
+            - button "Departments " [ref=e46]:
+              - text: Departments
+              - generic [ref=e47]: 
+          - listitem [ref=e48]:
+            - button "Services " [ref=e52]:
+              - text: Services
+              - generic [ref=e53]: 
+    - generic [ref=e54]:
+      - main [ref=e674]:
+        - region "Loading your orders" [ref=e676]:
+          - status [ref=e681]:
+            - generic [ref=e682]:
+              - separator [ref=e694]
+              - separator [ref=e707]
+              - separator [ref=e723]
+              - separator [ref=e736]
+              - separator [ref=e746]
+              - separator [ref=e759]
+            - separator [ref=e774]
+      - contentinfo [ref=e378]:
+        - region "Give feedback" [ref=e382]:
+          - paragraph [ref=e383]: We’d love to hear what you think!
+          - button "Give feedback" [ref=e384] [cursor=pointer]
+        - generic [ref=e385]:
+          - list [ref=e386]:
+            - listitem [ref=e387]:
+              - link "All Departments" [ref=e388] [cursor=pointer]:
+                - /url: /all-departments
+            - listitem [ref=e389]:
+              - link "Store Directory - opens in a new window" [ref=e390] [cursor=pointer]:
+                - /url: /store/directory
+                - text: Store Directory
+            - listitem [ref=e391]:
+              - link "Careers - opens in a new window" [ref=e392] [cursor=pointer]:
+                - /url: https://careers.walmart.com/
+                - text: Careers
+            - listitem [ref=e393]:
+              - link "Our Company - opens in a new window" [ref=e394] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/
+                - text: Our Company
+            - listitem [ref=e395]:
+              - link "Sell on Walmart.com - opens in a new window" [ref=e396] [cursor=pointer]:
+                - /url: https://marketplace.walmart.com/?utm_source=Walmart.com&utm_medium=link&utm_campaign=footer
+                - text: Sell on Walmart.com
+            - listitem [ref=e397]:
+              - link "Help" [ref=e398] [cursor=pointer]:
+                - /url: /help
+            - listitem [ref=e399]:
+              - link "Product Recalls - opens in a new window" [ref=e400] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/recalls
+                - text: Product Recalls
+            - listitem [ref=e401]:
+              - link "Accessibility - opens in a new window" [ref=e402] [cursor=pointer]:
+                - /url: https://www.walmart.com/help/article/responsible-disclosure-and-accessibility-policies/0f173dab8bd942da84b1cd7ab5ffc3cb
+                - text: Accessibility
+            - listitem [ref=e403]:
+              - link "Tax Exempt Program" [ref=e404] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/tax-exemption-program/8480422
+            - listitem [ref=e405]:
+              - link "Get the Walmart App" [ref=e406] [cursor=pointer]:
+                - /url: https://walmart.onelink.me/UIev?pid=walmart.com&af_web_dp=https%3A%2F%2Fwww.walmart.com%2Fcp%2Fwalmart-mobile-app%2F1087865&c=Walmart.com%20Site%20Footer&af_dp=walmart%3A%2F%2F
+            - listitem [ref=e407]:
+              - link "Safety Data Sheet" [ref=e408] [cursor=pointer]:
+                - /url: http://msds.walmartstores.com/
+            - listitem [ref=e409]:
+              - link "Terms of Use" [ref=e410] [cursor=pointer]:
+                - /url: /help/article/walmart-com-terms-of-use/3b75080af40340d6bbd596f116fae5a0
+            - listitem [ref=e411]:
+              - link "Privacy Notice - opens in a new window" [ref=e412] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/walmart-privacy-notice
+                - text: Privacy Notice
+            - listitem [ref=e413]:
+              - link "California Supply Chain Act - opens in a new window" [ref=e414] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/california-transparency
+                - text: California Supply Chain Act
+            - listitem [ref=e415]:
+              - link "Your Privacy Choices - opens in a new window" [ref=e416] [cursor=pointer]:
+                - /url: https://cpa-ui.walmart.com/dc/privacy/en-US/affirmation?brandCode=WMT&languageCode=en-US&market=US
+                - img [ref=e417]
+                - text: Your Privacy Choices
+            - listitem [ref=e418]:
+              - link "Customer Privacy Center - opens in a new window" [ref=e419] [cursor=pointer]:
+                - /url: https://www.walmart.com/privacy-center
+                - text: Customer Privacy Center
+            - listitem [ref=e420]:
+              - link "Notice at Collection - opens in a new window" [ref=e421] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/california-privacy-rights#what-are-the-categories-of-personal-information-collected
+                - text: Notice at Collection
+            - listitem [ref=e422]:
+              - link "AdChoices" [ref=e423] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/walmart-privacy-notice#interest-based-advertising
+            - listitem [ref=e424]:
+              - link "Consumer Health Data Privacy Notices" [ref=e425] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/walmart-consumer-health-data-privacy-notices
+            - listitem [ref=e426]:
+              - link "Learn about Spark Driver" [ref=e427] [cursor=pointer]:
+                - /url: https://www.sparkdriverapp.com/
+            - listitem [ref=e428]:
+              - link "Brand Shop Directory" [ref=e429] [cursor=pointer]:
+                - /url: https://www.walmart.com/brand/branddirectory
+            - listitem [ref=e430]:
+              - link "Pharmacy" [ref=e431] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/pharmacy/5431?povid=HWS_GlobalFooter_Pharmacy
+            - listitem [ref=e432]:
+              - link "Walmart Business" [ref=e433] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/walmart-business/7810722?povid=7810722_POV_WMTfooter
+            - listitem [ref=e434]:
+              - link "#IYWYK" [ref=e435] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/walmart-in-the-know/7781927
+            - listitem [ref=e436]:
+              - link "Delete Account" [ref=e437] [cursor=pointer]:
+                - /url: https://www.walmart.com/account/login?vid=oaoh&tid=0&returnUrl=%2Faccount%2Fdelete-account
+          - generic [ref=e438]: © 2026 Walmart. The trademarks Walmart and the Walmart Spark design are registered with the US Patent and Trademark Office. All Rights Reserved.
+  - alert [ref=e443]: /orders

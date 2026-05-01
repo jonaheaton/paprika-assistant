@@ -1,0 +1,411 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - banner [ref=e5]:
+        - link "Skip to Main Content" [ref=e6] [cursor=pointer]:
+          - /url: "#maincontent"
+        - text: 
+        - link "Walmart Homepage" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "Walmart+" [ref=e8]
+        - generic [ref=e12]:
+          - img "Banner title icon" [ref=e13]
+          - generic [ref=e14]: Pickup or delivery?
+        - search "Walmart Site-Wide" [ref=e15]:
+          - generic [ref=e16]:
+            - searchbox "Search" [ref=e17]
+            - button [ref=e18] [cursor=pointer]:
+              - generic [ref=e19]: 
+            - button "Search" [ref=e20] [cursor=pointer]:
+              - generic [ref=e21]: 
+        - navigation "Account and Cart" [ref=e22]:
+          - list [ref=e23]:
+            - listitem [ref=e24]:
+              - button "Reorder My Items" [ref=e25] [cursor=pointer]:
+                - generic [ref=e26]: 
+                - generic [ref=e27]:
+                  - generic [ref=e28]: Reorder
+                  - generic [ref=e29]: My Items
+              - text:   
+            - listitem [ref=e30]:
+              - generic [ref=e31]:
+                - button "Hi, Jonah E Account" [ref=e32] [cursor=pointer]:
+                  - generic [ref=e33]: 
+                  - generic [ref=e34]:
+                    - generic [ref=e35]: Hi, Jonah E
+                    - generic [ref=e36]: Account
+                - text:     
+            - listitem [ref=e37]:
+              - button "Cart contains 0 items Total Amount $0.00" [ref=e40]:
+                - generic [ref=e41]: 
+                - generic [ref=e42]: $0.00
+      - navigation "Primary" [ref=e45]:
+        - list [ref=e46]:
+          - listitem [ref=e47]:
+            - button "Departments " [ref=e51]:
+              - text: Departments
+              - generic [ref=e52]: 
+          - listitem [ref=e53]:
+            - button "Services " [ref=e57]:
+              - text: Services
+              - generic [ref=e58]: 
+    - generic [ref=e59]:
+      - main [ref=e62]:
+        - heading "Walmart | Save Money. Live better." [level=1] [ref=e64]
+        - generic [ref=e65]:
+          - generic [ref=e68]:
+            - generic [ref=e71]:
+              - generic [ref=e72]:
+                - button "Previous slide for heroCarousel list" [ref=e74]:
+                  - generic [ref=e75]: 
+                - navigation "carousel controls" [ref=e77]:
+                  - button "Pause carousel" [ref=e78]
+                - button "Next slide for heroCarousel list" [ref=e81]:
+                  - generic [ref=e82]: 
+              - list [ref=e83]:
+                - listitem [ref=e84]:
+                  - generic [ref=e86]:
+                    - img "Outdoor furniture. Dark brown sofa with white upholstered cushions, arm chair and coffee table. Spruce brand weed spray." [ref=e88]
+                    - generic [ref=e89]:
+                      - paragraph [ref=e90]: Furniture, lawn care & beyond
+                      - paragraph [ref=e91]: Rollbacks & more—event ends April 30!
+                      - generic [ref=e92]:
+                        - link "Shop now Rollbacks & more—event ends April 30!" [ref=e93] [cursor=pointer]:
+                          - /url: https://www.walmart.com/shop/patio-and-garden-event?athAsset=eyJhdGhjcGlkIjoiYjU4ZjU1MGItNDY5Mi00NmUxLWE5N2YtY2YwN2EzOTNlZjRiIiwiYWVjdSI6eyJzIjowLjA1LCJycyI6MC4wNSwic3QiOiIxIn0sImFld3IiOiJDVFIifQ==&athena=true
+                          - generic [ref=e94]: Shop now
+                        - link [ref=e95] [cursor=pointer]:
+                          - /url: https://www.walmart.com/shop/patio-and-garden-event?athAsset=eyJhdGhjcGlkIjoiYjU4ZjU1MGItNDY5Mi00NmUxLWE5N2YtY2YwN2EzOTNlZjRiIiwiYWVjdSI6eyJzIjowLjA1LCJycyI6MC4wNSwic3QiOiIxIn0sImFld3IiOiJDVFIifQ==&athena=true
+                          - generic [ref=e96]: Shop now
+                - listitem [ref=e97]
+                - listitem [ref=e101]
+                - listitem [ref=e105]:
+                  - generic [ref=e107]:
+                    - img "Get groceries as fast as today. Members like you save with Free Delivery. Thirty-five dollar min. T and C apply. Shop now." [ref=e109]
+                    - generic [ref=e110]:
+                      - paragraph [ref=e111]: Get groceries as fast as today!
+                      - paragraph [ref=e112]: Members like you save with Free Delivery
+                      - generic [ref=e113]:
+                        - link "Shop now Members like you save with Free Delivery" [ref=e114] [cursor=pointer]:
+                          - /url: https://www.walmart.com/cp/food/976759?athAsset=eyJhdGhjcGlkIjoiYjg3MGMyMGEtYjQxZS00MTY4LWEyYWEtYjhmNmI1MTBhNDE3IiwiYWVjdSI6eyJzIjowLjU1ODM4NzgyNTc3NDk2MjgsInJzIjowLjIzNDYyMTY4NjIwNDMwMDU3LCJzdCI6IjMxMTEwIn0sImFld3IiOiJDVFIifQ==&athena=true
+                          - generic [ref=e115]: Shop now
+                        - link [ref=e116] [cursor=pointer]:
+                          - /url: https://www.walmart.com/cp/food/976759?athAsset=eyJhdGhjcGlkIjoiYjg3MGMyMGEtYjQxZS00MTY4LWEyYWEtYjhmNmI1MTBhNDE3IiwiYWVjdSI6eyJzIjowLjU1ODM4NzgyNTc3NDk2MjgsInJzIjowLjIzNDYyMTY4NjIwNDMwMDU3LCJzdCI6IjMxMTEwIn0sImFld3IiOiJDVFIifQ==&athena=true
+                          - generic [ref=e117]: Shop now
+                - listitem [ref=e118]:
+                  - generic [ref=e120]:
+                    - img "View a fold-out Bluey playhouse, a car tire and a handheld vacuum cleaner. Rollbacks and more." [ref=e122]
+                    - generic [ref=e123]:
+                      - paragraph [ref=e124]: Time for a spring refresh
+                      - paragraph [ref=e125]: Save on 1,000s of must-haves
+                      - generic [ref=e126]:
+                        - link "Shop now Save on 1,000s of must-haves" [ref=e127] [cursor=pointer]:
+                          - /url: https://www.walmart.com/shop/savings?athAsset=eyJhdGhjcGlkIjoiMWM0YzJhNDktNTFjMS00YWFmLTlhNDMtNzcwMjRmNTk4ZTQ1IiwiYWVjdSI6eyJzIjowLjA1LCJycyI6MC4wNSwic3QiOiIxIn0sImFld3IiOiJDVFIifQ==&athena=true
+                          - generic [ref=e128]: Shop now
+                        - link [ref=e129] [cursor=pointer]:
+                          - /url: https://www.walmart.com/shop/savings?athAsset=eyJhdGhjcGlkIjoiMWM0YzJhNDktNTFjMS00YWFmLTlhNDMtNzcwMjRmNTk4ZTQ1IiwiYWVjdSI6eyJzIjowLjA1LCJycyI6MC4wNSwic3QiOiIxIn0sImFld3IiOiJDVFIifQ==&athena=true
+                          - generic [ref=e130]: Shop now
+            - generic [ref=e133]:
+              - heading "Jump right back in" [level=2] [ref=e140]
+              - generic [ref=e141]:
+                - text: 
+                - list [ref=e142]:
+                  - listitem [ref=e143]:
+                    - group [ref=e144]:
+                      - link "Angelus Shoe Wax Leather Polish Black 3 Oz $10.95" [ref=e145] [cursor=pointer]:
+                        - /url: /ip/Angelus-Shoe-Wax-Leather-Polish-Black-3-Oz/267263669?athAsset=eyJhdGhjcGlkIjoiMjY3MjYzNjY5IiwiYXRoc3RpZCI6IkNTMDIwIiwiYXRoYW5jaWQiOiJJdGVtQ2Fyb3VzZWwiLCJhdGhyayI6MC4yODc4Mjk4NX0=&athena=true
+                        - heading "Angelus Shoe Wax Leather Polish Black 3 Oz $10.95" [level=3] [ref=e147]
+                      - generic [ref=e148]:
+                        - img "Angelus Shoe Wax Leather Polish Black 3 Oz" [ref=e152]
+                        - link "Options - Angelus Shoe Wax Leather Polish Black 3 Oz" [ref=e156] [cursor=pointer]:
+                          - /url: /ip/Angelus-Shoe-Wax-Leather-Polish-Black-3-Oz/267263669?athAsset=eyJhdGhjcGlkIjoiMjY3MjYzNjY5IiwiYXRoc3RpZCI6IkNTMDIwIiwiYXRoYW5jaWQiOiJJdGVtQ2Fyb3VzZWwiLCJhdGhyayI6MC4yODc4Mjk4NX0=&athena=true
+                          - generic [ref=e157]: Options
+                        - generic [ref=e158]:
+                          - generic [ref=e160]:
+                            - generic [ref=e161]: $1095
+                            - generic [ref=e162]: current price $10.95
+                            - generic [ref=e163]: More options from $9.95
+                          - heading "Angelus Shoe Wax Leather Polish Black 3 Oz" [level=3] [ref=e165]
+                  - listitem [ref=e166]:
+                    - group [ref=e167]:
+                      - link "For DJI Mic Mini PULUZ Charging Case Silicone Scratch-proof Protective Cover (Black) $9.50" [ref=e168] [cursor=pointer]:
+                        - /url: /ip/For-DJI-Mic-Mini-PULUZ-Charging-Case-Silicone-Scratch-proof-Protective-Cover-Black/17208401354?athAsset=eyJhdGhjcGlkIjoiMTcyMDg0MDEzNTQiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjIzMDQyNDcyfQ==&athena=true
+                        - heading "For DJI Mic Mini PULUZ Charging Case Silicone Scratch-proof Protective Cover (Black) $9.50" [level=3] [ref=e170]
+                      - generic [ref=e171]:
+                        - generic [ref=e174]:
+                          - img "For DJI Mic Mini PULUZ Charging Case Silicone Scratch-proof Protective Cover (Black)"
+                        - button "Add to cart - For DJI Mic Mini PULUZ Charging Case Silicone Scratch-proof Protective Cover (Black)" [ref=e178] [cursor=pointer]:
+                          - generic "add to cart" [ref=e179]: 
+                          - generic [ref=e180]: Add
+                        - generic [ref=e181]:
+                          - generic [ref=e183]:
+                            - generic [ref=e184]: $950
+                            - generic [ref=e185]: current price $9.50
+                          - heading "For DJI Mic Mini PULUZ Charging Case Silicone Scratch-proof Protective Cover (Black)" [level=3] [ref=e187]
+                  - listitem [ref=e188]:
+                    - group [ref=e189]:
+                      - link "Einova Ultra-Fast Power Bank, 20,000 mAh, PB0801020-0C1, PB0801020-0C1 $39.99" [ref=e190] [cursor=pointer]:
+                        - /url: /ip/Einova-Ultra-Fast-Power-Bank-20-000-mAh-PB0801020-0C1-PB0801020-0C1/3698600771?athAsset=eyJhdGhjcGlkIjoiMzY5ODYwMDc3MSIsImF0aHN0aWQiOiJDUzAyMCIsImF0aGFuY2lkIjoiSXRlbUNhcm91c2VsIiwiYXRocmsiOi0wLjAwNTE1MDc3ODd9&athena=true
+                        - heading "Einova Ultra-Fast Power Bank, 20,000 mAh, PB0801020-0C1, PB0801020-0C1 $39.99" [level=3] [ref=e192]
+                      - generic [ref=e193]:
+                        - img "Einova Ultra-Fast Power Bank, 20,000 mAh, PB0801020-0C1, PB0801020-0C1" [ref=e197]
+                        - button "Add to cart - Einova Ultra-Fast Power Bank, 20,000 mAh, PB0801020-0C1, PB0801020-0C1" [ref=e201] [cursor=pointer]:
+                          - generic "add to cart" [ref=e202]: 
+                          - generic [ref=e203]: Add
+                        - generic [ref=e204]:
+                          - generic [ref=e206]:
+                            - generic [ref=e207]: $3999
+                            - generic [ref=e208]: current price $39.99
+                          - heading "Einova Ultra-Fast Power Bank, 20,000 mAh, PB0801020-0C1, PB0801020-0C1" [level=3] [ref=e210]
+                  - listitem [ref=e211]:
+                    - group [ref=e212]:
+                      - link "AOWOO 3Pcs Horsehair Shoes Brushes Kit,Polish Dauber Applicators,Boots Care Brushes for Cleaning Leather Shoes Shine $9.99" [ref=e213] [cursor=pointer]:
+                        - /url: /ip/Prdigy-3Pcs-Horsehair-Shoes-Brushes-Kit-Polish-Dauber-Applicators-Boots-Care-Brushes-for-Cleaning-Leather-Shoes-Shine/2551010057?athAsset=eyJhdGhjcGlkIjoiMjU1MTAxMDA1NyIsImF0aHN0aWQiOiJDUzAyMCIsImF0aGFuY2lkIjoiSXRlbUNhcm91c2VsIiwiYXRocmsiOi0wLjIzNzQ0ODh9&athena=true
+                        - heading "AOWOO 3Pcs Horsehair Shoes Brushes Kit,Polish Dauber Applicators,Boots Care Brushes for Cleaning Leather Shoes Shine $9.99" [level=3] [ref=e215]
+                      - generic [ref=e216]:
+                        - img "AOWOO 3Pcs Horsehair Shoes Brushes Kit,Polish Dauber Applicators,Boots Care Brushes for Cleaning Leather Shoes Shine" [ref=e220]
+                        - link "Options - AOWOO 3Pcs Horsehair Shoes Brushes Kit,Polish Dauber Applicators,Boots Care Brushes for Cleaning Leather Shoes Shine" [ref=e224] [cursor=pointer]:
+                          - /url: /ip/Prdigy-3Pcs-Horsehair-Shoes-Brushes-Kit-Polish-Dauber-Applicators-Boots-Care-Brushes-for-Cleaning-Leather-Shoes-Shine/2551010057?athAsset=eyJhdGhjcGlkIjoiMjU1MTAxMDA1NyIsImF0aHN0aWQiOiJDUzAyMCIsImF0aGFuY2lkIjoiSXRlbUNhcm91c2VsIiwiYXRocmsiOi0wLjIzNzQ0ODh9&athena=true
+                          - generic [ref=e225]: Options
+                        - generic [ref=e226]:
+                          - generic [ref=e228]:
+                            - generic [ref=e229]: $999
+                            - generic [ref=e230]: current price $9.99
+                          - heading "AOWOO 3Pcs Horsehair Shoes Brushes Kit,Polish Dauber Applicators,Boots Care Brushes for Cleaning Leather Shoes Shine" [level=3] [ref=e232]
+                  - listitem [ref=e233]:
+                    - group [ref=e234]:
+                      - link "LEGO Botanicals Happy Plants Building Toy for Kids, Girls, and Boys 9 - Playroom Decor for Desk or Shelf - Birthday Gift Idea for Young Gardeners - Artificial Indoor Plant for Play & Display - 10349 $18.39 Was $22.99" [ref=e235] [cursor=pointer]:
+                        - /url: /ip/LEGO-Botanicals-10349/13987768177?athAsset=eyJhdGhjcGlkIjoiMTM5ODc3NjgxNzciLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjotMC42MzIxMTY4fQ==&athena=true
+                        - heading "LEGO Botanicals Happy Plants Building Toy for Kids, Girls, and Boys 9 - Playroom Decor for Desk or Shelf - Birthday Gift Idea for Young Gardeners - Artificial Indoor Plant for Play & Display - 10349 $18.39 Was $22.99" [level=3] [ref=e237]
+                      - generic [ref=e238]:
+                        - img "LEGO Botanicals Happy Plants Building Toy for Kids, Girls, and Boys 9 - Playroom Decor for Desk or Shelf - Birthday Gift Idea for Young Gardeners - Artificial Indoor Plant for Play & Display - 10349" [ref=e242]
+                        - button "Add to cart - LEGO Botanicals Happy Plants Building Toy for Kids, Girls, and Boys 9 - Playroom Decor for Desk or Shelf - Birthday Gift Idea for Young Gardeners - Artificial Indoor Plant for Play & Display - 10349" [ref=e246] [cursor=pointer]:
+                          - generic "add to cart" [ref=e247]: 
+                          - generic [ref=e248]: Add
+                        - generic [ref=e249]:
+                          - generic [ref=e251]:
+                            - generic [ref=e252]: Now$1839
+                            - generic [ref=e253]: current price Now $18.39, Was $22.99
+                            - generic [ref=e254]: $22.99
+                          - heading "LEGO Botanicals Happy Plants Building Toy for Kids, Girls, and Boys 9 - Playroom Decor for Desk or Shelf - Birthday Gift Idea for Young Gardeners - Artificial Indoor Plant for Play & Display - 10349" [level=3] [ref=e256]
+                  - listitem [ref=e257]:
+                    - group [ref=e258]:
+                      - link "Angelus Leather Conditioner For Boots $10.99" [ref=e259] [cursor=pointer]:
+                        - /url: /ip/Angelus-Leather-Conditioner-For-Boots/1597593614?athAsset=eyJhdGhjcGlkIjoiMTU5NzU5MzYxNCIsImF0aHN0aWQiOiJDUzAyMCIsImF0aGFuY2lkIjoiSXRlbUNhcm91c2VsIiwiYXRocmsiOi0wLjY2MjczNjJ9&athena=true
+                        - heading "Angelus Leather Conditioner For Boots $10.99" [level=3] [ref=e261]
+                      - generic [ref=e262]:
+                        - img "Angelus Leather Conditioner For Boots" [ref=e266]
+                        - link "Options - Angelus Leather Conditioner For Boots" [ref=e270] [cursor=pointer]:
+                          - /url: /ip/Angelus-Leather-Conditioner-For-Boots/1597593614?athAsset=eyJhdGhjcGlkIjoiMTU5NzU5MzYxNCIsImF0aHN0aWQiOiJDUzAyMCIsImF0aGFuY2lkIjoiSXRlbUNhcm91c2VsIiwiYXRocmsiOi0wLjY2MjczNjJ9&athena=true
+                          - generic [ref=e271]: Options
+                        - generic [ref=e272]:
+                          - generic [ref=e274]:
+                            - generic [ref=e275]: $1099
+                            - generic [ref=e276]: current price $10.99
+                          - heading "Angelus Leather Conditioner For Boots" [level=3] [ref=e278]
+                  - listitem [ref=e279]:
+                    - group [ref=e280]:
+                      - link "Chicco BravoFor2 Standing/Sitting Double Stroller - Iron (Black/Grey), New $379.99" [ref=e281] [cursor=pointer]:
+                        - /url: /ip/Chicco-BravoFor2-Standing-Sitting-Double-Stroller-Iron-Black-Grey-New/828252535?athAsset=eyJhdGhjcGlkIjoiODI4MjUyNTM1IiwiYXRoc3RpZCI6IkNTMDIwIiwiYXRoYW5jaWQiOiJJdGVtQ2Fyb3VzZWwiLCJhdGhyayI6LTAuNzk1OTQyMDd9&athena=true
+                        - heading "Chicco BravoFor2 Standing/Sitting Double Stroller - Iron (Black/Grey), New $379.99" [level=3] [ref=e283]
+                      - generic [ref=e284]:
+                        - generic [ref=e287]:
+                          - img "Chicco BravoFor2 Standing/Sitting Double Stroller - Iron (Black/Grey), New"
+                        - link "Options - Chicco BravoFor2 Standing/Sitting Double Stroller - Iron (Black/Grey), New" [ref=e291] [cursor=pointer]:
+                          - /url: /ip/Chicco-BravoFor2-Standing-Sitting-Double-Stroller-Iron-Black-Grey-New/828252535?athAsset=eyJhdGhjcGlkIjoiODI4MjUyNTM1IiwiYXRoc3RpZCI6IkNTMDIwIiwiYXRoYW5jaWQiOiJJdGVtQ2Fyb3VzZWwiLCJhdGhyayI6LTAuNzk1OTQyMDd9&athena=true
+                          - generic [ref=e292]: Options
+                        - generic [ref=e293]:
+                          - generic [ref=e295]:
+                            - generic [ref=e296]: $37999
+                            - generic [ref=e297]: current price $379.99
+                          - heading "Chicco BravoFor2 Standing/Sitting Double Stroller - Iron (Black/Grey), New" [level=3] [ref=e299]
+                  - listitem [ref=e300]:
+                    - group [ref=e301]:
+                      - link "Sof Sole White Sport Shoe Polish 3 oz $4.97" [ref=e302] [cursor=pointer]:
+                        - /url: /ip/Sof-Sole-White-Sport-Shoe-Polish-3-oz/5105358487?athAsset=eyJhdGhjcGlkIjoiNTEwNTM1ODQ4NyIsImF0aHN0aWQiOiJDUzAyMCIsImF0aGFuY2lkIjoiSXRlbUNhcm91c2VsIiwiYXRocmsiOi0wLjMyNjAxMzY4fQ==&athena=true
+                        - heading "Sof Sole White Sport Shoe Polish 3 oz $4.97" [level=3] [ref=e304]
+                      - generic [ref=e305]:
+                        - generic [ref=e308]:
+                          - img "Sof Sole White Sport Shoe Polish 3 oz"
+                        - link "Options - Sof Sole White Sport Shoe Polish 3 oz" [ref=e312] [cursor=pointer]:
+                          - /url: /ip/Sof-Sole-White-Sport-Shoe-Polish-3-oz/5105358487?athAsset=eyJhdGhjcGlkIjoiNTEwNTM1ODQ4NyIsImF0aHN0aWQiOiJDUzAyMCIsImF0aGFuY2lkIjoiSXRlbUNhcm91c2VsIiwiYXRocmsiOi0wLjMyNjAxMzY4fQ==&athena=true
+                          - generic [ref=e313]: Options
+                        - generic [ref=e314]:
+                          - generic [ref=e316]:
+                            - generic [ref=e317]: $497
+                            - generic [ref=e318]: current price $4.97
+                          - heading "Sof Sole White Sport Shoe Polish 3 oz" [level=3] [ref=e320]
+                  - listitem [ref=e321]:
+                    - group [ref=e322]:
+                      - link "By Be The Bestest Kiwi Shoe Polish Paste (Pack Of 2) (Black) $12.98" [ref=e323] [cursor=pointer]:
+                        - /url: /ip/By-Be-The-Bestest-Kiwi-Shoe-Polish-Paste-Pack-Of-2-Black/2284685221?athAsset=eyJhdGhjcGlkIjoiMjI4NDY4NTIyMSIsImF0aHN0aWQiOiJDUzAyMCIsImF0aGFuY2lkIjoiSXRlbUNhcm91c2VsIiwiYXRocmsiOi0wLjY0MDA2MTc0fQ==&athena=true
+                        - heading "By Be The Bestest Kiwi Shoe Polish Paste (Pack Of 2) (Black) $12.98" [level=3] [ref=e325]
+                      - generic [ref=e326]:
+                        - generic [ref=e329]:
+                          - img "By Be The Bestest Kiwi Shoe Polish Paste (Pack Of 2) (Black)"
+                        - button "Add to cart - By Be The Bestest Kiwi Shoe Polish Paste (Pack Of 2) (Black)" [ref=e333] [cursor=pointer]:
+                          - generic "add to cart" [ref=e334]: 
+                          - generic [ref=e335]: Add
+                        - generic [ref=e336]:
+                          - generic [ref=e338]:
+                            - generic [ref=e339]: $1298
+                            - generic [ref=e340]: current price $12.98
+                          - heading "By Be The Bestest Kiwi Shoe Polish Paste (Pack Of 2) (Black)" [level=3] [ref=e342]
+                - button "Next slide for Jump right back in list" [ref=e343]:
+                  - generic [ref=e344]: 
+          - generic [ref=e349]:
+            - generic [ref=e352]:
+              - img "A mother sits beside her child, comforting them while they look at a laptop during a telehealth visit." [ref=e354]
+              - generic [ref=e355]:
+                - paragraph [ref=e356]: Telehealth, your way
+                - paragraph [ref=e357]: Licensed professionals available 24/7
+                - link "Learn more Licensed professionals available 24/7" [ref=e358] [cursor=pointer]:
+                  - /url: https://www.walmart.com/cp/virtual-care/3955077?athAsset=eyJhdGhjcGlkIjoiNGVlYzRkOWQtYTI0Ny00OWY5LWFhNjItMDRlMzc2NDU4N2Q1IiwiYWVjdSI6eyJzIjowLjQ4MDI0MDMyNjUxNjgwMjI2LCJycyI6LTAuMDc5MDc5ODc5NTE4NDY2NjQsInN0IjoiMzExMTEifSwiYWV3ciI6IkdNX0NUUiJ9&athena=true
+                  - generic [ref=e359]: Learn more
+                - link [ref=e360] [cursor=pointer]:
+                  - /url: https://www.walmart.com/cp/virtual-care/3955077?athAsset=eyJhdGhjcGlkIjoiNGVlYzRkOWQtYTI0Ny00OWY5LWFhNjItMDRlMzc2NDU4N2Q1IiwiYWVjdSI6eyJzIjowLjQ4MDI0MDMyNjUxNjgwMjI2LCJycyI6LTAuMDc5MDc5ODc5NTE4NDY2NjQsInN0IjoiMzExMTEifSwiYWV3ciI6IkdNX0NUUiJ9&athena=true
+                  - generic [ref=e361]: Learn more
+            - generic [ref=e363]:
+              - generic [ref=e365]:
+                - img "A plate with meat, next to a bowl of potato salad and a stack of buns alongside an Express Delivery logo." [ref=e367]
+                - generic [ref=e368]:
+                  - paragraph [ref=e369]: Food, cleanup & more
+                  - paragraph [ref=e370]: Grilling musts in as fast as 1 hour*
+                  - link "Shop now Grilling musts in as fast as 1 hour*" [ref=e371] [cursor=pointer]:
+                    - /url: https://www.walmart.com/cp/6545138?athAsset=eyJhdGhjcGlkIjoiMzI1MmU5ODMtY2EwMS00M2IxLTgwY2ItNTUzNjg0OWEzYTY3IiwiYWVjdSI6eyJzIjowLjA1LCJycyI6MC4wNSwic3QiOiIxIn0sImFld3IiOiJHTV9DVFIifQ==&athena=true
+                    - text: Shop now
+                  - link [ref=e372] [cursor=pointer]:
+                    - /url: https://www.walmart.com/cp/6545138?athAsset=eyJhdGhjcGlkIjoiMzI1MmU5ODMtY2EwMS00M2IxLTgwY2ItNTUzNjg0OWEzYTY3IiwiYWVjdSI6eyJzIjowLjA1LCJycyI6MC4wNSwic3QiOiIxIn0sImFld3IiOiJHTV9DVFIifQ==&athena=true
+                    - generic [ref=e373]: Shop now
+              - generic [ref=e374]:
+                - generic [ref=e377]:
+                  - img "Floral-patterned gift cards on a yellow background, surrounded by daisies." [ref=e379]
+                  - generic [ref=e380]:
+                    - paragraph [ref=e381]: Spring gift cards
+                    - link "Shop now Spring gift cards" [ref=e382] [cursor=pointer]:
+                      - /url: https://www.walmart.com/browse/gifts-registry/spring-gift-cards/1094765_96894_5001298_1796778?athAsset=eyJhdGhjcGlkIjoiMGViNTQ5ZDAtZDAwZi00NWIzLTk0YzItZmVjZDdkODhmOWJhIiwiYWVjdSI6eyJzIjowLjA1LCJycyI6MC4wNSwic3QiOiIxIn0sImFld3IiOiJHTV9DVFIifQ==&athena=true
+                      - text: Shop now
+                    - link [ref=e383] [cursor=pointer]:
+                      - /url: https://www.walmart.com/browse/gifts-registry/spring-gift-cards/1094765_96894_5001298_1796778?athAsset=eyJhdGhjcGlkIjoiMGViNTQ5ZDAtZDAwZi00NWIzLTk0YzItZmVjZDdkODhmOWJhIiwiYWVjdSI6eyJzIjowLjA1LCJycyI6MC4wNSwic3QiOiIxIn0sImFld3IiOiJHTV9DVFIifQ==&athena=true
+                      - generic [ref=e384]: Shop now
+                - generic [ref=e387]:
+                  - img "A pink and floral mixer, a floral mug, and an LED face mask." [ref=e389]
+                  - generic [ref=e390]:
+                    - paragraph [ref=e391]: Create a Mother’s Day wishlist
+                    - link "Get started Spring gift cards" [ref=e392] [cursor=pointer]:
+                      - /url: https://www.walmart.com/cp/any-occasion-wish-list/7684474?athAsset=eyJhdGhjcGlkIjoiY2MyMzYzOWItZjQ4Ny00Y2VhLWI5M2MtMTgwMTNmODU4ZWM3IiwiYWVjdSI6eyJzIjowLjA1LCJycyI6MC4wNSwic3QiOiIxIn0sImFld3IiOiJHTV9DVFIifQ==&athena=true
+                      - text: Get started
+                    - link [ref=e393] [cursor=pointer]:
+                      - /url: https://www.walmart.com/cp/any-occasion-wish-list/7684474?athAsset=eyJhdGhjcGlkIjoiY2MyMzYzOWItZjQ4Ny00Y2VhLWI5M2MtMTgwMTNmODU4ZWM3IiwiYWVjdSI6eyJzIjowLjA1LCJycyI6MC4wNSwic3QiOiIxIn0sImFld3IiOiJHTV9DVFIifQ==&athena=true
+                      - generic [ref=e394]: Get started
+            - generic [ref=e397]:
+              - img "MacBook Neo in citrus. Est. with a $599 purchase at 13.99% APR/36 months with trade up (otherwise a $179.99 final payment). See terms." [ref=e399]
+              - generic [ref=e400]:
+                - paragraph [ref=e401]: As low as $15/mo with OnePay Later*
+                - paragraph [ref=e402]: MacBook Neo. From $599.
+                - link "Shop now MacBook Neo. From $599." [ref=e403] [cursor=pointer]:
+                  - /url: https://www.walmart.com/ip/13-inch-MacBook-Neo-Apple-A18-Pro-chip-with-6-core-CPU-and-5-core-GPU-8GB-256GB-SSD-Citrus/19717318352?athAsset=eyJhdGhjcGlkIjoiMjQwNmNhY2EtOTExNS00ZjU3LWIzNDYtYjUwZTk0MjY5NDhkIiwiYWVjdSI6eyJzIjowLjA1LCJycyI6MC4wNSwic3QiOiIxIn0sImFld3IiOiJNUF9DVFIifQ==&athena=true
+                  - text: Shop now
+                - link [ref=e404] [cursor=pointer]:
+                  - /url: https://www.walmart.com/ip/13-inch-MacBook-Neo-Apple-A18-Pro-chip-with-6-core-CPU-and-5-core-GPU-8GB-256GB-SSD-Citrus/19717318352?athAsset=eyJhdGhjcGlkIjoiMjQwNmNhY2EtOTExNS00ZjU3LWIzNDYtYjUwZTk0MjY5NDhkIiwiYWVjdSI6eyJzIjowLjA1LCJycyI6MC4wNSwic3QiOiIxIn0sImFld3IiOiJNUF9DVFIifQ==&athena=true
+                  - generic [ref=e405]: Shop now
+        - region "loading home page" [ref=e406]:
+          - generic [ref=e407]:
+            - list [ref=e410]
+            - list [ref=e447]
+            - list [ref=e498]
+            - list [ref=e524]
+      - contentinfo [ref=e571]:
+        - region "Give feedback" [ref=e575]:
+          - paragraph [ref=e576]: We’d love to hear what you think!
+          - button "Give feedback" [ref=e577] [cursor=pointer]
+        - generic [ref=e578]:
+          - list [ref=e579]:
+            - listitem [ref=e580]:
+              - link "All Departments" [ref=e581] [cursor=pointer]:
+                - /url: /all-departments
+            - listitem [ref=e582]:
+              - link "Store Directory - opens in a new window" [ref=e583] [cursor=pointer]:
+                - /url: /store/directory
+                - text: Store Directory
+            - listitem [ref=e584]:
+              - link "Careers - opens in a new window" [ref=e585] [cursor=pointer]:
+                - /url: https://careers.walmart.com/
+                - text: Careers
+            - listitem [ref=e586]:
+              - link "Our Company - opens in a new window" [ref=e587] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/
+                - text: Our Company
+            - listitem [ref=e588]:
+              - link "Sell on Walmart.com - opens in a new window" [ref=e589] [cursor=pointer]:
+                - /url: https://marketplace.walmart.com/?utm_source=Walmart.com&utm_medium=link&utm_campaign=footer
+                - text: Sell on Walmart.com
+            - listitem [ref=e590]:
+              - link "Help" [ref=e591] [cursor=pointer]:
+                - /url: /help
+            - listitem [ref=e592]:
+              - link "Product Recalls - opens in a new window" [ref=e593] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/recalls
+                - text: Product Recalls
+            - listitem [ref=e594]:
+              - link "Accessibility - opens in a new window" [ref=e595] [cursor=pointer]:
+                - /url: https://www.walmart.com/help/article/responsible-disclosure-and-accessibility-policies/0f173dab8bd942da84b1cd7ab5ffc3cb
+                - text: Accessibility
+            - listitem [ref=e596]:
+              - link "Tax Exempt Program" [ref=e597] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/tax-exemption-program/8480422
+            - listitem [ref=e598]:
+              - link "Get the Walmart App" [ref=e599] [cursor=pointer]:
+                - /url: https://walmart.onelink.me/UIev?pid=walmart.com&af_web_dp=https%3A%2F%2Fwww.walmart.com%2Fcp%2Fwalmart-mobile-app%2F1087865&c=Walmart.com%20Site%20Footer&af_dp=walmart%3A%2F%2F
+            - listitem [ref=e600]:
+              - link "Safety Data Sheet" [ref=e601] [cursor=pointer]:
+                - /url: http://msds.walmartstores.com/
+            - listitem [ref=e602]:
+              - link "Terms of Use" [ref=e603] [cursor=pointer]:
+                - /url: /help/article/walmart-com-terms-of-use/3b75080af40340d6bbd596f116fae5a0
+            - listitem [ref=e604]:
+              - link "Privacy Notice - opens in a new window" [ref=e605] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/walmart-privacy-notice
+                - text: Privacy Notice
+            - listitem [ref=e606]:
+              - link "California Supply Chain Act - opens in a new window" [ref=e607] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/california-transparency
+                - text: California Supply Chain Act
+            - listitem [ref=e608]:
+              - link "Your Privacy Choices - opens in a new window" [ref=e609] [cursor=pointer]:
+                - /url: https://cpa-ui.walmart.com/dc/privacy/en-US/affirmation?brandCode=WMT&languageCode=en-US&market=US
+                - img [ref=e610]
+                - text: Your Privacy Choices
+            - listitem [ref=e611]:
+              - link "Customer Privacy Center - opens in a new window" [ref=e612] [cursor=pointer]:
+                - /url: https://www.walmart.com/privacy-center
+                - text: Customer Privacy Center
+            - listitem [ref=e613]:
+              - link "Notice at Collection - opens in a new window" [ref=e614] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/california-privacy-rights#what-are-the-categories-of-personal-information-collected
+                - text: Notice at Collection
+            - listitem [ref=e615]:
+              - link "AdChoices" [ref=e616] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/walmart-privacy-notice#interest-based-advertising
+            - listitem [ref=e617]:
+              - link "Consumer Health Data Privacy Notices" [ref=e618] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/walmart-consumer-health-data-privacy-notices
+            - listitem [ref=e619]:
+              - link "Learn about Spark Driver" [ref=e620] [cursor=pointer]:
+                - /url: https://www.sparkdriverapp.com/
+            - listitem [ref=e621]:
+              - link "Brand Shop Directory" [ref=e622] [cursor=pointer]:
+                - /url: https://www.walmart.com/brand/branddirectory
+            - listitem [ref=e623]:
+              - link "Pharmacy" [ref=e624] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/pharmacy/5431?povid=HWS_GlobalFooter_Pharmacy
+            - listitem [ref=e625]:
+              - link "Walmart Business" [ref=e626] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/walmart-business/7810722?povid=7810722_POV_WMTfooter
+            - listitem [ref=e627]:
+              - link "#IYWYK" [ref=e628] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/walmart-in-the-know/7781927
+            - listitem [ref=e629]:
+              - link "Delete Account" [ref=e630] [cursor=pointer]:
+                - /url: https://www.walmart.com/account/login?vid=oaoh&tid=0&returnUrl=%2Faccount%2Fdelete-account
+          - generic [ref=e631]: © 2026 Walmart. The trademarks Walmart and the Walmart Spark design are registered with the US Patent and Trademark Office. All Rights Reserved.
+  - alert [ref=e636]

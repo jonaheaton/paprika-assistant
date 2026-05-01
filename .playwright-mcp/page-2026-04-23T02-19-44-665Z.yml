@@ -1,0 +1,267 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - banner [ref=e5]:
+        - link "Skip to Main Content" [ref=e6] [cursor=pointer]:
+          - /url: "#maincontent"
+        - text: 
+        - link "Walmart Homepage" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "Walmart+" [ref=e8]
+        - generic [ref=e259]:
+          - button "Pickup or delivery? 20 W Palisade Ave • Teterboro Supercenter" [ref=e261] [cursor=pointer]:
+            - generic [ref=e262]:
+              - generic [ref=e263]:
+                - generic [ref=e265]: Pickup or delivery?
+                - generic [ref=e266]:
+                  - generic [ref=e270]: 20 W Palisade Ave
+                  - generic [ref=e273]:
+                    - generic [ref=e274]: •
+                    - generic [ref=e275]: Teterboro Supercenter
+              - generic [ref=e277]: 
+          - generic:
+            - generic:   
+          - generic [ref=e279]:
+            - generic [ref=e281]: 20 W Palisade Ave
+            - generic [ref=e283]: •
+        - search "Walmart Site-Wide" [ref=e15]:
+          - generic [ref=e16]:
+            - searchbox "Search" [ref=e17]
+            - button [ref=e18] [cursor=pointer]:
+              - generic [ref=e19]: 
+            - button "Search" [ref=e20] [cursor=pointer]:
+              - generic [ref=e21]: 
+        - navigation "Account and Cart" [ref=e22]:
+          - list [ref=e23]:
+            - listitem [ref=e24]:
+              - button "Reorder My Items" [ref=e25] [cursor=pointer]:
+                - generic [ref=e26]: 
+                - generic [ref=e27]:
+                  - generic [ref=e28]: Reorder
+                  - generic [ref=e29]: My Items
+              - text:   
+            - listitem [ref=e30]:
+              - generic [ref=e285]:
+                - button "Hi, Jonah E Account" [ref=e286] [cursor=pointer]:
+                  - generic [ref=e287]: 
+                  - generic [ref=e288]:
+                    - generic [ref=e289]: Hi, Jonah E
+                    - generic [ref=e290]: Account
+                - text:     
+            - listitem [ref=e37]:
+              - button "Cart contains 2 items Total Amount $59.73" [ref=e291]:
+                - generic [ref=e41]: 
+                - generic [ref=e292]: "2"
+                - generic [ref=e42]: $59.73
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - navigation "Primary" [ref=e45]:
+            - list [ref=e46]:
+              - listitem [ref=e47]:
+                - button "Departments " [ref=e51]:
+                  - text: Departments
+                  - generic [ref=e52]: 
+              - listitem [ref=e53]:
+                - button "Services " [ref=e57]:
+                  - text: Services
+                  - generic [ref=e58]: 
+          - navigation "Secondary" [ref=e294]:
+            - list [ref=e295]:
+              - listitem [ref=e296]:
+                - link "Rollbacks & More" [ref=e298] [cursor=pointer]:
+                  - /url: https://www.walmart.com/shop/savings
+              - listitem [ref=e299]:
+                - link "Mother's Day" [ref=e301] [cursor=pointer]:
+                  - /url: https://www.walmart.com/shop/gifts
+              - listitem [ref=e302]:
+                - link "Get it Fast" [ref=e304] [cursor=pointer]:
+                  - /url: https://www.walmart.com/cp/get-it-fast/6545138
+              - listitem [ref=e305]:
+                - link "Pharmacy" [ref=e307] [cursor=pointer]:
+                  - /url: https://www.walmart.com/cp/pharmacy/5431
+              - listitem [ref=e308]:
+                - link "New Arrivals" [ref=e310] [cursor=pointer]:
+                  - /url: https://www.walmart.com/cp/new-arrivals/2593086
+              - listitem [ref=e311]:
+                - link "Spring Home" [ref=e313] [cursor=pointer]:
+                  - /url: https://www.walmart.com/shop/spring-home/shop-all
+              - listitem [ref=e314]:
+                - link "Walmart+" [ref=e316] [cursor=pointer]:
+                  - /url: https://www.walmart.com/plus
+        - button "More " [ref=e319] [cursor=pointer]:
+          - generic [ref=e321]: More
+          - generic [ref=e322]: 
+    - generic [ref=e59]:
+      - main [ref=e62]:
+        - heading "Walmart | Save Money. Live better." [level=1] [ref=e64]
+        - generic [ref=e68]:
+          - generic [ref=e70]:
+            - generic [ref=e71]:
+              - generic [ref=e73]:
+                - img "A black grill against a white wall." [ref=e75]
+                - generic [ref=e76]:
+                  - paragraph [ref=e77]: Grills from Weber & beyond
+                  - link "Shop now Grills from Weber & beyond" [ref=e78] [cursor=pointer]:
+                    - /url: https://www.walmart.com/cp/outdoor-cooking/4089?athAsset=eyJhdGhjcGlkIjoiMTAwNWU3ZTEtZTU0ZS00MDMxLWI0OTQtYjg3ZTYyYmQ1Nzc0IiwiYWVjdSI6eyJzIjoxLjAsInN0IjoiMCJ9LCJhZXdyIjoiQ1RSIn0=&athena=true
+                    - text: Shop now
+                  - link [ref=e79] [cursor=pointer]:
+                    - /url: https://www.walmart.com/cp/outdoor-cooking/4089?athAsset=eyJhdGhjcGlkIjoiMTAwNWU3ZTEtZTU0ZS00MDMxLWI0OTQtYjg3ZTYyYmQ1Nzc0IiwiYWVjdSI6eyJzIjoxLjAsInN0IjoiMCJ9LCJhZXdyIjoiQ1RSIn0=&athena=true
+                    - generic [ref=e80]: Shop now
+              - generic [ref=e82]:
+                - img "Flash deals. Image shows a Burberry Classic Eau de Parfum spray in a transparent bottle with yellow perfume, set against a light yellow background." [ref=e84]
+                - generic [ref=e85]:
+                  - paragraph [ref=e86]: Up to 65% off
+                  - link "Shop now Up to 65% off" [ref=e87] [cursor=pointer]:
+                    - /url: https://www.walmart.com/shop/deals/flash-deals?athAsset=eyJhdGhjcGlkIjoiN2Q1YjRmODctM2Q0Ny00ZTliLTkxYmQtYjUxMGIyNDZmOGM5IiwiYXRoZ2FpIjoiMSIsImFlY3UiOnsicyI6MS4wLCJzdCI6IjAifSwiYWV3ciI6IkNUUiJ9&athena=true
+                    - text: Shop now
+                  - link [ref=e88] [cursor=pointer]:
+                    - /url: https://www.walmart.com/shop/deals/flash-deals?athAsset=eyJhdGhjcGlkIjoiN2Q1YjRmODctM2Q0Ny00ZTliLTkxYmQtYjUxMGIyNDZmOGM5IiwiYXRoZ2FpIjoiMSIsImFlY3UiOnsicyI6MS4wLCJzdCI6IjAifSwiYWV3ciI6IkNUUiJ9&athena=true
+                    - generic [ref=e89]: Shop now
+            - generic [ref=e92]:
+              - 'img "Image of a woman working on a McBook. Apple: magic runs in the family. Shop now." [ref=e94]'
+              - generic [ref=e95]:
+                - paragraph [ref=e96]: "Apple: magic runs in the family"
+                - 'link "Shop now Apple: magic runs in the family" [ref=e97] [cursor=pointer]':
+                  - /url: https://www.walmart.com/shop/new-from-apple?athAsset=eyJhdGhjcGlkIjoiNTM2NWQ3ODYtYjg4ZS00NGE2LWIxMDgtNTY3Yjc4ODVhNGZhIiwiYWVjdSI6eyJzIjoxLjAsInN0IjoiMCJ9LCJhZXdyIjoiQ1RSIn0=&athena=true
+                  - text: Shop now
+                - link [ref=e98] [cursor=pointer]:
+                  - /url: https://www.walmart.com/shop/new-from-apple?athAsset=eyJhdGhjcGlkIjoiNTM2NWQ3ODYtYjg4ZS00NGE2LWIxMDgtNTY3Yjc4ODVhNGZhIiwiYWVjdSI6eyJzIjoxLjAsInN0IjoiMCJ9LCJhZXdyIjoiQ1RSIn0=&athena=true
+                  - generic [ref=e99]: Shop now
+          - generic [ref=e102]:
+            - img "A tablescape of chicken penne alfredo, Ceasar salad, Josh white wine, and fresh pink and orange flowers is shown." [ref=e104]
+            - generic [ref=e105]:
+              - paragraph [ref=e106]: Make Mom’s Day dinner special
+              - link "Shop now Make Mom’s Day dinner special" [ref=e107] [cursor=pointer]:
+                - /url: https://www.walmart.com/shop/mothers-day/food/dinner?athAsset=eyJhdGhjcGlkIjoiYThmMTA4ZmUtODQ4Mi00OTZhLTliOTItNDgwNzhhNjU3YmQ0IiwiYWVjdSI6eyJzIjoxLjAsInN0IjoiMCJ9LCJhZXdyIjoiQ1RSIn0=&athena=true
+                - text: Shop now
+              - link [ref=e108] [cursor=pointer]:
+                - /url: https://www.walmart.com/shop/mothers-day/food/dinner?athAsset=eyJhdGhjcGlkIjoiYThmMTA4ZmUtODQ4Mi00OTZhLTliOTItNDgwNzhhNjU3YmQ0IiwiYWVjdSI6eyJzIjoxLjAsInN0IjoiMCJ9LCJhZXdyIjoiQ1RSIn0=&athena=true
+                - generic [ref=e109]: Shop now
+          - generic [ref=e112]:
+            - img "Bedroom with Purple Basil by Glidden accent wall & a white wall with black-trimmed windows. Natural wood flooring & furniture, neutral bedding." [ref=e114]
+            - generic [ref=e115]:
+              - paragraph [ref=e116]: Transform your space
+              - paragraph [ref=e117]: Paint & accessories
+              - link "Shop now Paint & accessories" [ref=e118] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/paint/1067617?athAsset=eyJhdGhjcGlkIjoiNDFlOTkzMDItYzJiZC00MTRkLTk3MGUtOGQ2ODU0Yzc2ZGNkIiwiYWVjdSI6eyJzIjoxLjAsInN0IjoiMCJ9LCJhZXdyIjoiTVBfQVRDUiJ9&athena=true
+                - text: Shop now
+              - link [ref=e119] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/paint/1067617?athAsset=eyJhdGhjcGlkIjoiNDFlOTkzMDItYzJiZC00MTRkLTk3MGUtOGQ2ODU0Yzc2ZGNkIiwiYWVjdSI6eyJzIjoxLjAsInN0IjoiMCJ9LCJhZXdyIjoiTVBfQVRDUiJ9&athena=true
+                - generic [ref=e120]: Shop now
+        - region "loading home page" [ref=e121]:
+          - generic [ref=e122]:
+            - list [ref=e123]
+            - list [ref=e144]
+            - list [ref=e157]
+      - generic [ref=e175]:
+        - contentinfo [ref=e176]:
+          - region "Give feedback" [ref=e180]:
+            - paragraph [ref=e181]: We’d love to hear what you think!
+            - button "Give feedback" [ref=e182] [cursor=pointer]
+          - generic [ref=e183]:
+            - list [ref=e184]:
+              - listitem [ref=e185]:
+                - link "All Departments" [ref=e186] [cursor=pointer]:
+                  - /url: /all-departments
+              - listitem [ref=e187]:
+                - link "Store Directory - opens in a new window" [ref=e188] [cursor=pointer]:
+                  - /url: /store/directory
+                  - text: Store Directory
+              - listitem [ref=e189]:
+                - link "Careers - opens in a new window" [ref=e190] [cursor=pointer]:
+                  - /url: https://careers.walmart.com/
+                  - text: Careers
+              - listitem [ref=e191]:
+                - link "Our Company - opens in a new window" [ref=e192] [cursor=pointer]:
+                  - /url: https://corporate.walmart.com/
+                  - text: Our Company
+              - listitem [ref=e193]:
+                - link "Sell on Walmart.com - opens in a new window" [ref=e194] [cursor=pointer]:
+                  - /url: https://marketplace.walmart.com/?utm_source=Walmart.com&utm_medium=link&utm_campaign=footer
+                  - text: Sell on Walmart.com
+              - listitem [ref=e195]:
+                - link "Help" [ref=e196] [cursor=pointer]:
+                  - /url: /help
+              - listitem [ref=e197]:
+                - link "Product Recalls - opens in a new window" [ref=e198] [cursor=pointer]:
+                  - /url: https://corporate.walmart.com/recalls
+                  - text: Product Recalls
+              - listitem [ref=e199]:
+                - link "Accessibility - opens in a new window" [ref=e200] [cursor=pointer]:
+                  - /url: https://www.walmart.com/help/article/responsible-disclosure-and-accessibility-policies/0f173dab8bd942da84b1cd7ab5ffc3cb
+                  - text: Accessibility
+              - listitem [ref=e201]:
+                - link "Tax Exempt Program" [ref=e202] [cursor=pointer]:
+                  - /url: https://www.walmart.com/cp/tax-exemption-program/8480422
+              - listitem [ref=e203]:
+                - link "Get the Walmart App" [ref=e204] [cursor=pointer]:
+                  - /url: https://walmart.onelink.me/UIev?pid=walmart.com&af_web_dp=https%3A%2F%2Fwww.walmart.com%2Fcp%2Fwalmart-mobile-app%2F1087865&c=Walmart.com%20Site%20Footer&af_dp=walmart%3A%2F%2F
+              - listitem [ref=e205]:
+                - link "Safety Data Sheet" [ref=e206] [cursor=pointer]:
+                  - /url: http://msds.walmartstores.com/
+              - listitem [ref=e207]:
+                - link "Terms of Use" [ref=e208] [cursor=pointer]:
+                  - /url: /help/article/walmart-com-terms-of-use/3b75080af40340d6bbd596f116fae5a0
+              - listitem [ref=e209]:
+                - link "Privacy Notice - opens in a new window" [ref=e210] [cursor=pointer]:
+                  - /url: https://corporate.walmart.com/privacy-security/walmart-privacy-notice
+                  - text: Privacy Notice
+              - listitem [ref=e211]:
+                - link "California Supply Chain Act - opens in a new window" [ref=e212] [cursor=pointer]:
+                  - /url: https://corporate.walmart.com/california-transparency
+                  - text: California Supply Chain Act
+              - listitem [ref=e213]:
+                - link "Your Privacy Choices - opens in a new window" [ref=e214] [cursor=pointer]:
+                  - /url: https://cpa-ui.walmart.com/dc/privacy/en-US/affirmation?brandCode=WMT&languageCode=en-US&market=US
+                  - img [ref=e215]
+                  - text: Your Privacy Choices
+              - listitem [ref=e216]:
+                - link "Customer Privacy Center - opens in a new window" [ref=e217] [cursor=pointer]:
+                  - /url: https://www.walmart.com/privacy-center
+                  - text: Customer Privacy Center
+              - listitem [ref=e218]:
+                - link "Notice at Collection - opens in a new window" [ref=e219] [cursor=pointer]:
+                  - /url: https://corporate.walmart.com/privacy-security/california-privacy-rights#what-are-the-categories-of-personal-information-collected
+                  - text: Notice at Collection
+              - listitem [ref=e220]:
+                - link "AdChoices" [ref=e221] [cursor=pointer]:
+                  - /url: https://corporate.walmart.com/privacy-security/walmart-privacy-notice#interest-based-advertising
+              - listitem [ref=e222]:
+                - link "Consumer Health Data Privacy Notices" [ref=e223] [cursor=pointer]:
+                  - /url: https://corporate.walmart.com/privacy-security/walmart-consumer-health-data-privacy-notices
+              - listitem [ref=e224]:
+                - link "Learn about Spark Driver" [ref=e225] [cursor=pointer]:
+                  - /url: https://www.sparkdriverapp.com/
+              - listitem [ref=e226]:
+                - link "Brand Shop Directory" [ref=e227] [cursor=pointer]:
+                  - /url: https://www.walmart.com/brand/branddirectory
+              - listitem [ref=e228]:
+                - link "Pharmacy" [ref=e229] [cursor=pointer]:
+                  - /url: https://www.walmart.com/cp/pharmacy/5431?povid=HWS_GlobalFooter_Pharmacy
+              - listitem [ref=e230]:
+                - link "Walmart Business" [ref=e231] [cursor=pointer]:
+                  - /url: https://www.walmart.com/cp/walmart-business/7810722?povid=7810722_POV_WMTfooter
+              - listitem [ref=e232]:
+                - link "#IYWYK" [ref=e233] [cursor=pointer]:
+                  - /url: https://www.walmart.com/cp/walmart-in-the-know/7781927
+              - listitem [ref=e234]:
+                - link "Delete Account" [ref=e235] [cursor=pointer]:
+                  - /url: https://www.walmart.com/account/login?vid=oaoh&tid=0&returnUrl=%2Faccount%2Fdelete-account
+            - generic [ref=e236]: © 2026 Walmart. The trademarks Walmart and the Walmart Spark design are registered with the US Patent and Trademark Office. All Rights Reserved.
+        - generic [ref=e237]:
+          - generic [ref=e238]:
+            - generic [ref=e240]: 
+            - generic [ref=e241]:
+              - generic [ref=e242]: Walmart - Shopping & Grocery
+              - generic [ref=e243]: The easiest way to shop, check out & track your orders – anywhere you are.
+              - img "4.5 stars out of 5" [ref=e244]:
+                - generic [ref=e245]:
+                  - generic [ref=e246]: 
+                  - generic [ref=e247]: 
+                  - generic [ref=e248]: 
+                  - generic [ref=e249]: 
+                  - generic [ref=e250]: 
+            - button "Close banner" [ref=e251]:
+              - generic [ref=e252]: 
+          - button "Get the app" [ref=e253] [cursor=pointer]
+  - alert [ref=e258]

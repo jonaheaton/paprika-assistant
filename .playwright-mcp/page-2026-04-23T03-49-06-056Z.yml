@@ -1,0 +1,495 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - banner [ref=e5]:
+        - link "Skip to Main Content" [ref=e6] [cursor=pointer]:
+          - /url: "#maincontent"
+        - text: 
+        - link "Walmart Homepage" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "Walmart+" [ref=e8]
+        - search "Walmart Site-Wide" [ref=e9]:
+          - generic [ref=e10]:
+            - searchbox "Search" [ref=e11]
+            - button [ref=e12] [cursor=pointer]:
+              - generic [ref=e13]: 
+            - button "Search" [ref=e14] [cursor=pointer]:
+              - generic [ref=e15]: 
+        - navigation "Account and Cart" [ref=e16]:
+          - list [ref=e17]:
+            - listitem [ref=e18]:
+              - button "Reorder My Items" [ref=e19] [cursor=pointer]:
+                - generic [ref=e20]: 
+                - generic [ref=e21]:
+                  - generic [ref=e22]: Reorder
+                  - generic [ref=e23]: My Items
+              - text:   
+            - listitem [ref=e24]:
+              - generic [ref=e26]:
+                - button "Hi, Jonah E Account" [ref=e27] [cursor=pointer]:
+                  - generic [ref=e28]: 
+                  - generic [ref=e29]:
+                    - generic [ref=e30]: Hi, Jonah E
+                    - generic [ref=e31]: Account
+                - text:     
+            - listitem [ref=e32]:
+              - button "Cart contains 0 items Total Amount $0.00" [ref=e35]:
+                - generic [ref=e36]: 
+                - generic [ref=e37]: $0.00
+      - navigation "Primary" [ref=e40]:
+        - list [ref=e41]:
+          - listitem [ref=e42]:
+            - button "Departments " [ref=e46]:
+              - text: Departments
+              - generic [ref=e47]: 
+          - listitem [ref=e48]:
+            - button "Services " [ref=e52]:
+              - text: Services
+              - generic [ref=e53]: 
+    - generic [ref=e54]:
+      - main [ref=e57]:
+        - generic [ref=e58]:
+          - generic [ref=e59]:
+            - navigation "breadcrumb" [ref=e61]:
+              - list [ref=e62]:
+                - listitem [ref=e63]:
+                  - link "My account" [ref=e65] [cursor=pointer]:
+                    - /url: /account
+                  - text: /
+                - listitem [ref=e66]:
+                  - link "Purchase history" [ref=e68] [cursor=pointer]:
+                    - /url: /orders
+            - generic [ref=e70]:
+              - link "Messages" [ref=e73] [cursor=pointer]:
+                - /url: /account/message-center
+                - generic [ref=e74]: 
+              - generic [ref=e75]:
+                - link "Account Settings Your Wallet, Addresses, Personal Info and more are now in Account Settings." [ref=e76] [cursor=pointer]:
+                  - /url: /account/settings
+                  - generic [ref=e77]: 
+                - generic [ref=e80]:
+                  - generic [ref=e81]:
+                    - generic [ref=e82]: callout
+                    - text: Your Wallet, Addresses, Personal Info and more are now in Account Settings.
+                  - button "Close callout" [ref=e84] [cursor=pointer]: Close
+          - generic [ref=e85]:
+            - generic [ref=e88]:
+              - separator [ref=e100]
+              - separator [ref=e112]
+              - separator [ref=e127]
+              - separator [ref=e139]
+              - separator [ref=e148]
+              - separator [ref=e160]
+            - generic [ref=e168]:
+              - heading "Purchase history" [level=1] [ref=e170]
+              - search [ref=e171]:
+                - generic [ref=e173]:
+                  - button "Search" [ref=e174]:
+                    - generic [ref=e175]: 
+                  - searchbox "Search your orders" [ref=e176]
+              - region "Filter orders" [ref=e177]:
+                - list [ref=e178]:
+                  - listitem [ref=e179]:
+                    - button "All, filter applied" [active] [ref=e181] [cursor=pointer]: All
+                  - listitem [ref=e182]:
+                    - generic [ref=e183]:
+                      - text: 
+                      - button "By date" [ref=e187] [cursor=pointer]:
+                        - text: By date
+                        - generic [ref=e189]: 
+                  - listitem [ref=e190]:
+                    - button "Returns" [ref=e192] [cursor=pointer]
+                  - listitem [ref=e193]:
+                    - button "In store" [ref=e195] [cursor=pointer]
+                  - listitem [ref=e196]:
+                    - generic [ref=e197]:
+                      - text: 
+                      - button "Status" [ref=e201] [cursor=pointer]:
+                        - text: Status
+                        - generic [ref=e203]: 
+              - separator [ref=e204]
+              - generic [ref=e210]:
+                - generic [ref=e211]:
+                  - heading "Help other customers by writing a review." [level=2] [ref=e212]
+                  - button "Close, Tell others what you thought" [ref=e213] [cursor=pointer]:
+                    - generic [ref=e214]: 
+                - list [ref=e216]:
+                  - listitem [ref=e217]:
+                    - generic [ref=e220]:
+                      - generic [ref=e223]: What'd you think?
+                      - button "Review more items" [ref=e225] [cursor=pointer]
+                  - listitem [ref=e226]:
+                    - generic [ref=e228]:
+                      - 'link "Review Dossier Originals, The icons collection, Amber Rose, Eau de Parfum. Size: 50ml / 1.7oz" [ref=e229] [cursor=pointer]':
+                        - /url: /reviews/write-review?productId=18566118912&conditionGroupCode=1&returnUrl=/orders&campaign_id=PURCHASE-HISTORY-SINGLE-ITEM-REVIEW
+                      - generic [ref=e231]:
+                        - generic [ref=e232]: "Dossier Originals, The icons collection, Amber Rose, Eau de Parfum. Size: 50ml / 1.7oz"
+                        - generic [ref=e234]:
+                          - generic "Click to rate" [ref=e235]:
+                            - generic [ref=e236]:
+                              - generic [ref=e237]:
+                                - radio [ref=e239]
+                                - img [ref=e240]
+                              - generic [ref=e242]:
+                                - radio [ref=e244]
+                                - img [ref=e245]
+                              - generic [ref=e247]:
+                                - radio [ref=e249]
+                                - img [ref=e250]
+                              - generic [ref=e252]:
+                                - radio [ref=e254]
+                                - img [ref=e255]
+                              - generic [ref=e257]:
+                                - radio [ref=e259]
+                                - img [ref=e260]
+                          - generic [ref=e264]:
+                            - generic [ref=e266]:
+                              - generic [ref=e267]: Click to rate
+                              - text: Click to rate
+                            - button [ref=e269]:
+                              - generic [ref=e270]: 
+                  - listitem [ref=e271]:
+                    - generic [ref=e273]:
+                      - link "Review Refresh Tears Lubricant Eye Drops Artificial Tears, 30 ml, 2 Bottles" [ref=e274] [cursor=pointer]:
+                        - /url: /reviews/write-review?productId=10294098&conditionGroupCode=1&returnUrl=/orders&campaign_id=PURCHASE-HISTORY-SINGLE-ITEM-REVIEW
+                      - generic [ref=e276]:
+                        - generic [ref=e277]: Refresh Tears Lubricant Eye Drops Artificial Tears, 30 ml, 2 Bottles
+                        - generic [ref=e281]:
+                          - generic [ref=e282]:
+                            - radio [ref=e284]
+                            - img [ref=e285]
+                          - generic [ref=e287]:
+                            - radio [ref=e289]
+                            - img [ref=e290]
+                          - generic [ref=e292]:
+                            - radio [ref=e294]
+                            - img [ref=e295]
+                          - generic [ref=e297]:
+                            - radio [ref=e299]
+                            - img [ref=e300]
+                          - generic [ref=e302]:
+                            - radio [ref=e304]
+                            - img [ref=e305]
+              - generic [ref=e307]:
+                - generic [ref=e311]:
+                  - generic [ref=e312]:
+                    - generic [ref=e313]:
+                      - generic [ref=e318]:
+                        - generic [ref=e320]: Delivery
+                        - heading "Delivered today at 1:18pm" [level=2] [ref=e322]
+                      - generic [ref=e325]:
+                        - generic [ref=e326]:
+                          - generic "Sold by HaloFox" [ref=e327]:
+                            - text: Sold by
+                            - link "HaloFox" [ref=e328] [cursor=pointer]:
+                              - /url: /global/seller/101183483?itemId=200014796922606
+                          - generic [ref=e329]: "|"
+                        - generic [ref=e330]: Fulfilled by Walmart
+                      - list [ref=e335]:
+                        - listitem [ref=e336]:
+                          - generic [ref=e337]: Complete,
+                          - img [ref=e338]
+                          - text: Placed
+                        - listitem [ref=e340]:
+                          - generic [ref=e341]: Complete,
+                          - img [ref=e342]
+                          - text: Preparing
+                        - listitem [ref=e344]:
+                          - generic [ref=e345]: Complete,
+                          - img [ref=e346]
+                          - text: On the way
+                        - listitem [ref=e348]:
+                          - generic [ref=e349]: Current,
+                          - img [ref=e350]
+                          - text: Delivered
+                      - button "Can't find your package?" [ref=e355] [cursor=pointer]
+                    - generic [ref=e359]:
+                      - link "Track shipment" [ref=e361] [cursor=pointer]
+                      - button "View details of Delivery, Delivered today at 1:18pm" [ref=e363] [cursor=pointer]: View details
+                  - list [ref=e367]:
+                    - listitem [ref=e368]:
+                      - img "5-Pack 231 Label Maker Tape for Brother P Touch TZc231 Tape Label Tape 12mm 0.47 Inch Laminated White Label Maker Tape Compatible for TZc-231 for P Touch PT-D210 PTH110 PT-D220 PTD600, 26.2 Feet" [ref=e370]
+                  - generic [ref=e371]:
+                    - separator [ref=e372]
+                    - generic [ref=e375]:
+                      - heading "How was your delivery experience?" [level=3] [ref=e376]
+                      - generic [ref=e377]: Select a rating to begin quick survey.
+                      - group [ref=e378]:
+                        - generic [ref=e379]:
+                          - generic [ref=e380]:
+                            - radio "Select a rating to begin quick survey. 1 star out of 5" [ref=e382]
+                            - img [ref=e383]
+                          - generic [ref=e385]:
+                            - radio "Select a rating to begin quick survey. 2 stars out of 5" [ref=e387]
+                            - img [ref=e388]
+                          - generic [ref=e390]:
+                            - radio "Select a rating to begin quick survey. 3 stars out of 5" [ref=e392]
+                            - img [ref=e393]
+                          - generic [ref=e395]:
+                            - radio "Select a rating to begin quick survey. 4 stars out of 5" [ref=e397]
+                            - img [ref=e398]
+                          - generic [ref=e400]:
+                            - radio "Select a rating to begin quick survey. 5 stars out of 5" [ref=e402]
+                            - img [ref=e403]
+                - generic [ref=e406]:
+                  - link "Start a return for order number 200014796922606" [ref=e408] [cursor=pointer]:
+                    - /url: /orders/200014796922606/returns
+                    - text: Start a return
+                  - generic [ref=e410]: Order total $13.85
+              - generic [ref=e411]:
+                - generic [ref=e415]:
+                  - generic [ref=e416]:
+                    - generic [ref=e417]:
+                      - generic [ref=e422]:
+                        - generic [ref=e424]: Delivery from store
+                        - heading "Delivered today at 12:04pm" [level=2] [ref=e426]
+                      - list [ref=e431]:
+                        - listitem [ref=e432]:
+                          - generic [ref=e433]: Complete,
+                          - img [ref=e434]
+                          - text: Placed
+                        - listitem [ref=e436]:
+                          - generic [ref=e437]: Complete,
+                          - img [ref=e438]
+                          - text: Preparing
+                        - listitem [ref=e440]:
+                          - generic [ref=e441]: Complete,
+                          - img [ref=e442]
+                          - text: On the way
+                        - listitem [ref=e444]:
+                          - generic [ref=e445]: Current,
+                          - img [ref=e446]
+                          - text: Delivered
+                    - generic [ref=e452]:
+                      - link "View delivery details" [ref=e454] [cursor=pointer]
+                      - button "View details of Delivery from store, Delivered today at 12:04pm" [ref=e456] [cursor=pointer]: View details
+                  - list [ref=e460]:
+                    - listitem [ref=e461]:
+                      - img "Goldbug Baby Sunglasses for Boys and Girls, Infant and Toddler, Black" [ref=e463]
+                    - listitem [ref=e464]:
+                      - img "Bluey Pink with Flowers Cat Eye Sunglasses for Kids UV Protection" [ref=e466]
+                - generic [ref=e468]:
+                  - link "Start a return for order number 200014452219750" [ref=e470] [cursor=pointer]:
+                    - /url: /orders/200014452219750/returns
+                    - text: Start a return
+                  - generic [ref=e472]: Order total $12.69
+              - generic [ref=e473]:
+                - generic [ref=e477]:
+                  - generic [ref=e478]:
+                    - generic [ref=e479]:
+                      - generic [ref=e484]:
+                        - generic [ref=e486]: Delivery from store
+                        - heading "Delivered on Apr 21" [level=2] [ref=e488]
+                      - list [ref=e493]:
+                        - listitem [ref=e494]:
+                          - generic [ref=e495]: Complete,
+                          - img [ref=e496]
+                          - text: Placed
+                        - listitem [ref=e498]:
+                          - generic [ref=e499]: Complete,
+                          - img [ref=e500]
+                          - text: Preparing
+                        - listitem [ref=e502]:
+                          - generic [ref=e503]: Complete,
+                          - img [ref=e504]
+                          - text: On the way
+                        - listitem [ref=e506]:
+                          - generic [ref=e507]: Current,
+                          - img [ref=e508]
+                          - text: Delivered
+                    - generic [ref=e514]:
+                      - link "View delivery details" [ref=e516] [cursor=pointer]
+                      - button "View details of Delivery from store, Delivered on Apr 21" [ref=e518] [cursor=pointer]: View details
+                  - list [ref=e522]:
+                    - listitem [ref=e523]:
+                      - img "Sensible Portions Garden Veggie Avocado Oil, Sea Salt Straws, 0.75 oz Snack Bag Multipack (10 Count)" [ref=e525]
+                - generic [ref=e527]:
+                  - link "Start a return for order number 200014426966175" [ref=e529] [cursor=pointer]:
+                    - /url: /orders/200014426966175/returns
+                    - text: Start a return
+                  - generic [ref=e531]: Order total $7.86
+              - generic [ref=e532]:
+                - generic [ref=e536]:
+                  - generic [ref=e537]:
+                    - generic [ref=e538]:
+                      - generic [ref=e543]:
+                        - generic [ref=e545]: Delivery from store
+                        - heading "Delivered on Apr 21" [level=2] [ref=e547]
+                      - list [ref=e552]:
+                        - listitem [ref=e553]:
+                          - generic [ref=e554]: Complete,
+                          - img [ref=e555]
+                          - text: Placed
+                        - listitem [ref=e557]:
+                          - generic [ref=e558]: Complete,
+                          - img [ref=e559]
+                          - text: Preparing
+                        - listitem [ref=e561]:
+                          - generic [ref=e562]: Complete,
+                          - img [ref=e563]
+                          - text: On the way
+                        - listitem [ref=e565]:
+                          - generic [ref=e566]: Current,
+                          - img [ref=e567]
+                          - text: Delivered
+                    - generic [ref=e573]:
+                      - link "View delivery details" [ref=e575] [cursor=pointer]
+                      - button "View details of Delivery from store, Delivered on Apr 21" [ref=e577] [cursor=pointer]: View details
+                  - list [ref=e581]:
+                    - listitem [ref=e582]:
+                      - img "Great Value Parmesan Finely Shredded Cheese, 6 oz Bag" [ref=e584]
+                    - listitem [ref=e585]:
+                      - img "Smucker’s Natural Creamy Peanut Butter, 16 oz Jar" [ref=e587]
+                    - listitem [ref=e588]:
+                      - img "Great Value 75 sq ft Aluminum Foil" [ref=e590]
+                    - listitem [ref=e591]:
+                      - img "Great Value Original Whipped Cream Cheese Spread, 12 oz Tub" [ref=e593]
+                    - listitem [ref=e594]:
+                      - img "Great Value Mango Chunks, 48 oz (Frozen)" [ref=e596]
+                    - listitem [ref=e597]:
+                      - 'img "Goodles Deluxe Ched Over Heels Liquid Mac & Cheese, Mild Cheddar, Shells, Shelf Stable, 9 oz; Brand: GOODLES; Product Type: Packaged Meals" [ref=e599]'
+                    - listitem [ref=e600]:
+                      - img "Goodles Mac & Cheese Cheddy Mac Noodles, Cheddar, Ziti, Shelf-Stable, 6 oz" [ref=e602]
+                    - listitem [ref=e603]:
+                      - img "Great Value Spaghetti, 16 oz" [ref=e605]
+                    - listitem [ref=e606]:
+                      - img "Barilla Protein+ Spaghetti Pasta, Plant Based Pasta, 14.5oz" [ref=e608]
+                    - listitem [ref=e609]: "+17"
+                - generic [ref=e611]:
+                  - link "Start a return for order number 200014704057843" [ref=e613] [cursor=pointer]:
+                    - /url: /orders/200014704057843/returns
+                    - text: Start a return
+                  - generic [ref=e615]: Order total $110.47
+              - generic [ref=e616]:
+                - generic [ref=e620]:
+                  - generic [ref=e621]:
+                    - generic [ref=e622]:
+                      - generic [ref=e627]:
+                        - generic [ref=e629]: Delivery from store
+                        - heading "Delivered on Apr 20" [level=2] [ref=e631]
+                      - list [ref=e636]:
+                        - listitem [ref=e637]:
+                          - generic [ref=e638]: Complete,
+                          - img [ref=e639]
+                          - text: Placed
+                        - listitem [ref=e641]:
+                          - generic [ref=e642]: Complete,
+                          - img [ref=e643]
+                          - text: Preparing
+                        - listitem [ref=e645]:
+                          - generic [ref=e646]: Complete,
+                          - img [ref=e647]
+                          - text: On the way
+                        - listitem [ref=e649]:
+                          - generic [ref=e650]: Current,
+                          - img [ref=e651]
+                          - text: Delivered
+                    - button "View details of Delivery from store, Delivered on Apr 20" [ref=e659] [cursor=pointer]: View details
+                  - list [ref=e663]:
+                    - listitem [ref=e664]:
+                      - 'img "Dossier Originals, The icons collection, Amber Rose, Eau de Parfum. Size: 50ml / 1.7oz" [ref=e666]'
+                - generic [ref=e668]:
+                  - link "Start a return for order number 200014791982832" [ref=e670] [cursor=pointer]:
+                    - /url: /orders/200014791982832/returns
+                    - text: Start a return
+                  - generic [ref=e672]: Order total $52.18
+              - navigation "Pagination" [ref=e673]:
+                - list [ref=e674]:
+                  - listitem [ref=e675]:
+                    - button "Next page" [ref=e676]:
+                      - generic [ref=e677]: 
+      - contentinfo [ref=e679]:
+        - region "Give feedback" [ref=e683]:
+          - paragraph [ref=e684]: We’d love to hear what you think!
+          - button "Give feedback" [ref=e685] [cursor=pointer]
+        - generic [ref=e686]:
+          - list [ref=e687]:
+            - listitem [ref=e688]:
+              - link "All Departments" [ref=e689] [cursor=pointer]:
+                - /url: /all-departments
+            - listitem [ref=e690]:
+              - link "Store Directory - opens in a new window" [ref=e691] [cursor=pointer]:
+                - /url: /store/directory
+                - text: Store Directory
+            - listitem [ref=e692]:
+              - link "Careers - opens in a new window" [ref=e693] [cursor=pointer]:
+                - /url: https://careers.walmart.com/
+                - text: Careers
+            - listitem [ref=e694]:
+              - link "Our Company - opens in a new window" [ref=e695] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/
+                - text: Our Company
+            - listitem [ref=e696]:
+              - link "Sell on Walmart.com - opens in a new window" [ref=e697] [cursor=pointer]:
+                - /url: https://marketplace.walmart.com/?utm_source=Walmart.com&utm_medium=link&utm_campaign=footer
+                - text: Sell on Walmart.com
+            - listitem [ref=e698]:
+              - link "Help" [ref=e699] [cursor=pointer]:
+                - /url: /help
+            - listitem [ref=e700]:
+              - link "Product Recalls - opens in a new window" [ref=e701] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/recalls
+                - text: Product Recalls
+            - listitem [ref=e702]:
+              - link "Accessibility - opens in a new window" [ref=e703] [cursor=pointer]:
+                - /url: https://www.walmart.com/help/article/responsible-disclosure-and-accessibility-policies/0f173dab8bd942da84b1cd7ab5ffc3cb
+                - text: Accessibility
+            - listitem [ref=e704]:
+              - link "Tax Exempt Program" [ref=e705] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/tax-exemption-program/8480422
+            - listitem [ref=e706]:
+              - link "Get the Walmart App" [ref=e707] [cursor=pointer]:
+                - /url: https://walmart.onelink.me/UIev?pid=walmart.com&af_web_dp=https%3A%2F%2Fwww.walmart.com%2Fcp%2Fwalmart-mobile-app%2F1087865&c=Walmart.com%20Site%20Footer&af_dp=walmart%3A%2F%2F
+            - listitem [ref=e708]:
+              - link "Safety Data Sheet" [ref=e709] [cursor=pointer]:
+                - /url: http://msds.walmartstores.com/
+            - listitem [ref=e710]:
+              - link "Terms of Use" [ref=e711] [cursor=pointer]:
+                - /url: /help/article/walmart-com-terms-of-use/3b75080af40340d6bbd596f116fae5a0
+            - listitem [ref=e712]:
+              - link "Privacy Notice - opens in a new window" [ref=e713] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/walmart-privacy-notice
+                - text: Privacy Notice
+            - listitem [ref=e714]:
+              - link "California Supply Chain Act - opens in a new window" [ref=e715] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/california-transparency
+                - text: California Supply Chain Act
+            - listitem [ref=e716]:
+              - link "Your Privacy Choices - opens in a new window" [ref=e717] [cursor=pointer]:
+                - /url: https://cpa-ui.walmart.com/dc/privacy/en-US/affirmation?brandCode=WMT&languageCode=en-US&market=US
+                - img [ref=e718]
+                - text: Your Privacy Choices
+            - listitem [ref=e719]:
+              - link "Customer Privacy Center - opens in a new window" [ref=e720] [cursor=pointer]:
+                - /url: https://www.walmart.com/privacy-center
+                - text: Customer Privacy Center
+            - listitem [ref=e721]:
+              - link "Notice at Collection - opens in a new window" [ref=e722] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/california-privacy-rights#what-are-the-categories-of-personal-information-collected
+                - text: Notice at Collection
+            - listitem [ref=e723]:
+              - link "AdChoices" [ref=e724] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/walmart-privacy-notice#interest-based-advertising
+            - listitem [ref=e725]:
+              - link "Consumer Health Data Privacy Notices" [ref=e726] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/walmart-consumer-health-data-privacy-notices
+            - listitem [ref=e727]:
+              - link "Learn about Spark Driver" [ref=e728] [cursor=pointer]:
+                - /url: https://www.sparkdriverapp.com/
+            - listitem [ref=e729]:
+              - link "Brand Shop Directory" [ref=e730] [cursor=pointer]:
+                - /url: https://www.walmart.com/brand/branddirectory
+            - listitem [ref=e731]:
+              - link "Pharmacy" [ref=e732] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/pharmacy/5431?povid=HWS_GlobalFooter_Pharmacy
+            - listitem [ref=e733]:
+              - link "Walmart Business" [ref=e734] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/walmart-business/7810722?povid=7810722_POV_WMTfooter
+            - listitem [ref=e735]:
+              - link "#IYWYK" [ref=e736] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/walmart-in-the-know/7781927
+            - listitem [ref=e737]:
+              - link "Delete Account" [ref=e738] [cursor=pointer]:
+                - /url: https://www.walmart.com/account/login?vid=oaoh&tid=0&returnUrl=%2Faccount%2Fdelete-account
+          - generic [ref=e739]: © 2026 Walmart. The trademarks Walmart and the Walmart Spark design are registered with the US Patent and Trademark Office. All Rights Reserved.
+  - alert [ref=e744]

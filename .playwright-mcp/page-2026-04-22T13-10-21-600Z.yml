@@ -1,0 +1,950 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - banner [ref=e5]:
+        - link "Skip to Main Content" [ref=e1459] [cursor=pointer]:
+          - /url: "#maincontent"
+        - text: 
+        - link "Walmart Homepage" [ref=e1460] [cursor=pointer]:
+          - /url: /
+          - img "Walmart+" [ref=e1461]
+        - search "Walmart Site-Wide" [ref=e1462]:
+          - generic [ref=e10]:
+            - searchbox "Search" [ref=e1463]
+            - button [ref=e12] [cursor=pointer]:
+              - generic [ref=e13]: 
+            - button "Search" [ref=e1464] [cursor=pointer]:
+              - generic [ref=e15]: 
+        - navigation "Account and Cart" [ref=e1465]:
+          - list [ref=e17]:
+            - listitem [ref=e18]:
+              - button "Reorder My Items" [ref=e1466] [cursor=pointer]:
+                - generic [ref=e20]: 
+                - generic [ref=e21]:
+                  - generic [ref=e22]: Reorder
+                  - generic [ref=e23]: My Items
+              - text:   
+            - listitem [ref=e24]:
+              - generic [ref=e26]:
+                - button "Hi, Jonah E Account" [ref=e1467] [cursor=pointer]:
+                  - generic [ref=e28]: 
+                  - generic [ref=e29]:
+                    - generic [ref=e30]: Hi, Jonah E
+                    - generic [ref=e31]: Account
+                - text:     
+            - listitem [ref=e32]:
+              - button "Cart contains 0 items Total Amount $0.00" [ref=e1468]:
+                - generic [ref=e36]: 
+                - generic [ref=e37]: "0"
+                - generic [ref=e38]: $0.00
+      - navigation "Primary" [ref=e1469]:
+        - list [ref=e42]:
+          - listitem [ref=e43]:
+            - button "Departments " [ref=e1470]:
+              - text: Departments
+              - generic [ref=e48]: 
+          - listitem [ref=e49]:
+            - button "Services " [ref=e1471]:
+              - text: Services
+              - generic [ref=e54]: 
+    - generic [ref=e55]:
+      - main [ref=e4053]:
+        - generic [ref=e4054]:
+          - generic [ref=e4055]:
+            - navigation "breadcrumb" [ref=e4057]:
+              - list [ref=e4058]:
+                - listitem [ref=e4059]:
+                  - link "My account" [ref=e4061] [cursor=pointer]:
+                    - /url: /account
+                  - text: /
+                - listitem [ref=e4062]:
+                  - link "Purchase history" [ref=e4064] [cursor=pointer]:
+                    - /url: /orders
+                  - text: /
+                - listitem [ref=e4065]:
+                  - link "Order details" [ref=e4067] [cursor=pointer]:
+                    - /url: /orders/200014577999454
+            - generic [ref=e4069]:
+              - link "Messages (4 unread)" [ref=e4072] [cursor=pointer]:
+                - /url: /account/message-center
+                - generic [ref=e4073]: 
+                - generic [ref=e4074]: "4"
+              - generic [ref=e4075]:
+                - link "Account Settings Your Wallet, Addresses, Personal Info and more are now in Account Settings." [ref=e4076] [cursor=pointer]:
+                  - /url: /account/settings
+                  - generic [ref=e4077]: 
+                - generic [ref=e4080]:
+                  - generic [ref=e4081]:
+                    - generic [ref=e4082]: callout
+                    - text: Your Wallet, Addresses, Personal Info and more are now in Account Settings.
+                  - button "Close callout" [ref=e4084] [cursor=pointer]: Close
+          - generic [ref=e4085]:
+            - navigation [ref=e4088]:
+              - generic [ref=e4091]:
+                - separator [ref=e4092]
+                - generic [ref=e4093]:
+                  - img [ref=e4094]
+                  - heading "Hi, Jonah" [level=3] [ref=e4095]
+                - generic [ref=e4096]: Member since 2023
+                - generic [ref=e4097]:
+                  - button "Account" [expanded] [ref=e4098]:
+                    - heading " Account" [level=2] [ref=e4099]:
+                      - generic [ref=e4100]:
+                        - generic [ref=e4103]: 
+                        - text: Account
+                    - generic [ref=e4106]: 
+                  - generic [ref=e4108]:
+                    - list [ref=e4110]:
+                      - listitem [ref=e4111]:
+                        - link "Home" [ref=e4113] [cursor=pointer]:
+                          - /url: /account
+                          - generic [ref=e4114]: Home
+                      - listitem [ref=e4115]:
+                        - link "Purchase history" [ref=e4117] [cursor=pointer]:
+                          - /url: /orders
+                          - generic [ref=e4118]: Purchase history
+                      - listitem [ref=e4119]:
+                        - link "Walmart+" [ref=e4121] [cursor=pointer]:
+                          - /url: /account/plus/overview
+                          - generic [ref=e4122]: Walmart+
+                      - listitem [ref=e4123]:
+                        - link "My savings" [ref=e4125] [cursor=pointer]:
+                          - /url: /savings
+                          - generic [ref=e4126]: My savings
+                      - listitem [ref=e4127]:
+                        - link "Walmart Cash" [ref=e4129] [cursor=pointer]:
+                          - /url: https://www.walmart.com/walmartcash
+                          - generic [ref=e4130]: Walmart Cash
+                      - listitem [ref=e4131]:
+                        - link "Messages(4 New)" [ref=e4133] [cursor=pointer]:
+                          - /url: /account/message-center
+                          - generic [ref=e4134]:
+                            - text: Messages
+                            - generic [ref=e4135]: (4 New)
+                    - generic [ref=e4137]:
+                      - heading "My items" [level=3] [ref=e4138]
+                      - list [ref=e4139]:
+                        - listitem [ref=e4140]:
+                          - link "Reorder" [ref=e4142] [cursor=pointer]:
+                            - /url: https://www.walmart.com/my-items
+                            - generic [ref=e4143]: Reorder
+                        - listitem [ref=e4144]:
+                          - link "Lists" [ref=e4146] [cursor=pointer]:
+                            - /url: /lists
+                            - generic [ref=e4147]: Lists
+                        - listitem [ref=e4148]:
+                          - link "Subscriptions" [ref=e4150] [cursor=pointer]:
+                            - /url: /subscriptions/manage
+                            - generic [ref=e4151]: Subscriptions
+                        - listitem [ref=e4152]:
+                          - link "Registry" [ref=e4154] [cursor=pointer]:
+                            - /url: /my-registries
+                            - generic [ref=e4155]: Registry
+                        - listitem [ref=e4156]:
+                          - link "Protection plans" [ref=e4158] [cursor=pointer]:
+                            - /url: /protection-plans
+                            - generic [ref=e4159]: Protection plans
+                    - generic [ref=e4160]:
+                      - heading "My profile" [level=3] [ref=e4161]
+                      - list [ref=e4162]:
+                        - listitem [ref=e4163]:
+                          - link "Reviews 10+ items to review" [ref=e4165] [cursor=pointer]:
+                            - /url: /reviews/dashboard
+                            - generic [ref=e4166]:
+                              - text: Reviews
+                              - generic [ref=e4168]: 10+ items to review
+                        - listitem [ref=e4169]:
+                          - link "Pets" [ref=e4171] [cursor=pointer]:
+                            - /url: /account/pet-hub
+                            - generic [ref=e4172]: Pets
+                        - listitem [ref=e4173]:
+                          - link "Vehicles" [ref=e4175] [cursor=pointer]:
+                            - /url: /acc/garage
+                            - generic [ref=e4176]: Vehicles
+                        - listitem [ref=e4177]:
+                          - link "Recipes" [ref=e4179] [cursor=pointer]:
+                            - /url: /i/recipe-results?facet=myrecipes-all
+                            - generic [ref=e4180]: Recipes
+                        - listitem [ref=e4181]:
+                          - link "Giving & impact" [ref=e4183] [cursor=pointer]:
+                            - /url: /account/spark-good
+                            - generic [ref=e4184]: Giving & impact
+                    - generic [ref=e4185]:
+                      - heading "Other Accounts" [level=2] [ref=e4186]
+                      - list [ref=e4187]:
+                        - listitem [ref=e4188]:
+                          - link "Pharmacy" [ref=e4190] [cursor=pointer]:
+                            - /url: https://www.walmart.com/pharmacy/dashboard
+                            - generic [ref=e4191]: Pharmacy
+                        - listitem [ref=e4192]:
+                          - link "Photo" [ref=e4194] [cursor=pointer]:
+                            - /url: https://photos3.walmart.com/account/orders
+                            - generic [ref=e4195]: Photo
+                - generic [ref=e4196]:
+                  - separator [ref=e4197]
+                  - button "Settings" [ref=e4198]:
+                    - heading " Settings" [level=2] [ref=e4199]:
+                      - generic [ref=e4200]:
+                        - generic [ref=e4203]: 
+                        - text: Settings
+                    - generic [ref=e4206]: 
+                - separator [ref=e4207]
+                - link " Sign Out" [ref=e4208] [cursor=pointer]:
+                  - /url: https://www.walmart.com/account/logout?returnUrl=%2Forders%2F200014577999454%3FgroupId%3D70d90472686fb4906b797e8e0e5ca98b
+                  - generic [ref=e4211]: 
+                  - generic [ref=e4212]: Sign Out
+            - generic [ref=e4214]:
+              - generic [ref=e4215]:
+                - generic [ref=e4216]:
+                  - heading "Apr 12, 2026 order" [level=1] [ref=e4217]
+                  - generic [ref=e4218]: "|"
+                  - generic [ref=e4219]: Order# 2000145-77999454
+                - generic [ref=e4222]:
+                  - generic [ref=e4223]: 
+                  - button "Print" [ref=e4224]
+              - generic [ref=e4225]:
+                - generic [ref=e4226]:
+                  - generic [ref=e4232]:
+                    - img [ref=e4233]
+                    - generic [ref=e4235]:
+                      - generic [ref=e4238]: $2.75 Walmart Cash added!
+                      - link "View your balance" [ref=e4241] [cursor=pointer]:
+                        - /url: https://www.walmart.com/cp/8301756
+                  - generic [ref=e4244]:
+                    - generic [ref=e4253]:
+                      - generic [ref=e4255]: Delivery from store
+                      - heading "Delivered on Apr 13" [level=2] [ref=e4257]
+                      - generic [ref=e4258]: Return eligible until Sun, Jul 12
+                    - separator [ref=e4259]
+                    - generic [ref=e4260]:
+                      - generic [ref=e4261]:
+                        - generic [ref=e4262]: 29 items received
+                        - button "Hide items" [expanded] [active] [ref=e4498] [cursor=pointer]:
+                          - generic [ref=e4264]: 
+                      - generic [ref=e4265]:
+                        - generic [ref=e4268]:
+                          - generic [ref=e4269]: Want to see what was substituted?
+                          - button "View substitutions" [ref=e4270] [cursor=pointer]: View
+                        - generic [ref=e4500]:
+                          - generic [ref=e4503]:
+                            - heading "Substitutions" [level=2] [ref=e4504]
+                            - text: (2 items)
+                          - generic [ref=e4505]: Substitution
+                          - generic [ref=e4507]:
+                            - generic [ref=e4508]:
+                              - link [ref=e4511] [cursor=pointer]:
+                                - /url: /ip/Crofters-63873-Organic-Strawberry-Conserves/29952845
+                              - generic [ref=e4513]:
+                                - generic [ref=e4514]:
+                                  - generic [ref=e4516]:
+                                    - link "Crofters Fruit Spread Organic Premium Strawberry, 16.5 oz" [ref=e4517] [cursor=pointer]:
+                                      - /url: /ip/Crofters-63873-Organic-Strawberry-Conserves/29952845
+                                      - generic [ref=e4519]: Crofters Fruit Spread Organic Premium Strawberry, 16.5 oz
+                                    - generic [ref=e4521]: "Multipack Quantity: 1"
+                                  - generic [ref=e4522]: Qty 1
+                                - generic [ref=e4526]: $5.64
+                            - button "Add to cart - Crofters Fruit Spread Organic Premium Strawberry, 16.5 oz" [ref=e4532] [cursor=pointer]:
+                              - generic [ref=e4533]: Add to cart
+                            - generic [ref=e4536]:
+                              - generic [ref=e4537]: 
+                              - button "Review item" [ref=e4538]
+                          - separator [ref=e4540]
+                          - generic [ref=e4541]: Substitution
+                          - generic [ref=e4543]:
+                            - generic [ref=e4544]:
+                              - link [ref=e4547] [cursor=pointer]:
+                                - /url: /ip/Culture-Pop-Soda-Watermelon-Probiotic-Soda-12-fl-oz/436428978
+                              - generic [ref=e4549]:
+                                - generic [ref=e4550]:
+                                  - generic [ref=e4552]:
+                                    - link "Culture Pop Soda Watermelon, Probiotic Soda, 12 fl oz" [ref=e4553] [cursor=pointer]:
+                                      - /url: /ip/Culture-Pop-Soda-Watermelon-Probiotic-Soda-12-fl-oz/436428978
+                                      - generic [ref=e4555]: Culture Pop Soda Watermelon, Probiotic Soda, 12 fl oz
+                                    - generic [ref=e4557]: "Multipack Quantity: 1"
+                                  - generic [ref=e4558]: Qty 1
+                                  - generic [ref=e4559]: $0.29 from savings
+                                - generic [ref=e4561]:
+                                  - generic [ref=e4563]: $1.68
+                                  - generic [ref=e4564]: Was $1.97
+                                  - generic [ref=e4565]: $1.97
+                            - button "Add to cart - Culture Pop Soda Watermelon, Probiotic Soda, 12 fl oz" [ref=e4571] [cursor=pointer]:
+                              - generic [ref=e4572]: Add to cart
+                            - generic [ref=e4575]:
+                              - generic [ref=e4576]: 
+                              - button "Review item" [ref=e4577]
+                          - separator [ref=e4579]
+                      - generic [ref=e4582]:
+                        - heading "Weight-adjusted" [level=2] [ref=e4586]
+                        - generic [ref=e4588]:
+                          - generic [ref=e4589]:
+                            - link [ref=e4592] [cursor=pointer]:
+                              - /url: /ip/Fresh-Granny-Smith-Apple-Each/51259197
+                            - generic [ref=e4594]:
+                              - generic [ref=e4595]:
+                                - generic [ref=e4597]:
+                                  - link "Fresh Granny Smith Apple, Each" [ref=e4598] [cursor=pointer]:
+                                    - /url: /ip/Fresh-Granny-Smith-Apple-Each/51259197
+                                    - generic [ref=e4600]: Fresh Granny Smith Apple, Each
+                                  - generic [ref=e4602]: 93.0¢/lb
+                                - generic [ref=e4603]:
+                                  - text: Qty 2
+                                  - generic [ref=e4604]: Final weight 1.2 lbs
+                                - generic [ref=e4605]: $0.70 from savings
+                              - generic [ref=e4607]:
+                                - generic [ref=e4609]: $1.14
+                                - generic [ref=e4610]: Was $1.84
+                                - generic [ref=e4611]: $1.84
+                          - button "Add to cart - Fresh Granny Smith Apple, Each" [ref=e4617] [cursor=pointer]:
+                            - generic [ref=e4618]: Add to cart
+                          - generic [ref=e4621]:
+                            - generic [ref=e4622]: 
+                            - button "Review item" [ref=e4623]
+                        - separator [ref=e4625]
+                        - generic [ref=e4627]:
+                          - generic [ref=e4628]:
+                            - link [ref=e4631] [cursor=pointer]:
+                              - /url: /ip/Fresh-Green-Seedless-Grapes-2-25-lbs-Bag-Est/44390943
+                            - generic [ref=e4633]:
+                              - generic [ref=e4634]:
+                                - generic [ref=e4636]:
+                                  - link "Fresh Green Seedless Grapes, Bag (2.25 lbs/Bag Est.)" [ref=e4637] [cursor=pointer]:
+                                    - /url: /ip/Fresh-Green-Seedless-Grapes-2-25-lbs-Bag-Est/44390943
+                                    - generic [ref=e4639]: Fresh Green Seedless Grapes, Bag (2.25 lbs/Bag Est.)
+                                  - generic [ref=e4641]: $2.27/lb
+                                - generic [ref=e4642]:
+                                  - text: Qty 1
+                                  - generic [ref=e4643]: Final weight 2.2 lbs
+                              - generic [ref=e4647]: $5.07
+                          - button "Add to cart - Fresh Green Seedless Grapes, Bag (2.25 lbs/Bag Est.)" [ref=e4653] [cursor=pointer]:
+                            - generic [ref=e4654]: Add to cart
+                          - generic [ref=e4657]:
+                            - generic [ref=e4658]: 
+                            - button "Review item" [ref=e4659]
+                        - separator [ref=e4661]
+                      - generic [ref=e4664]:
+                        - heading "Shopped" [level=2] [ref=e4668]
+                        - generic [ref=e4670]:
+                          - generic [ref=e4671]:
+                            - link [ref=e4674] [cursor=pointer]:
+                              - /url: /ip/Old-Spice-Base-Shampoo-Cleanse-Cosmetic/16940263889
+                            - generic [ref=e4676]:
+                              - generic [ref=e4677]:
+                                - generic [ref=e4679]:
+                                  - 'link "Old Spice Shampoo: The Spice Alchemist, Cologne-Infused Yuzu Peel & White Wood, No Parabens or Phthalates, 21.9 fl oz" [ref=e4680] [cursor=pointer]':
+                                    - /url: /ip/Old-Spice-Base-Shampoo-Cleanse-Cosmetic/16940263889
+                                    - generic [ref=e4682]: "Old Spice Shampoo: The Spice Alchemist, Cologne-Infused Yuzu Peel & White Wood, No Parabens or Phthalates, 21.9 fl oz"
+                                  - generic [ref=e4683]:
+                                    - generic [ref=e4684]: "Multipack Quantity: 1"
+                                    - generic [ref=e4685]: $10.38/pt
+                                - generic [ref=e4686]: Qty 1
+                              - generic [ref=e4690]: $12.97
+                          - 'button "Add to cart - Old Spice Shampoo: The Spice Alchemist, Cologne-Infused Yuzu Peel & White Wood, No Parabens or Phthalates, 21.9 fl oz" [ref=e4696] [cursor=pointer]':
+                            - generic [ref=e4697]: Add to cart
+                          - generic [ref=e4700]:
+                            - generic [ref=e4701]: 
+                            - button "Review item" [ref=e4702]
+                        - separator [ref=e4704]
+                        - generic [ref=e4706]:
+                          - generic [ref=e4707]:
+                            - link [ref=e4710] [cursor=pointer]:
+                              - /url: /ip/Ocean-Spray-Os-100-Pure-Cranberry-Juice/983118751
+                            - generic [ref=e4712]:
+                              - generic [ref=e4713]:
+                                - generic [ref=e4715]:
+                                  - link "Ocean Spray® Pure Unsweetened Cranberry, 100% Cranberry Juice, 32 fl oz Bottle" [ref=e4716] [cursor=pointer]:
+                                    - /url: /ip/Ocean-Spray-Os-100-Pure-Cranberry-Juice/983118751
+                                    - generic [ref=e4718]: Ocean Spray® Pure Unsweetened Cranberry, 100% Cranberry Juice, 32 fl oz Bottle
+                                  - generic [ref=e4719]:
+                                    - generic [ref=e4720]: "Multipack Quantity: 1"
+                                    - generic [ref=e4721]: $5.48/qt
+                                - generic [ref=e4722]: Qty 1
+                              - generic [ref=e4726]: $5.48
+                          - button "Add to cart - Ocean Spray® Pure Unsweetened Cranberry, 100% Cranberry Juice, 32 fl oz Bottle" [ref=e4732] [cursor=pointer]:
+                            - generic [ref=e4733]: Add to cart
+                          - generic [ref=e4736]:
+                            - generic [ref=e4737]: 
+                            - button "Review item" [ref=e4738]
+                        - separator [ref=e4740]
+                        - generic [ref=e4742]:
+                          - generic [ref=e4743]:
+                            - link [ref=e4746] [cursor=pointer]:
+                              - /url: /ip/Colgate-Maximum-Strength-Sensitive-Multiprotection-Toothpaste-6-oz-Pack-of-2/33141127
+                            - generic [ref=e4748]:
+                              - generic [ref=e4749]:
+                                - generic [ref=e4751]:
+                                  - link "Colgate Sensitive Complete Protection Toothpaste for Sensitive Teeth, Spearmint, 2 Pack, 6 oz" [ref=e4752] [cursor=pointer]:
+                                    - /url: /ip/Colgate-Maximum-Strength-Sensitive-Multiprotection-Toothpaste-6-oz-Pack-of-2/33141127
+                                    - generic [ref=e4754]: Colgate Sensitive Complete Protection Toothpaste for Sensitive Teeth, Spearmint, 2 Pack, 6 oz
+                                  - generic [ref=e4755]:
+                                    - generic [ref=e4756]: "Count: 2"
+                                    - generic [ref=e4757]: $11.95/lb
+                                - generic [ref=e4758]: Qty 1
+                              - generic [ref=e4762]: $8.96
+                          - button "Add to cart - Colgate Sensitive Complete Protection Toothpaste for Sensitive Teeth, Spearmint, 2 Pack, 6 oz" [ref=e4768] [cursor=pointer]:
+                            - generic [ref=e4769]: Add to cart
+                          - generic [ref=e4772]:
+                            - generic [ref=e4773]: 
+                            - button "Review item" [ref=e4774]
+                        - separator [ref=e4776]
+                        - generic [ref=e4778]:
+                          - generic [ref=e4779]:
+                            - link [ref=e4782] [cursor=pointer]:
+                              - /url: /ip/Refresh-Tears-Lubricant-Eye-Drops-Artificial-Tears-30-ml-2-Bottles/10294098
+                            - generic [ref=e4784]:
+                              - generic [ref=e4785]:
+                                - generic [ref=e4787]:
+                                  - link "Refresh Tears Lubricant Eye Drops Artificial Tears, 30 ml, 2 Bottles" [ref=e4788] [cursor=pointer]:
+                                    - /url: /ip/Refresh-Tears-Lubricant-Eye-Drops-Artificial-Tears-30-ml-2-Bottles/10294098
+                                    - generic [ref=e4790]: Refresh Tears Lubricant Eye Drops Artificial Tears, 30 ml, 2 Bottles
+                                  - generic [ref=e4791]:
+                                    - generic [ref=e4792]: "Count Per Pack: 2"
+                                    - generic [ref=e4793]: $472.96/qt
+                                - generic [ref=e4794]: Qty 1
+                              - generic [ref=e4798]: $14.78
+                          - button "Add to cart - Refresh Tears Lubricant Eye Drops Artificial Tears, 30 ml, 2 Bottles" [ref=e4804] [cursor=pointer]:
+                            - generic [ref=e4805]: Add to cart
+                          - generic [ref=e4808]:
+                            - generic [ref=e4809]: 
+                            - button "Review item" [ref=e4810]
+                        - separator [ref=e4812]
+                        - generic [ref=e4814]:
+                          - generic [ref=e4815]:
+                            - link [ref=e4818] [cursor=pointer]:
+                              - /url: /ip/Carmex-Daily-Care-Moisturizing-Lip-Balm-Sticks-SPF-15-Multi-Flavor-Lip-Balm-3-Count-1-Pack-of-3/302645583
+                            - generic [ref=e4820]:
+                              - generic [ref=e4821]:
+                                - generic [ref=e4823]:
+                                  - link "Carmex Daily Care Moisturizing Lip Balm Sticks, SPF 15, Multi-Flavor Lip Balm, 3 Count (1 Pack of 3)" [ref=e4824] [cursor=pointer]:
+                                    - /url: /ip/Carmex-Daily-Care-Moisturizing-Lip-Balm-Sticks-SPF-15-Multi-Flavor-Lip-Balm-3-Count-1-Pack-of-3/302645583
+                                    - generic [ref=e4826]: Carmex Daily Care Moisturizing Lip Balm Sticks, SPF 15, Multi-Flavor Lip Balm, 3 Count (1 Pack of 3)
+                                  - generic [ref=e4827]:
+                                    - generic [ref=e4828]: "Multipack Quantity: 1"
+                                    - generic [ref=e4829]: $116.62/lb
+                                - generic [ref=e4830]: Qty 1
+                              - generic [ref=e4834]: $3.28
+                          - button "Add to cart - Carmex Daily Care Moisturizing Lip Balm Sticks, SPF 15, Multi-Flavor Lip Balm, 3 Count (1 Pack of 3)" [ref=e4840] [cursor=pointer]:
+                            - generic [ref=e4841]: Add to cart
+                          - generic [ref=e4844]:
+                            - generic [ref=e4845]: 
+                            - button "Review item" [ref=e4846]
+                        - separator [ref=e4848]
+                        - generic [ref=e4850]:
+                          - generic [ref=e4851]:
+                            - link [ref=e4854] [cursor=pointer]:
+                              - /url: /ip/Cabot-Creamery-Cabot-Whole-Milk-Plain-Greek-Yogurt-2-lb-Refridgerated-Tub/32358846
+                            - generic [ref=e4856]:
+                              - generic [ref=e4857]:
+                                - generic [ref=e4859]:
+                                  - link "Cabot Creamery Cabot Whole Milk Plain Greek Yogurt 2 lb (Refrigerated Tub)" [ref=e4860] [cursor=pointer]:
+                                    - /url: /ip/Cabot-Creamery-Cabot-Whole-Milk-Plain-Greek-Yogurt-2-lb-Refridgerated-Tub/32358846
+                                    - generic [ref=e4862]: Cabot Creamery Cabot Whole Milk Plain Greek Yogurt 2 lb (Refrigerated Tub)
+                                  - generic [ref=e4864]: $2.36/lb
+                                - generic [ref=e4865]: Qty 1
+                              - generic [ref=e4869]: $4.72
+                          - button "Add to cart - Cabot Creamery Cabot Whole Milk Plain Greek Yogurt 2 lb (Refrigerated Tub)" [ref=e4875] [cursor=pointer]:
+                            - generic [ref=e4876]: Add to cart
+                          - generic [ref=e4879]:
+                            - generic [ref=e4880]: 
+                            - button "Review item" [ref=e4881]
+                        - separator [ref=e4883]
+                        - generic [ref=e4885]:
+                          - generic [ref=e4886]:
+                            - link [ref=e4889] [cursor=pointer]:
+                              - /url: /ip/Great-Value-Pineapple-Chunks-Frozen-16-oz/115159456
+                            - generic [ref=e4891]:
+                              - generic [ref=e4892]:
+                                - generic [ref=e4894]:
+                                  - link "Great Value Pineapple Chunks, 16 oz (Frozen)" [ref=e4895] [cursor=pointer]:
+                                    - /url: /ip/Great-Value-Pineapple-Chunks-Frozen-16-oz/115159456
+                                    - generic [ref=e4897]: Great Value Pineapple Chunks, 16 oz (Frozen)
+                                  - generic [ref=e4899]: $2.82/lb
+                                - generic [ref=e4900]: Qty 1
+                              - generic [ref=e4904]: $2.82
+                          - button "Add to cart - Great Value Pineapple Chunks, 16 oz (Frozen)" [ref=e4910] [cursor=pointer]:
+                            - generic [ref=e4911]: Add to cart
+                          - generic [ref=e4914]:
+                            - generic [ref=e4915]: 
+                            - button "Review item" [ref=e4916]
+                        - separator [ref=e4918]
+                        - generic [ref=e4920]:
+                          - generic [ref=e4921]:
+                            - link [ref=e4924] [cursor=pointer]:
+                              - /url: /ip/bettergoods-Double-Vanilla-Premium-Ice-Cream-16-fl-oz/5212491125
+                            - generic [ref=e4926]:
+                              - generic [ref=e4927]:
+                                - generic [ref=e4929]:
+                                  - link "bettergoods Double Vanilla Premium Ice Cream, 16 fl oz" [ref=e4930] [cursor=pointer]:
+                                    - /url: /ip/bettergoods-Double-Vanilla-Premium-Ice-Cream-16-fl-oz/5212491125
+                                    - generic [ref=e4932]: bettergoods Double Vanilla Premium Ice Cream, 16 fl oz
+                                  - generic [ref=e4934]: $6.88/qt
+                                - generic [ref=e4935]: Qty 1
+                              - generic [ref=e4939]: $3.44
+                          - button "Add to cart - bettergoods Double Vanilla Premium Ice Cream, 16 fl oz" [ref=e4945] [cursor=pointer]:
+                            - generic [ref=e4946]: Add to cart
+                          - generic [ref=e4949]:
+                            - generic [ref=e4950]: 
+                            - button "Review item" [ref=e4951]
+                        - separator [ref=e4953]
+                        - generic [ref=e4955]:
+                          - generic [ref=e4956]:
+                            - link [ref=e4959] [cursor=pointer]:
+                              - /url: /ip/Haagen-Dazs-Vanilla-Bean-Ice-Cream-14oz/33302957
+                            - generic [ref=e4961]:
+                              - generic [ref=e4962]:
+                                - generic [ref=e4964]:
+                                  - link "Haagen Dazs Vanilla Bean Ice Cream, Gluten Free, Kosher, 14 oz" [ref=e4965] [cursor=pointer]:
+                                    - /url: /ip/Haagen-Dazs-Vanilla-Bean-Ice-Cream-14oz/33302957
+                                    - generic [ref=e4967]: Haagen Dazs Vanilla Bean Ice Cream, Gluten Free, Kosher, 14 oz
+                                  - generic [ref=e4969]: $9.97/qt
+                                - generic [ref=e4970]: Qty 1
+                              - generic [ref=e4974]: $4.36
+                          - button "Add to cart - Haagen Dazs Vanilla Bean Ice Cream, Gluten Free, Kosher, 14 oz" [ref=e4980] [cursor=pointer]:
+                            - generic [ref=e4981]: Add to cart
+                          - generic [ref=e4984]:
+                            - generic [ref=e4985]: 
+                            - button "Review item" [ref=e4986]
+                        - separator [ref=e4988]
+                        - generic [ref=e4990]:
+                          - generic [ref=e4991]:
+                            - link [ref=e4994] [cursor=pointer]:
+                              - /url: /ip/Alexia-Sweet-Potato-Julienne-Fries-20-oz/15716883
+                            - generic [ref=e4996]:
+                              - generic [ref=e4997]:
+                                - generic [ref=e4999]:
+                                  - link "Alexia® Sweet Potato Fries Sweet & Savory with Sea Salt, Frozen 20 oz Bag" [ref=e5000] [cursor=pointer]:
+                                    - /url: /ip/Alexia-Sweet-Potato-Julienne-Fries-20-oz/15716883
+                                    - generic [ref=e5002]: Alexia® Sweet Potato Fries Sweet & Savory with Sea Salt, Frozen 20 oz Bag
+                                  - generic [ref=e5003]:
+                                    - generic [ref=e5004]: "Count Per Pack: 1"
+                                    - generic [ref=e5005]: $4.34/lb
+                                - generic [ref=e5006]: Qty 1
+                              - generic [ref=e5010]: $5.42
+                          - button "Add to cart - Alexia® Sweet Potato Fries Sweet & Savory with Sea Salt, Frozen 20 oz Bag" [ref=e5016] [cursor=pointer]:
+                            - generic [ref=e5017]: Add to cart
+                          - generic [ref=e5020]:
+                            - generic [ref=e5021]: 
+                            - button "Review item" [ref=e5022]
+                        - separator [ref=e5024]
+                        - generic [ref=e5026]:
+                          - generic [ref=e5027]:
+                            - link [ref=e5030] [cursor=pointer]:
+                              - /url: /ip/Marketside-Organic-Baby-Arugula-Salad-5-oz-Clam-Shell-Fresh/998269547
+                            - generic [ref=e5032]:
+                              - generic [ref=e5033]:
+                                - generic [ref=e5035]:
+                                  - link "Marketside Organic Baby Arugula Salad, 5 oz Clam Shell (Fresh)" [ref=e5036] [cursor=pointer]:
+                                    - /url: /ip/Marketside-Organic-Baby-Arugula-Salad-5-oz-Clam-Shell-Fresh/998269547
+                                    - generic [ref=e5038]: Marketside Organic Baby Arugula Salad, 5 oz Clam Shell (Fresh)
+                                  - generic [ref=e5040]: $8.83/lb
+                                - generic [ref=e5041]: Qty 1
+                              - generic [ref=e5045]: $2.76
+                          - button "Add to cart - Marketside Organic Baby Arugula Salad, 5 oz Clam Shell (Fresh)" [ref=e5051] [cursor=pointer]:
+                            - generic [ref=e5052]: Add to cart
+                          - generic [ref=e5055]:
+                            - generic [ref=e5056]: 
+                            - button "Review item" [ref=e5057]
+                        - separator [ref=e5059]
+                        - generic [ref=e5061]:
+                          - generic [ref=e5062]:
+                            - link [ref=e5065] [cursor=pointer]:
+                              - /url: /ip/Great-Value-No-Sugar-Added-100-Apple-Juice-64-oz/16935731
+                            - generic [ref=e5067]:
+                              - generic [ref=e5068]:
+                                - generic [ref=e5070]:
+                                  - link "Great Value No Added Sweeteners 100% Apple Juice, 64 fl oz" [ref=e5071] [cursor=pointer]:
+                                    - /url: /ip/Great-Value-No-Sugar-Added-100-Apple-Juice-64-oz/16935731
+                                    - generic [ref=e5073]: Great Value No Added Sweeteners 100% Apple Juice, 64 fl oz
+                                  - generic [ref=e5074]:
+                                    - generic [ref=e5075]: "Multipack Quantity: 1"
+                                    - generic [ref=e5076]: $1.14/qt
+                                - generic [ref=e5077]: Qty 1
+                              - generic [ref=e5081]: $2.27
+                          - button "Add to cart - Great Value No Added Sweeteners 100% Apple Juice, 64 fl oz" [ref=e5087] [cursor=pointer]:
+                            - generic [ref=e5088]: Add to cart
+                          - generic [ref=e5091]:
+                            - generic [ref=e5092]: 
+                            - button "Review item" [ref=e5093]
+                        - separator [ref=e5095]
+                        - generic [ref=e5097]:
+                          - generic [ref=e5098]:
+                            - link [ref=e5101] [cursor=pointer]:
+                              - /url: /ip/Great-Value-Thin-Crispy-Cantina-Style-Tortilla-Chips-13-oz/835593418
+                            - generic [ref=e5103]:
+                              - generic [ref=e5104]:
+                                - generic [ref=e5106]:
+                                  - link "Great Value Thin and Crispy Cantina Style Tortilla Chips, 13 oz" [ref=e5107] [cursor=pointer]:
+                                    - /url: /ip/Great-Value-Thin-Crispy-Cantina-Style-Tortilla-Chips-13-oz/835593418
+                                    - generic [ref=e5109]: Great Value Thin and Crispy Cantina Style Tortilla Chips, 13 oz
+                                  - generic [ref=e5110]:
+                                    - generic [ref=e5111]: "Multipack Quantity: 1"
+                                    - generic [ref=e5112]: $2.43/lb
+                                - generic [ref=e5113]: Qty 1
+                              - generic [ref=e5117]: $1.97
+                          - button "Add to cart - Great Value Thin and Crispy Cantina Style Tortilla Chips, 13 oz" [ref=e5123] [cursor=pointer]:
+                            - generic [ref=e5124]: Add to cart
+                          - generic [ref=e5127]:
+                            - generic [ref=e5128]: 
+                            - button "Review item" [ref=e5129]
+                        - separator [ref=e5131]
+                        - generic [ref=e5133]:
+                          - generic [ref=e5134]:
+                            - link [ref=e5137] [cursor=pointer]:
+                              - /url: /ip/Dave-s-Killer-Bread-21-Whole-Grains-and-Seeds-Organic-Bread-Loaf-27-oz/49342184
+                            - generic [ref=e5139]:
+                              - generic [ref=e5140]:
+                                - generic [ref=e5142]:
+                                  - link "Dave's Killer Bread 21 Whole Grains and Seeds Organic Bread Loaf, 27 ounce, Shelf Stable" [ref=e5143] [cursor=pointer]:
+                                    - /url: /ip/Dave-s-Killer-Bread-21-Whole-Grains-and-Seeds-Organic-Bread-Loaf-27-oz/49342184
+                                    - generic [ref=e5145]: Dave's Killer Bread 21 Whole Grains and Seeds Organic Bread Loaf, 27 ounce, Shelf Stable
+                                  - generic [ref=e5147]: $3.80/lb
+                                - generic [ref=e5148]: Qty 1
+                              - generic [ref=e5152]: $6.42
+                          - button "Add to cart - Dave's Killer Bread 21 Whole Grains and Seeds Organic Bread Loaf, 27 ounce, Shelf Stable" [ref=e5158] [cursor=pointer]:
+                            - generic [ref=e5159]: Add to cart
+                          - generic [ref=e5162]:
+                            - generic [ref=e5163]: 
+                            - button "Review item" [ref=e5164]
+                        - separator [ref=e5166]
+                        - generic [ref=e5168]:
+                          - generic [ref=e5169]:
+                            - link [ref=e5172] [cursor=pointer]:
+                              - /url: /ip/Great-Value-String-Low-Moisture-Part-Skim-Mozzarella-Cheese-12-oz-Bag-12-Sticks/364923224
+                            - generic [ref=e5174]:
+                              - generic [ref=e5175]:
+                                - generic [ref=e5177]:
+                                  - link "Great Value Low-Moisture Part-Skim Mozzarella String Cheese Snack, 12 oz, 12 Count" [ref=e5178] [cursor=pointer]:
+                                    - /url: /ip/Great-Value-String-Low-Moisture-Part-Skim-Mozzarella-Cheese-12-oz-Bag-12-Sticks/364923224
+                                    - generic [ref=e5180]: Great Value Low-Moisture Part-Skim Mozzarella String Cheese Snack, 12 oz, 12 Count
+                                  - generic [ref=e5182]: $4.37/lb
+                                - generic [ref=e5183]: Qty 1
+                              - generic [ref=e5187]: $3.28
+                          - button "Add to cart - Great Value Low-Moisture Part-Skim Mozzarella String Cheese Snack, 12 oz, 12 Count" [ref=e5193] [cursor=pointer]:
+                            - generic [ref=e5194]: Add to cart
+                          - generic [ref=e5197]:
+                            - generic [ref=e5198]: 
+                            - button "Review item" [ref=e5199]
+                        - separator [ref=e5201]
+                        - generic [ref=e5203]:
+                          - generic [ref=e5204]:
+                            - link [ref=e5207] [cursor=pointer]:
+                              - /url: /ip/Great-Value-Greek-Plain-Nonfat-Yogurt-5-3-oz-Cups-Plastic-Container/166046751
+                            - generic [ref=e5209]:
+                              - generic [ref=e5210]:
+                                - generic [ref=e5212]:
+                                  - link "Great Value Plain Nonfat Greek Yogurt, 5.3 oz Individual Cup" [ref=e5213] [cursor=pointer]:
+                                    - /url: /ip/Great-Value-Greek-Plain-Nonfat-Yogurt-5-3-oz-Cups-Plastic-Container/166046751
+                                    - generic [ref=e5215]: Great Value Plain Nonfat Greek Yogurt, 5.3 oz Individual Cup
+                                  - generic [ref=e5217]: $2.48/lb
+                                - generic [ref=e5218]: Qty 6
+                              - generic [ref=e5220]:
+                                - generic [ref=e5222]: $4.92
+                                - generic [ref=e5223]: $0.82 ea
+                          - button "Add to cart - Great Value Plain Nonfat Greek Yogurt, 5.3 oz Individual Cup" [ref=e5229] [cursor=pointer]:
+                            - generic [ref=e5230]: Add to cart
+                          - generic [ref=e5233]:
+                            - generic [ref=e5234]: 
+                            - button "Review item" [ref=e5235]
+                        - separator [ref=e5237]
+                        - generic [ref=e5239]:
+                          - generic [ref=e5240]:
+                            - link [ref=e5243] [cursor=pointer]:
+                              - /url: /ip/Conair-Professional-Small-Round-Brush/10323141
+                            - generic [ref=e5245]:
+                              - generic [ref=e5246]:
+                                - generic [ref=e5248]:
+                                  - link "Conair Grip & Style Small Metal Round Hairbrush, Nylon Bristles and Rubber Handle" [ref=e5249] [cursor=pointer]:
+                                    - /url: /ip/Conair-Professional-Small-Round-Brush/10323141
+                                    - generic [ref=e5251]: Conair Grip & Style Small Metal Round Hairbrush, Nylon Bristles and Rubber Handle
+                                  - generic [ref=e5252]:
+                                    - generic [ref=e5253]: "Multipack Quantity: 1"
+                                    - generic [ref=e5254]: $3.48/ea
+                                - generic [ref=e5255]: Qty 1
+                              - generic [ref=e5259]: $3.48
+                          - button "Add to cart - Conair Grip & Style Small Metal Round Hairbrush, Nylon Bristles and Rubber Handle" [ref=e5265] [cursor=pointer]:
+                            - generic [ref=e5266]: Add to cart
+                          - generic [ref=e5269]:
+                            - generic [ref=e5270]: 
+                            - button "Review item" [ref=e5271]
+                        - separator [ref=e5273]
+                        - generic [ref=e5275]:
+                          - generic [ref=e5276]:
+                            - link [ref=e5279] [cursor=pointer]:
+                              - /url: /ip/HT-PTFE-TAPE/16498209044
+                            - generic [ref=e5281]:
+                              - generic [ref=e5282]:
+                                - generic [ref=e5284]:
+                                  - link "Hyper Tough Pfte Tape for General Purpose Use, Model Number 41-311HT" [ref=e5285] [cursor=pointer]:
+                                    - /url: /ip/HT-PTFE-TAPE/16498209044
+                                    - generic [ref=e5287]: Hyper Tough Pfte Tape for General Purpose Use, Model Number 41-311HT
+                                  - generic [ref=e5288]:
+                                    - generic [ref=e5289]: "Multipack Quantity: 1"
+                                    - generic [ref=e5290]: 97.0¢/ea
+                                - generic [ref=e5291]: Qty 1
+                              - generic [ref=e5295]: $0.97
+                          - button "Add to cart - Hyper Tough Pfte Tape for General Purpose Use, Model Number 41-311HT" [ref=e5301] [cursor=pointer]:
+                            - generic [ref=e5302]: Add to cart
+                          - generic [ref=e5305]:
+                            - generic [ref=e5306]: 
+                            - button "Review item" [ref=e5307]
+                        - separator [ref=e5309]
+                        - generic [ref=e5311]:
+                          - generic [ref=e5312]:
+                            - link [ref=e5315] [cursor=pointer]:
+                              - /url: /ip/Fresh-Organic-Mini-Cucumbers-1-Pound-Bag/704747922
+                            - generic [ref=e5317]:
+                              - generic [ref=e5318]:
+                                - generic [ref=e5320]:
+                                  - link "Fresh Organic Mini Cucumbers, 1 Pound Bag" [ref=e5321] [cursor=pointer]:
+                                    - /url: /ip/Fresh-Organic-Mini-Cucumbers-1-Pound-Bag/704747922
+                                    - generic [ref=e5323]: Fresh Organic Mini Cucumbers, 1 Pound Bag
+                                  - generic [ref=e5325]: $3.46/lb
+                                - generic [ref=e5326]: Qty 1
+                              - generic [ref=e5330]: $3.46
+                          - button "Add to cart - Fresh Organic Mini Cucumbers, 1 Pound Bag" [ref=e5336] [cursor=pointer]:
+                            - generic [ref=e5337]: Add to cart
+                          - generic [ref=e5340]:
+                            - generic [ref=e5341]: 
+                            - button "Review item" [ref=e5342]
+                    - separator [ref=e4292]
+                    - generic [ref=e4294]:
+                      - heading "How can we help?" [level=2] [ref=e4295]:
+                        - generic [ref=e4296]: How can we help?
+                      - button "Start a return for refund or replacement" [ref=e4297]:
+                        - generic [ref=e4298]:
+                          - generic [ref=e4299]: Start a return for refund or replacement
+                          - generic [ref=e4301]: 
+                      - button "Issues with delivery" [ref=e4302]:
+                        - generic [ref=e4303]:
+                          - generic [ref=e4304]: Issues with delivery
+                          - generic [ref=e4306]: 
+                      - button "Need more help? Visit our help center." [ref=e4307]:
+                        - generic [ref=e4308]:
+                          - generic [ref=e4309]: Need more help? Visit our help center.
+                          - generic [ref=e4311]: 
+                    - separator [ref=e4312]
+                    - text: 
+                  - generic [ref=e4316]:
+                    - generic [ref=e4317]:
+                      - heading "Tell others what you thought" [level=2] [ref=e4318]
+                      - button "Close, Tell others what you thought" [ref=e4319] [cursor=pointer]:
+                        - generic [ref=e4320]: 
+                    - list [ref=e4322]:
+                      - listitem [ref=e4323]:
+                        - generic [ref=e4326]:
+                          - generic [ref=e4329]: What’d you think?
+                          - button "Review more items" [ref=e4331] [cursor=pointer]
+                      - listitem [ref=e4332]:
+                        - generic [ref=e4334]:
+                          - link "Review Fresh Green Seedless Grapes, Bag (2.25 lbs/Bag Est.)" [ref=e4335] [cursor=pointer]:
+                            - /url: /reviews/write-review?productId=44390943&conditionGroupCode=1&returnUrl=/orders&campaign_id=ORDER_DETAILS_MULTI_ITEM_REVIEW
+                          - generic [ref=e4337]:
+                            - generic [ref=e4338]: Fresh Green Seedless Grapes, Bag (2.25 lbs/Bag Est.)
+                            - generic [ref=e4340]:
+                              - generic "Click to rate" [ref=e4341]:
+                                - generic [ref=e4342]:
+                                  - generic [ref=e4343]:
+                                    - radio [ref=e4345]
+                                    - img [ref=e4346]
+                                  - generic [ref=e4348]:
+                                    - radio [ref=e4350]
+                                    - img [ref=e4351]
+                                  - generic [ref=e4353]:
+                                    - radio [ref=e4355]
+                                    - img [ref=e4356]
+                                  - generic [ref=e4358]:
+                                    - radio [ref=e4360]
+                                    - img [ref=e4361]
+                                  - generic [ref=e4363]:
+                                    - radio [ref=e4365]
+                                    - img [ref=e4366]
+                              - generic [ref=e4370]:
+                                - generic [ref=e4372]:
+                                  - generic [ref=e4373]: Click to rate
+                                  - text: Click to rate
+                                - button [ref=e4375]:
+                                  - generic [ref=e4376]: 
+                      - listitem [ref=e4377]:
+                        - generic [ref=e4379]:
+                          - link "Review Great Value No Added Sweeteners 100% Apple Juice, 64 fl oz" [ref=e4380] [cursor=pointer]:
+                            - /url: /reviews/write-review?productId=16935731&conditionGroupCode=1&returnUrl=/orders&campaign_id=ORDER_DETAILS_MULTI_ITEM_REVIEW
+                          - generic [ref=e4382]:
+                            - generic [ref=e4383]: Great Value No Added Sweeteners 100% Apple Juice, 64 fl oz
+                            - generic [ref=e4387]:
+                              - generic [ref=e4388]:
+                                - radio [ref=e4390]
+                                - img [ref=e4391]
+                              - generic [ref=e4393]:
+                                - radio [ref=e4395]
+                                - img [ref=e4396]
+                              - generic [ref=e4398]:
+                                - radio [ref=e4400]
+                                - img [ref=e4401]
+                              - generic [ref=e4403]:
+                                - radio [ref=e4405]
+                                - img [ref=e4406]
+                              - generic [ref=e4408]:
+                                - radio [ref=e4410]
+                                - img [ref=e4411]
+                - generic [ref=e4414]:
+                  - generic [ref=e4416]:
+                    - generic [ref=e4417]: Delivery from store
+                    - generic [ref=e4418]:
+                      - heading "Address" [level=2] [ref=e4420]
+                      - generic [ref=e4421]:
+                        - generic [ref=e4422]: Jonah Eaton
+                        - generic [ref=e4423]: 20 W Palisade Ave, Apt 2208, Englewood, NJ 07631
+                    - separator [ref=e4424]
+                    - generic [ref=e4426]:
+                      - heading "Delivery instructions" [level=2] [ref=e4427]
+                      - button "Show delivery instructions" [ref=e4428]:
+                        - generic [ref=e4429]: 
+                    - separator [ref=e4430]
+                  - generic [ref=e4431]:
+                    - heading "Payment method" [level=2] [ref=e4433]
+                    - generic [ref=e4434]:
+                      - text: 
+                      - generic [ref=e4436]:
+                        - generic [ref=e4437]:
+                          - img "OnePay CashRewards" [ref=e4438]
+                          - generic [ref=e4439]:
+                            - generic [ref=e4440]: OnePay CashRewards
+                            - generic [ref=e4441]: Ending in 5554
+                        - generic [ref=e4443]: Your payment method has a temporary hold for $125.10. An updated charge will appear on your statement within 10 business days.
+                    - separator [ref=e4445]
+                  - generic [ref=e4446]:
+                    - generic "Subtotal was $109.93" [ref=e4447]:
+                      - generic [ref=e4448]: Subtotal
+                      - generic [ref=e4449]: $109.93
+                    - generic "Savings, $0.64" [ref=e4450]:
+                      - generic [ref=e4452]: Savings
+                      - button "Savings summary" [ref=e4453] [cursor=pointer]:
+                        - generic [ref=e4454]: 
+                      - generic [ref=e4456]: "-$0.64"
+                    - generic "Subtotal after savings, $109.29" [ref=e4457]: $109.29
+                    - separator [ref=e4458]
+                    - generic [ref=e4459]:
+                      - generic [ref=e4460]:
+                        - generic [ref=e4461]: Walmart+ Free delivery from store , was $9.95, now $0
+                        - generic [ref=e4462]:
+                          - img [ref=e4463]
+                          - generic [ref=e4465]: Free delivery from store
+                        - generic [ref=e4466]:
+                          - generic [ref=e4467]: $9.95
+                          - generic [ref=e4468]: $0
+                      - generic [ref=e4469]:
+                        - generic [ref=e4470]: Tax $2.08
+                        - generic [ref=e4473]: Tax
+                        - generic [ref=e4475]: $2.08
+                    - separator [ref=e4476]
+                    - generic [ref=e4477]:
+                      - generic [ref=e4478]: Driver tip
+                      - generic [ref=e4479]: $9.00
+                    - generic [ref=e4480]:
+                      - generic [ref=e4481]: Total
+                      - generic [ref=e4482]: $120.37
+                    - generic [ref=e4483]:
+                      - img [ref=e4484]
+                      - button "Charge history. Your transaction activity for this order. " [ref=e4485]:
+                        - generic "Charge history. Your transaction activity for this order." [ref=e4486]:
+                          - generic [ref=e4487]: Charge history
+                          - generic [ref=e4488]: Your transaction activity for this order
+                        - generic [ref=e4489]: 
+                  - generic [ref=e4490]:
+                    - generic [ref=e4491]: Order# 2000145-77999454
+                    - img "Barcode" [ref=e4493]
+                  - button "Reorder All, Delivered on Apr 13, Delivery from store, 29 items" [ref=e4497] [cursor=pointer]: Reorder all
+      - contentinfo [ref=e712]:
+        - region "Give feedback" [ref=e1571]:
+          - paragraph [ref=e717]: We’d love to hear what you think!
+          - button "Give feedback" [ref=e1572] [cursor=pointer]
+        - generic [ref=e719]:
+          - list [ref=e720]:
+            - listitem [ref=e721]:
+              - link "All Departments" [ref=e1573] [cursor=pointer]:
+                - /url: /all-departments
+            - listitem [ref=e723]:
+              - link "Store Directory - opens in a new window" [ref=e1574] [cursor=pointer]:
+                - /url: /store/directory
+                - text: Store Directory
+            - listitem [ref=e725]:
+              - link "Careers - opens in a new window" [ref=e1575] [cursor=pointer]:
+                - /url: https://careers.walmart.com/
+                - text: Careers
+            - listitem [ref=e727]:
+              - link "Our Company - opens in a new window" [ref=e1576] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/
+                - text: Our Company
+            - listitem [ref=e729]:
+              - link "Sell on Walmart.com - opens in a new window" [ref=e1577] [cursor=pointer]:
+                - /url: https://marketplace.walmart.com/?utm_source=Walmart.com&utm_medium=link&utm_campaign=footer
+                - text: Sell on Walmart.com
+            - listitem [ref=e731]:
+              - link "Help" [ref=e1578] [cursor=pointer]:
+                - /url: /help
+            - listitem [ref=e733]:
+              - link "Product Recalls - opens in a new window" [ref=e1579] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/recalls
+                - text: Product Recalls
+            - listitem [ref=e735]:
+              - link "Accessibility - opens in a new window" [ref=e1580] [cursor=pointer]:
+                - /url: https://www.walmart.com/help/article/responsible-disclosure-and-accessibility-policies/0f173dab8bd942da84b1cd7ab5ffc3cb
+                - text: Accessibility
+            - listitem [ref=e737]:
+              - link "Tax Exempt Program" [ref=e1581] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/tax-exemption-program/8480422
+            - listitem [ref=e739]:
+              - link "Get the Walmart App" [ref=e1582] [cursor=pointer]:
+                - /url: https://walmart.onelink.me/UIev?pid=walmart.com&af_web_dp=https%3A%2F%2Fwww.walmart.com%2Fcp%2Fwalmart-mobile-app%2F1087865&c=Walmart.com%20Site%20Footer&af_dp=walmart%3A%2F%2F
+            - listitem [ref=e741]:
+              - link "Safety Data Sheet" [ref=e1583] [cursor=pointer]:
+                - /url: http://msds.walmartstores.com/
+            - listitem [ref=e743]:
+              - link "Terms of Use" [ref=e1584] [cursor=pointer]:
+                - /url: /help/article/walmart-com-terms-of-use/3b75080af40340d6bbd596f116fae5a0
+            - listitem [ref=e745]:
+              - link "Privacy Notice - opens in a new window" [ref=e1585] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/walmart-privacy-notice
+                - text: Privacy Notice
+            - listitem [ref=e747]:
+              - link "California Supply Chain Act - opens in a new window" [ref=e1586] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/california-transparency
+                - text: California Supply Chain Act
+            - listitem [ref=e749]:
+              - link "Your Privacy Choices - opens in a new window" [ref=e1587] [cursor=pointer]:
+                - /url: https://cpa-ui.walmart.com/dc/privacy/en-US/affirmation?brandCode=WMT&languageCode=en-US&market=US
+                - img [ref=e751]
+                - text: Your Privacy Choices
+            - listitem [ref=e752]:
+              - link "Customer Privacy Center - opens in a new window" [ref=e1588] [cursor=pointer]:
+                - /url: https://www.walmart.com/privacy-center
+                - text: Customer Privacy Center
+            - listitem [ref=e754]:
+              - link "Notice at Collection - opens in a new window" [ref=e1589] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/california-privacy-rights#what-are-the-categories-of-personal-information-collected
+                - text: Notice at Collection
+            - listitem [ref=e756]:
+              - link "AdChoices" [ref=e1590] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/walmart-privacy-notice#interest-based-advertising
+            - listitem [ref=e758]:
+              - link "Consumer Health Data Privacy Notices" [ref=e1591] [cursor=pointer]:
+                - /url: https://corporate.walmart.com/privacy-security/walmart-consumer-health-data-privacy-notices
+            - listitem [ref=e760]:
+              - link "Learn about Spark Driver" [ref=e1592] [cursor=pointer]:
+                - /url: https://www.sparkdriverapp.com/
+            - listitem [ref=e762]:
+              - link "Brand Shop Directory" [ref=e1593] [cursor=pointer]:
+                - /url: https://www.walmart.com/brand/branddirectory
+            - listitem [ref=e764]:
+              - link "Pharmacy" [ref=e1594] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/pharmacy/5431?povid=HWS_GlobalFooter_Pharmacy
+            - listitem [ref=e766]:
+              - link "Walmart Business" [ref=e1595] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/walmart-business/7810722?povid=7810722_POV_WMTfooter
+            - listitem [ref=e768]:
+              - link "#IYWYK" [ref=e1596] [cursor=pointer]:
+                - /url: https://www.walmart.com/cp/walmart-in-the-know/7781927
+            - listitem [ref=e770]:
+              - link "Delete Account" [ref=e1597] [cursor=pointer]:
+                - /url: https://www.walmart.com/account/login?vid=oaoh&tid=0&returnUrl=%2Faccount%2Fdelete-account
+          - generic [ref=e772]: © 2026 Walmart. The trademarks Walmart and the Walmart Spark design are registered with the US Patent and Trademark Office. All Rights Reserved.
+  - alert [ref=e777]: /orders/200014577999454?groupId=70d90472686fb4906b797e8e0e5ca98b
