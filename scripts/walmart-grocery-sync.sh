@@ -78,6 +78,7 @@ log "Step 1: Gmail grocery detection..."
 
 timeout 300 "$CLAUDE_BIN" -p "Use the gmail-walmart-detector skill." \
     --allowedTools "mcp__claude_ai_Gmail__search_threads,mcp__claude_ai_Gmail__get_thread,Read,Write" \
+    --debug-file "$LOG_DIR/walmart-sync-$TODAY-debug.log" \
     --output-format json \
     --max-turns 20 \
     > "$STEP1_JSON" 2>&1 || {
@@ -173,5 +174,6 @@ rm -f "$PENDING_FILE"
 # Rotate logs older than 30 days
 find "$LOG_DIR" -name "walmart-sync-*.log" -mtime +30 -delete 2>/dev/null || true
 find "$LOG_DIR" -name "walmart-sync-*-step*.json" -mtime +30 -delete 2>/dev/null || true
+find "$LOG_DIR" -name "walmart-sync-*-debug.log" -mtime +30 -delete 2>/dev/null || true
 
 log "=== Walmart grocery sync completed successfully ==="
