@@ -12,7 +12,7 @@
 set -euo pipefail
 
 # Ensure claude is in PATH (launchd doesn't inherit shell profile)
-export PATH="/Users/jonaheaton/.local/bin:$PATH"
+export PATH="/Users/jonaheaton/.local/bin:/opt/homebrew/bin:$PATH"
 
 REPO_DIR="${REPO_DIR:-$HOME/Documents/paprika-assistant}"
 LOG_DIR="${LOG_DIR:-$REPO_DIR/logs}"
@@ -76,7 +76,7 @@ log "=== Walmart Grocery Sync starting ==="
 # ---------------------------------------------------------------------------
 log "Step 1: Gmail grocery detection..."
 
-timeout 300 "$CLAUDE_BIN" -p "Use the gmail-walmart-detector skill." \
+gtimeout 300 "$CLAUDE_BIN" -p "Use the gmail-walmart-detector skill." \
     --allowedTools "mcp__claude_ai_Gmail__search_threads,mcp__claude_ai_Gmail__get_thread,Read,Write" \
     --debug-file "$LOG_DIR/walmart-sync-$TODAY-debug.log" \
     --output-format json \
@@ -131,7 +131,7 @@ log "Found $DELIVERY_COUNT new delivery/deliveries. Starting pantry import..."
 # ---------------------------------------------------------------------------
 # Note: walmart-to-pantry skill detects headless mode by checking for pending file.
 # Enumerate specific Playwright tools; update if wildcard syntax is verified.
-timeout 1800 "$CLAUDE_BIN" -p "A new Walmart grocery delivery was detected. Read $PENDING_FILE for the delivery details, then use the walmart-to-pantry skill to import the items into Paprika. This is a headless automated run — do not ask for user input at any point. If you cannot proceed without user interaction, output a HEADLESS_ERROR message and exit." \
+gtimeout 1800 "$CLAUDE_BIN" -p "A new Walmart grocery delivery was detected. Read $PENDING_FILE for the delivery details, then use the walmart-to-pantry skill to import the items into Paprika. This is a headless automated run — do not ask for user input at any point. If you cannot proceed without user interaction, output a HEADLESS_ERROR message and exit." \
     --allowedTools "mcp__plugin_playwright_playwright__browser_navigate,mcp__plugin_playwright_playwright__browser_snapshot,mcp__plugin_playwright_playwright__browser_evaluate,mcp__plugin_playwright_playwright__browser_click,mcp__plugin_playwright_playwright__browser_wait_for,mcp__plugin_playwright_playwright__browser_type,mcp__claude_ai_Paprika__pantry,Read,Write" \
     --output-format json \
     --max-turns 60 \
