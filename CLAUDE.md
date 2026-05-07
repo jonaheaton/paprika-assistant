@@ -199,7 +199,7 @@ This runs with launchd's real PATH, fd limits, and all other constraints — ide
 **`claude -p` fails with "low max file descriptors" error**
 - Cause: launchd's default fd limit is 256 — too low for `claude -p` to open all MCP sockets
 - Symptom: Things task created; step1 JSON contains `An unknown error occurred, possibly due to low max file descriptors`; may also manifest as a silent hang (socket open blocks instead of failing)
-- Fix: add `ulimit -n 65536` near the top of the script, or set `SoftResourceLimits`/`HardResourceLimits` in the plist
+- Fix: `ulimit -n 65536` added to `walmart-grocery-sync.sh` (line 16); raises the limit for the script and all children before any MCP connections
 - Note: not caught by `install-walmart-sync.sh test` or the stub test suite — use `launchctl start` to reproduce
 
 **Gmail MCP token expired**

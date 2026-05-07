@@ -13,6 +13,7 @@ set -euo pipefail
 
 # Ensure claude is in PATH (launchd doesn't inherit shell profile)
 export PATH="/Users/jonaheaton/.local/bin:/opt/homebrew/bin:$PATH"
+ulimit -n 65536
 
 REPO_DIR="${REPO_DIR:-$HOME/Documents/paprika-assistant}"
 LOG_DIR="${LOG_DIR:-$REPO_DIR/logs}"
