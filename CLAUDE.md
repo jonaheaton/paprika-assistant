@@ -167,6 +167,15 @@ Automatic cleanup of expired and duplicate pantry items using Claude Code in hea
 bash tests/test-orchestrator.sh
 ```
 
+**Limitations of the above tests:** Both simulate launchd's stripped environment variables but not its resource limits (e.g., fd limit of 256). Tests run from a terminal inherit the shell's limits (typically 1024+), so failures caused by launchd's constraints won't be caught.
+
+**True launchd simulation — trigger the job through launchd itself:**
+```bash
+launchctl start com.jonaheaton.walmart-grocery-sync
+tail -f ~/Documents/paprika-assistant/logs/walmart-sync-$(date +%Y-%m-%d).log
+```
+This runs with launchd's real PATH, fd limits, and all other constraints — identical to the 5 AM scheduled run.
+
 ### Known Failure Modes
 
 **`Operation not permitted` when running via launchd**
@@ -186,6 +195,12 @@ bash tests/test-orchestrator.sh
 - Symptom: every run exits immediately with the "already running" message
 - Fix: `rm logs/.walmart-sync.pid` — then the improved PID guard (checks process name) prevents recurrence
 - Test: `bash tests/test-orchestrator.sh` (tests 5 and 6 cover this)
+
+**`claude -p` fails with "low max file descriptors" error**
+- Cause: launchd's default fd limit is 256 — too low for `claude -p` to open all MCP sockets
+- Symptom: Things task created; step1 JSON contains `An unknown error occurred, possibly due to low max file descriptors`; may also manifest as a silent hang (socket open blocks instead of failing)
+- Fix: add `ulimit -n 65536` near the top of the script, or set `SoftResourceLimits`/`HardResourceLimits` in the plist
+- Note: not caught by `install-walmart-sync.sh test` or the stub test suite — use `launchctl start` to reproduce
 
 **Gmail MCP token expired**
 - Symptom: Things task created: "Gmail MCP token expired — re-authorize"
