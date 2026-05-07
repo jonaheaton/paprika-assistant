@@ -40,7 +40,7 @@ notify_failure() {
   # Capture last 20 log lines for the Things task note (sanitize single quotes)
   local last_lines
   last_lines=$(tail -20 "$RUN_LOG" 2>/dev/null | tr "'" '"' || echo "No log available")
-  "$CLAUDE_BIN" -p "Create a Things 3 task titled 'Walmart Grocery Sync Failed ($TODAY)' with notes: '$reason
+  gtimeout 60 "$CLAUDE_BIN" -p "Create a Things 3 task titled 'Walmart Grocery Sync Failed ($TODAY)' with notes: '$reason
 
 Last log lines:
 $last_lines
