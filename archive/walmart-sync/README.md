@@ -34,3 +34,7 @@ Settings read-back showed the plugin disabled; `launchctl print-disabled gui/<ui
 Revival is not an active task. If explicitly requested in the future, review the archive first and make a new plan; do not simply enable the old timer or plugin. Current shopping uses the existing signed-in Chrome; operational troubleshooting lives in `~/wand/walmart-tools/docs/chrome-instance-troubleshooting.md`.
 
 Retirement verification also confirmed both former shell entrypoints refuse execution (including installer `install` and `run-now`). Historical orchestrator regression tests passed 18/18 stub assertions after updating their source path.
+
+## Plugin removal follow-up
+
+Later in the same retirement session, the user requested actual plugin uninstallation in both Codex and Claude. Claude's supported plugin uninstall command succeeded; installed-plugin list, registry and enabled-plugin settings had no Playwright entry afterward. The residual plugin cache was moved to Trash. Codex's plugin-uninstall tool reported `not_installed`; its standalone MCP configuration also had no Playwright entry. This supersedes the earlier disabled-only state. Historical source, settings backups and the retired browser-profile copy remain archival; they do not constitute an installed plugin.

@@ -41,7 +41,7 @@ Project-level skills are stored in `.claude/skills/`. These skills are specific 
 
 ## Retired Walmart automation
 
-The daily Walmart-to-Paprika sync and its Playwright browser are **archived as of 2026-11-05**. The scheduler is disabled and unloaded; Claude's Playwright plugin is disabled by default. Do not re-enable them without a new explicit user request. See [retirement record](archive/walmart-sync/README.md). Old setup and test commands are historical.
+The daily Walmart-to-Paprika sync and its Playwright browser are **archived as of 2026-11-05**. The scheduler is disabled and unloaded; Claude's Playwright plugin is uninstalled. Do not re-enable them without a new explicit user request. See [retirement record](archive/walmart-sync/README.md). Old setup and test commands are historical.
 
 ## Scheduled Automation
 
