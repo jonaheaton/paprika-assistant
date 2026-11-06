@@ -3,6 +3,9 @@ name: gmail-walmart-detector
 description: Detect new Walmart DFS grocery deliveries in Gmail and write structured pending entries for the pantry importer. Use when the walmart-grocery-sync orchestrator runs Step 1 (Gmail detection phase).
 ---
 
+> **ARCHIVED 2026-11-05.** Retired; not an available current workflow. See the archive README.
+
+
 # Gmail Walmart Detector
 
 Scans Gmail for Walmart grocery delivery emails (DFS = Delivery From Store), deduplicates against already-processed deliveries, and writes structured identifiers to a pending file for the pantry importer.

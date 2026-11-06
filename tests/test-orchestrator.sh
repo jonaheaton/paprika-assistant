@@ -1,5 +1,5 @@
 #!/bin/bash
-# Orchestrator test suite for walmart-grocery-sync.sh.
+# Offline regression tests for the ARCHIVED walmart-grocery-sync.sh source.
 # Run: bash tests/test-orchestrator.sh
 # Uses tests/stub-claude.sh as the claude binary to exercise error paths
 # without hitting real APIs. Tests run against a temporary log directory.
@@ -7,7 +7,7 @@
 set -uo pipefail
 
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-SCRIPT="$REPO_DIR/scripts/walmart-grocery-sync.sh"
+SCRIPT="$REPO_DIR/archive/walmart-sync/scripts/walmart-grocery-sync.sh"
 STUB="$REPO_DIR/tests/stub-claude.sh"
 chmod +x "$STUB"
 

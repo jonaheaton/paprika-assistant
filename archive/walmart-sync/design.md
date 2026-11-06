@@ -1,3 +1,5 @@
+> **ARCHIVED 2026-11-05.** Historical design, not an active plan.
+
 # Walmart Grocery Sync — Design Spec
 
 **Date:** 2026-04-23  

@@ -3,6 +3,9 @@ name: walmart-to-pantry
 description: Extract grocery items from Walmart orders and add them to Paprika pantry inventory. Use when the user wants to add items from a Walmart grocery order to their Paprika pantry, transfer Walmart purchases to pantry tracking, or sync Walmart order history with Paprika inventory.
 ---
 
+> **ARCHIVED 2026-11-05.** Retired; not an available current workflow. See the archive README.
+
+
 # Walmart to Pantry
 
 Automate transferring grocery items from Walmart orders into Paprika pantry inventory with proper categorization and expiration dates.
